@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "distribution": "portable_site",
+  "project": {
+    "id": "jv_web_demonstrator",
+    "version": "0.1.0"
+  },
+  "source": {
+    "repository": "Jozzpoly/JV-Box3D-Web-experiment",
+    "ref": {
+      "state": "DETACHED",
+      "fingerprint": null
+    },
+    "commit": "5ba6cc406b8c1541e29cd1ae59ffed78a7509284",
+    "commitDate": "2026-08-07T20:10:27+02:00",
+    "workingTreeClean": true
+  },
+  "runtimeBackend": {
+    "id": "legacy_ts_m6",
+    "role": "REFERENCE_BROWSER_FIXTURE",
+    "productPhysicsAuthority": false,
+    "nativeParity": "NOT_PROVEN"
+  },
+  "runtimeAssets": [
+    "receipts/jv_m6_factory_receipt.json",
+    "scenes/synthetic-flat-lab.scene.json",
+    "vehicles/tiny/vehicle.visual.json",
+    "vehicles/tiny/models/m6-rig-proof.glb"
+  ],
+  "complianceFiles": [
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "publication": {
+    "mode": "DORMANT",
+    "pathPortableCandidate": true,
+    "publicReady": false,
+    "pagesPublicationApproved": false,
+    "publishedByBuild": false
+  },
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "assets/__vite-browser-external-BRyEmtFe.js",
+      "bytes": 103,
+      "sha256": "d7f5932de1313b3114c9bb06a6a5f9ca426be7a2ef25ad94a9ffce806ebdb4be"
+    },
+    {
+      "path": "assets/main-DigvBG9H.js",
+      "bytes": 1234035,
+      "sha256": "755cf40235766a937f276d5c744c27c67efaf747148ee8582ca937ce305ebf6b"
+    },
+    {
+      "path": "assets/main-DKayl8wH.css",
+      "bytes": 7276,
+      "sha256": "295a3dd4561671b894b5b85803aae943275f329392dd1394c14ecedb11286433"
+    },
+    {
+      "path": "assets/map-only-r0-CGJHE82U.js",
+      "bytes": 4044,
+      "sha256": "723ef1c6bb85c3eb397a6bef4206f1f715a61e3c81e6775a534c78dfc2797088"
+    },
+    {
+      "path": "assets/preload-helper-C2yQGJWv.js",
+      "bytes": 9882,
+      "sha256": "d0a6e2b224a73877342b6a8de99ccf70bb786b4385e87a86807930a1e5d8010d"
+    },
+    {
+      "path": "assets/rolldown-runtime-Bh1tDfsg.js",
+      "bytes": 567,
+      "sha256": "1b13387cb23dc39bf70e31677c21f6db5cad3377b96f286b6ee444496e5bfea7"
+    },
+    {
+      "path": "index.html",
+      "bytes": 527,
+      "sha256": "836d610faf87465fbf7cfb5f59fe05328bbe5dbe8ec1293b2f64aecb33623c76"
+    },
+    {
+      "path": "receipts/jv_m6_factory_receipt.json",
+      "bytes": 20368,
+      "sha256": "ab4e927e8156ae2fc25d8c5cfa422bceaaf3788aafadb665e50a8f15549be925"
+    },
+    {
+      "path": "scenes/synthetic-flat-lab.scene.json",
+      "bytes": 441,
+      "sha256": "a8247fa29d1971e1e3f818e3ffa1fc211c2134db8fd174a29621053cb67f2ffe"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 4353,
+      "sha256": "2eeaadc2aaa574d4152ee6a5ab25e2fd55745d6271e19d5175d97d97c548f4fb"
+    },
+    {
+      "path": "vehicles/tiny/models/m6-rig-proof.glb",
+      "bytes": 2628,
+      "sha256": "b243bf5ae6ed0b185885b6d341ab0a12fd377743408040e14226c1fecbb31281"
+    },
+    {
+      "path": "vehicles/tiny/vehicle.visual.json",
+      "bytes": 12435,
+      "sha256": "a744f4f4d5528cffff34343465540cf5fbe08c5e7da7ac3cf1819c065d1cc19b"
+    }
+  ]
+}
