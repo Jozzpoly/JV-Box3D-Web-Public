@@ -11,8 +11,8 @@
       "state": "BRANCH",
       "fingerprint": "963480d27a11"
     },
-    "commit": "f991e43432f424a7de9df90dc7969b0fd27df938",
-    "commitDate": "2026-08-14T15:58:46+02:00",
+    "commit": "0657e5ecbc4081e8ad75ce8b9d1a8be385c586eb",
+    "commitDate": "2026-08-14T18:19:36+02:00",
     "workingTreeClean": true
   },
   "runtimeBackend": {
@@ -216,9 +216,9 @@
       "sha256": "d7f5932de1313b3114c9bb06a6a5f9ca426be7a2ef25ad94a9ffce806ebdb4be"
     },
     {
-      "path": "assets/index-C26oExcN.js",
-      "bytes": 16659,
-      "sha256": "a484354aa19612311338177c03ce52790e9dce28886b409f0bf52eb0aff5e1b4"
+      "path": "assets/index-xOTAc_ep.js",
+      "bytes": 16508,
+      "sha256": "9a159443aa2c6c4927ce5bc2fd3e33eea8a77d09ce812a4f3081e706448fb8de"
     },
     {
       "path": "assets/main-C6WpNzVr.css",
@@ -243,7 +243,7 @@
     {
       "path": "index.html",
       "bytes": 513,
-      "sha256": "92608ff4b04b493c23fd5bceb20609e7e7e3ee93f67d27b240b22b3535a59cfa"
+      "sha256": "b61dbd1f6eb81dbc72b7afc69aed5c7bfadc93b35e83a7407ffa91a2112fdd3a"
     },
     {
       "path": "receipts/jv_friends_scan_receipt.json",
