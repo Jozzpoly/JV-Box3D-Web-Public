@@ -1,0 +1,856 @@
+{
+  "schema": "JV_WEB_OWNER_M6_FULL_RIG_R2",
+  "sourceAuthority": {
+    "sourceSha256": {
+      "chassis": "45055fee11458290d107e8442d1da0d032ed9a094bea98a069d99e1a87954ca8",
+      "wheel": "1fe1d08dd068157d699dc5232054ee61f6aa5a14af15480be0c77aeb55b5b617",
+      "frontSuspension": "57cda983f8f728bc819460540d2ee39b1b17288ecdac1f0dc8bb1a3e6f9ab750",
+      "rearSuspension": "374e54eb420f0b3e31bba0d749fdf1cf942db2389361dde1313d7a6b29e77ec2",
+      "damper": "eca8770078d9df4ed6d7649473fa35d57501c3951232ffe8d91429a6f1f67118",
+      "cardan": "16f4eab46d526c273f434e109331586df2cd7e3ab0792a4dfbd21d7ed4ef0860"
+    },
+    "contractSha256": {
+      "wheel": "24cf7d68bff367a6fcf267dd5efd841e13658736693881099fd52b2e7c613bfb",
+      "frontSuspension": "2085a5429ae3c1f20c74250ec9e0e29aec70c992679a1537ea9cae28b1d709bd",
+      "rearSuspension": "110e71595ba88dff11d4a29be533616b54980bcb25f035d9a0531a587e8dce01",
+      "damper": "6dfae948e67e9e5e73aaead3811a5f1105358ebf1d5418e87e523e45865e0812",
+      "cardan": "72c65b9e1527e69aac20b17d6ce305d9f808564bd71f7d17ea7984f95961919c"
+    }
+  },
+  "sources": {
+    "chassis": {
+      "nodeCount": 15,
+      "primitiveCount": 5,
+      "vertexCount": 16320,
+      "triangleCount": 1632,
+      "skinCount": 1,
+      "validatedJointCount": 14,
+      "bindPoseFlattening": "VERIFIED",
+      "textureCount": 1
+    },
+    "wheel": {
+      "nodeCount": 13,
+      "primitiveCount": 1,
+      "vertexCount": 1224,
+      "triangleCount": 612,
+      "skinCount": 1,
+      "validatedJointCount": 12,
+      "bindPoseFlattening": "VERIFIED",
+      "textureCount": 1
+    },
+    "frontSuspension": {
+      "nodeCount": 15,
+      "primitiveCount": 1,
+      "vertexCount": 624,
+      "triangleCount": 312,
+      "skinCount": 1,
+      "validatedJointCount": 14,
+      "bindPoseFlattening": "VERIFIED",
+      "textureCount": 1
+    },
+    "rearSuspension": {
+      "nodeCount": 14,
+      "primitiveCount": 1,
+      "vertexCount": 456,
+      "triangleCount": 228,
+      "skinCount": 1,
+      "validatedJointCount": 13,
+      "bindPoseFlattening": "VERIFIED",
+      "textureCount": 1
+    },
+    "damper": {
+      "nodeCount": 5,
+      "primitiveCount": 1,
+      "vertexCount": 240,
+      "triangleCount": 120,
+      "skinCount": 1,
+      "validatedJointCount": 4,
+      "bindPoseFlattening": "VERIFIED",
+      "textureCount": 1
+    },
+    "cardan": {
+      "nodeCount": 5,
+      "primitiveCount": 1,
+      "vertexCount": 456,
+      "triangleCount": 228,
+      "skinCount": 1,
+      "validatedJointCount": 4,
+      "bindPoseFlattening": "VERIFIED",
+      "textureCount": 1
+    }
+  },
+  "wheelCalibration": {
+    "markerContract": "VERIFIED",
+    "requiredMarkers": [
+      "Socket_WheelMount",
+      "Marker_TireRadiusOuter",
+      "Marker_TireWidthLeft",
+      "Marker_TireWidthRight"
+    ],
+    "authoredCenter": [
+      -0.125,
+      0.5,
+      0
+    ],
+    "authoredRadius": 1.46875,
+    "authoredWidth": 1.25,
+    "requestedRadius": 0.514062464,
+    "requestedWidth": 0.4375,
+    "radialScale": 0.3499999754893617,
+    "axialScale": 0.35,
+    "centerError": 0,
+    "mountOffset": 0.13124999999999998,
+    "mountAxisError": 0,
+    "radiusError": 0,
+    "widthError": 0,
+    "sourceAuthority": {
+      "repository": "Jozzpoly/Box3d_FunProject",
+      "sourceAuthorityCommit": "33722127777248b3dcb228fb47f7de2fad847036",
+      "wheelSourceGitBlob": "c13c77a8e5552175ee8266b2da33a54691f1dae9",
+      "factoryReceiptGitBlob": "6a5cb337a7d4707946835e83e036365130c52459",
+      "historicalVisualCommit": "891c7561142b601f62ea76b68b0f55f8fababc6c"
+    }
+  },
+  "calibration": {
+    "corners": {
+      "fl": {
+        "placement": {
+          "translation": [
+            1.25,
+            -0.7250000000000001,
+            -0.503125
+          ],
+          "attach": [
+            1.25,
+            -0.55,
+            -0.9187500000000001
+          ],
+          "mirrored": false
+        },
+        "physical": {
+          "wheelCenter": [
+            1.25,
+            -0.55,
+            -1.05
+          ],
+          "upperHinge": [
+            1.2342520405653337,
+            -0.27889727457341834,
+            -0.5478987790374772
+          ],
+          "upperBall": [
+            1.2342520405653337,
+            -0.37000000000000005,
+            -0.8878987790374773
+          ],
+          "lowerHinge": [
+            1.2657479594346663,
+            -0.6067433714816836,
+            -0.4721012209625229
+          ],
+          "lowerBall": [
+            1.2657479594346663,
+            -0.73,
+            -0.9321012209625229
+          ],
+          "steeringStart": [
+            1.08,
+            -0.4267433714816836,
+            -0.45
+          ],
+          "steeringArm": [
+            1.08,
+            -0.55,
+            -0.86716
+          ],
+          "coiloverChassis": [
+            1.25,
+            -0.13000000000000006,
+            -0.93
+          ],
+          "coiloverKnuckle": [
+            1.2657479594346663,
+            -0.73,
+            -0.9321012209625229
+          ]
+        },
+        "arms": {
+          "upper": {
+            "sourceBounds": {
+              "min": [
+                -0.8125,
+                0.875,
+                -0.53125
+              ],
+              "max": [
+                0.5,
+                1.0625,
+                0.53125
+              ],
+              "size": [
+                1.3125,
+                0.1875,
+                1.0625
+              ],
+              "center": [
+                -0.15625,
+                0.96875,
+                0
+              ]
+            },
+            "targetAxialLength": 0.35199390133942826,
+            "targetSpreadLength": 0.48,
+            "xScale": 0.26818582959194537,
+            "yScale": 0.35,
+            "zScale": 0.4517647058823529,
+            "sourceXWorld": [
+              0,
+              0.25881904510252074,
+              0.9659258262890684
+            ],
+            "sourceYWorld": [
+              0,
+              0.9659258262890684,
+              -0.25881904510252074
+            ],
+            "sourceZWorld": [
+              -1,
+              0,
+              0
+            ],
+            "restEndpointErrorMeters": 0
+          },
+          "lower": {
+            "sourceBounds": {
+              "min": [
+                -0.8125,
+                -0.0625,
+                -0.53125
+              ],
+              "max": [
+                0.5,
+                0.125,
+                0.53125
+              ],
+              "size": [
+                1.3125,
+                0.1875,
+                1.0625
+              ],
+              "center": [
+                -0.15625,
+                0.03125,
+                0
+              ]
+            },
+            "targetAxialLength": 0.47622704298863816,
+            "targetSpreadLength": 0.48,
+            "xScale": 0.3628396518008672,
+            "yScale": 0.35,
+            "zScale": 0.4517647058823529,
+            "sourceXWorld": [
+              0,
+              0.25881904510252074,
+              0.9659258262890683
+            ],
+            "sourceYWorld": [
+              0,
+              0.9659258262890685,
+              -0.2588190451025208
+            ],
+            "sourceZWorld": [
+              -1,
+              0,
+              0
+            ],
+            "restEndpointErrorMeters": 0
+          }
+        },
+        "cardan": {
+          "start": [
+            1.25,
+            -0.55,
+            -0.32812500000000006
+          ],
+          "end": [
+            1.25,
+            -0.55,
+            -0.875
+          ],
+          "length": 0.546875
+        }
+      },
+      "fr": {
+        "placement": {
+          "translation": [
+            1.25,
+            -0.7250000000000001,
+            0.503125
+          ],
+          "attach": [
+            1.25,
+            -0.55,
+            0.9187500000000001
+          ],
+          "mirrored": true
+        },
+        "physical": {
+          "wheelCenter": [
+            1.25,
+            -0.55,
+            1.05
+          ],
+          "upperHinge": [
+            1.2342520405653337,
+            -0.27889727457341834,
+            0.5478987790374772
+          ],
+          "upperBall": [
+            1.2342520405653337,
+            -0.37000000000000005,
+            0.8878987790374773
+          ],
+          "lowerHinge": [
+            1.2657479594346663,
+            -0.6067433714816836,
+            0.4721012209625229
+          ],
+          "lowerBall": [
+            1.2657479594346663,
+            -0.73,
+            0.9321012209625229
+          ],
+          "steeringStart": [
+            1.08,
+            -0.4267433714816836,
+            0.45
+          ],
+          "steeringArm": [
+            1.08,
+            -0.55,
+            0.86716
+          ],
+          "coiloverChassis": [
+            1.25,
+            -0.13000000000000006,
+            0.93
+          ],
+          "coiloverKnuckle": [
+            1.2657479594346663,
+            -0.73,
+            0.9321012209625229
+          ]
+        },
+        "arms": {
+          "upper": {
+            "sourceBounds": {
+              "min": [
+                -0.8125,
+                0.875,
+                -0.53125
+              ],
+              "max": [
+                0.5,
+                1.0625,
+                0.53125
+              ],
+              "size": [
+                1.3125,
+                0.1875,
+                1.0625
+              ],
+              "center": [
+                -0.15625,
+                0.96875,
+                0
+              ]
+            },
+            "targetAxialLength": 0.35199390133942826,
+            "targetSpreadLength": 0.48,
+            "xScale": 0.26818582959194537,
+            "yScale": 0.35,
+            "zScale": 0.4517647058823529,
+            "sourceXWorld": [
+              0,
+              -0.25881904510252074,
+              0.9659258262890684
+            ],
+            "sourceYWorld": [
+              0,
+              0.9659258262890684,
+              0.25881904510252074
+            ],
+            "sourceZWorld": [
+              -1,
+              0,
+              0
+            ],
+            "restEndpointErrorMeters": 0
+          },
+          "lower": {
+            "sourceBounds": {
+              "min": [
+                -0.8125,
+                -0.0625,
+                -0.53125
+              ],
+              "max": [
+                0.5,
+                0.125,
+                0.53125
+              ],
+              "size": [
+                1.3125,
+                0.1875,
+                1.0625
+              ],
+              "center": [
+                -0.15625,
+                0.03125,
+                0
+              ]
+            },
+            "targetAxialLength": 0.47622704298863816,
+            "targetSpreadLength": 0.48,
+            "xScale": 0.3628396518008672,
+            "yScale": 0.35,
+            "zScale": 0.4517647058823529,
+            "sourceXWorld": [
+              0,
+              -0.25881904510252074,
+              0.9659258262890683
+            ],
+            "sourceYWorld": [
+              0,
+              0.9659258262890685,
+              0.2588190451025208
+            ],
+            "sourceZWorld": [
+              -1,
+              0,
+              0
+            ],
+            "restEndpointErrorMeters": 0
+          }
+        },
+        "cardan": {
+          "start": [
+            1.25,
+            -0.55,
+            0.32812500000000006
+          ],
+          "end": [
+            1.25,
+            -0.55,
+            0.875
+          ],
+          "length": 0.546875
+        }
+      },
+      "rl": {
+        "placement": {
+          "translation": [
+            -1.25,
+            -0.7250000000000001,
+            -0.503125
+          ],
+          "attach": [
+            -1.25,
+            -0.55,
+            -0.9187500000000001
+          ],
+          "mirrored": false
+        },
+        "physical": {
+          "wheelCenter": [
+            -1.25,
+            -0.55,
+            -1.05
+          ],
+          "upperHinge": [
+            -1.2657479594346663,
+            -0.27889727457341834,
+            -0.5478987790374772
+          ],
+          "upperBall": [
+            -1.2657479594346663,
+            -0.37000000000000005,
+            -0.8878987790374773
+          ],
+          "lowerHinge": [
+            -1.2342520405653337,
+            -0.6067433714816836,
+            -0.4721012209625229
+          ],
+          "lowerBall": [
+            -1.2342520405653337,
+            -0.73,
+            -0.9321012209625229
+          ],
+          "steeringStart": [
+            -1.42,
+            -0.4267433714816836,
+            -0.40716
+          ],
+          "steeringArm": [
+            -1.42,
+            -0.55,
+            -0.86716
+          ],
+          "coiloverChassis": [
+            -1.25,
+            -0.13000000000000006,
+            -0.93
+          ],
+          "coiloverKnuckle": [
+            -1.2342520405653337,
+            -0.73,
+            -0.9321012209625229
+          ]
+        },
+        "arms": {
+          "upper": {
+            "sourceBounds": {
+              "min": [
+                -0.8125,
+                0.875,
+                -0.53125
+              ],
+              "max": [
+                0.5,
+                1.0625,
+                0.546875
+              ],
+              "size": [
+                1.3125,
+                0.1875,
+                1.078125
+              ],
+              "center": [
+                -0.15625,
+                0.96875,
+                0.0078125
+              ]
+            },
+            "targetAxialLength": 0.35199390133942826,
+            "targetSpreadLength": 0.48,
+            "xScale": 0.26818582959194537,
+            "yScale": 0.35,
+            "zScale": 0.4452173913043478,
+            "sourceXWorld": [
+              0,
+              0.25881904510252074,
+              0.9659258262890684
+            ],
+            "sourceYWorld": [
+              0,
+              0.9659258262890684,
+              -0.25881904510252074
+            ],
+            "sourceZWorld": [
+              -1,
+              0,
+              0
+            ],
+            "restEndpointErrorMeters": 0
+          },
+          "lower": {
+            "sourceBounds": {
+              "min": [
+                -0.8125,
+                -0.0625,
+                -0.5625
+              ],
+              "max": [
+                0.5,
+                0.125,
+                0.5625
+              ],
+              "size": [
+                1.3125,
+                0.1875,
+                1.125
+              ],
+              "center": [
+                -0.15625,
+                0.03125,
+                0
+              ]
+            },
+            "targetAxialLength": 0.47622704298863816,
+            "targetSpreadLength": 0.48,
+            "xScale": 0.3628396518008672,
+            "yScale": 0.35,
+            "zScale": 0.42666666666666664,
+            "sourceXWorld": [
+              0,
+              0.25881904510252074,
+              0.9659258262890683
+            ],
+            "sourceYWorld": [
+              0,
+              0.9659258262890685,
+              -0.2588190451025208
+            ],
+            "sourceZWorld": [
+              -1,
+              0,
+              0
+            ],
+            "restEndpointErrorMeters": 0
+          }
+        },
+        "cardan": {
+          "start": [
+            -1.25,
+            -0.55,
+            -0.32812500000000006
+          ],
+          "end": [
+            -1.25,
+            -0.55,
+            -0.83125
+          ],
+          "length": 0.503125
+        }
+      },
+      "rr": {
+        "placement": {
+          "translation": [
+            -1.25,
+            -0.7250000000000001,
+            0.503125
+          ],
+          "attach": [
+            -1.25,
+            -0.55,
+            0.9187500000000001
+          ],
+          "mirrored": true
+        },
+        "physical": {
+          "wheelCenter": [
+            -1.25,
+            -0.55,
+            1.05
+          ],
+          "upperHinge": [
+            -1.2657479594346663,
+            -0.27889727457341834,
+            0.5478987790374772
+          ],
+          "upperBall": [
+            -1.2657479594346663,
+            -0.37000000000000005,
+            0.8878987790374773
+          ],
+          "lowerHinge": [
+            -1.2342520405653337,
+            -0.6067433714816836,
+            0.4721012209625229
+          ],
+          "lowerBall": [
+            -1.2342520405653337,
+            -0.73,
+            0.9321012209625229
+          ],
+          "steeringStart": [
+            -1.42,
+            -0.4267433714816836,
+            0.40716
+          ],
+          "steeringArm": [
+            -1.42,
+            -0.55,
+            0.86716
+          ],
+          "coiloverChassis": [
+            -1.25,
+            -0.13000000000000006,
+            0.93
+          ],
+          "coiloverKnuckle": [
+            -1.2342520405653337,
+            -0.73,
+            0.9321012209625229
+          ]
+        },
+        "arms": {
+          "upper": {
+            "sourceBounds": {
+              "min": [
+                -0.8125,
+                0.875,
+                -0.53125
+              ],
+              "max": [
+                0.5,
+                1.0625,
+                0.546875
+              ],
+              "size": [
+                1.3125,
+                0.1875,
+                1.078125
+              ],
+              "center": [
+                -0.15625,
+                0.96875,
+                0.0078125
+              ]
+            },
+            "targetAxialLength": 0.35199390133942826,
+            "targetSpreadLength": 0.48,
+            "xScale": 0.26818582959194537,
+            "yScale": 0.35,
+            "zScale": 0.4452173913043478,
+            "sourceXWorld": [
+              0,
+              -0.25881904510252074,
+              0.9659258262890684
+            ],
+            "sourceYWorld": [
+              0,
+              0.9659258262890684,
+              0.25881904510252074
+            ],
+            "sourceZWorld": [
+              -1,
+              0,
+              0
+            ],
+            "restEndpointErrorMeters": 0
+          },
+          "lower": {
+            "sourceBounds": {
+              "min": [
+                -0.8125,
+                -0.0625,
+                -0.5625
+              ],
+              "max": [
+                0.5,
+                0.125,
+                0.5625
+              ],
+              "size": [
+                1.3125,
+                0.1875,
+                1.125
+              ],
+              "center": [
+                -0.15625,
+                0.03125,
+                0
+              ]
+            },
+            "targetAxialLength": 0.47622704298863816,
+            "targetSpreadLength": 0.48,
+            "xScale": 0.3628396518008672,
+            "yScale": 0.35,
+            "zScale": 0.42666666666666664,
+            "sourceXWorld": [
+              0,
+              -0.25881904510252074,
+              0.9659258262890683
+            ],
+            "sourceYWorld": [
+              0,
+              0.9659258262890685,
+              0.2588190451025208
+            ],
+            "sourceZWorld": [
+              -1,
+              0,
+              0
+            ],
+            "restEndpointErrorMeters": 0
+          }
+        },
+        "cardan": {
+          "start": [
+            -1.25,
+            -0.55,
+            0.32812500000000006
+          ],
+          "end": [
+            -1.25,
+            -0.55,
+            0.83125
+          ],
+          "length": 0.503125
+        }
+      }
+    }
+  },
+  "output": {
+    "byteLength": 829076,
+    "sha256": "5b6421cb9991adff4a467b559ec2b69e25ea1667bd7cfee1e189d3d94cd116b3",
+    "nodeCount": 54,
+    "meshCount": 51,
+    "imageCount": 3,
+    "textureCount": 3,
+    "bindingCount": 54,
+    "realBindingCount": 53,
+    "realBindingIds": [
+      "owner.chassis",
+      "owner.fl.wheel",
+      "owner.fr.wheel",
+      "owner.rl.wheel",
+      "owner.rr.wheel",
+      "owner.fl.upper-arm",
+      "owner.fl.lower-arm",
+      "owner.fl.knuckle.socket-chassismount-b",
+      "owner.fl.knuckle.socket-wheelcenter",
+      "owner.fl.chassis-bracket.socket-chassismount-a",
+      "owner.fl.chassis-bracket.socket-singledamper-mount",
+      "owner.fl.coilover.upper",
+      "owner.fl.coilover.stretch",
+      "owner.fl.coilover.lower",
+      "owner.fl.steering-link",
+      "owner.fl.cardan.drive-end",
+      "owner.fl.cardan.mid",
+      "owner.fl.cardan.hub-end",
+      "owner.fr.upper-arm",
+      "owner.fr.lower-arm",
+      "owner.fr.knuckle.socket-chassismount-b",
+      "owner.fr.knuckle.socket-wheelcenter",
+      "owner.fr.chassis-bracket.socket-chassismount-a",
+      "owner.fr.chassis-bracket.socket-singledamper-mount",
+      "owner.fr.coilover.upper",
+      "owner.fr.coilover.stretch",
+      "owner.fr.coilover.lower",
+      "owner.fr.steering-link",
+      "owner.fr.cardan.drive-end",
+      "owner.fr.cardan.mid",
+      "owner.fr.cardan.hub-end",
+      "owner.rl.upper-arm",
+      "owner.rl.lower-arm",
+      "owner.rl.knuckle.socket-wheelcenter",
+      "owner.rl.chassis-bracket.socket-chassismount",
+      "owner.rl.coilover.upper",
+      "owner.rl.coilover.stretch",
+      "owner.rl.coilover.lower",
+      "owner.rl.steering-link",
+      "owner.rl.cardan.drive-end",
+      "owner.rl.cardan.mid",
+      "owner.rl.cardan.hub-end",
+      "owner.rr.upper-arm",
+      "owner.rr.lower-arm",
+      "owner.rr.knuckle.socket-wheelcenter",
+      "owner.rr.chassis-bracket.socket-chassismount",
+      "owner.rr.coilover.upper",
+      "owner.rr.coilover.stretch",
+      "owner.rr.coilover.lower",
+      "owner.rr.steering-link",
+      "owner.rr.cardan.drive-end",
+      "owner.rr.cardan.mid",
+      "owner.rr.cardan.hub-end"
+    ],
+    "diagnosticBindingIds": [
+      "diagnostic.rack.coverage"
+    ],
+    "textureRendering": "EMBEDDED_BASE_COLOR_MASK_V1",
+    "cardanTreatment": "VISUAL_ONLY_PART_PAIR_NO_TORQUE_TRANSFER"
+  }
+}

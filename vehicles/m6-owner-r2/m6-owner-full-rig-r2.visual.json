@@ -1,0 +1,1614 @@
+{
+  "format": "jv-web-vehicle-visual-package",
+  "schemaVersion": 1,
+  "id": "m6-owner-full-rig-r2",
+  "displayName": "M6 Owner Full Rig R2",
+  "vehicleFamily": "M6",
+  "rigProfile": "M6_FULL_RIG_V1",
+  "units": "meter",
+  "axes": {
+    "forward": "+X",
+    "up": "+Y",
+    "right": "+Z"
+  },
+  "asset": {
+    "kind": "GLB",
+    "url": "models/m6-owner-full-rig-r2.glb",
+    "sha256": "5b6421cb9991adff4a467b559ec2b69e25ea1667bd7cfee1e189d3d94cd116b3",
+    "byteLength": 829076
+  },
+  "bindings": [
+    {
+      "bindingId": "owner.chassis",
+      "nodeName": "JV_R2_Real_owner_chassis",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.chassis"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          -0.6,
+          0
+        ],
+        "rotation": [
+          0,
+          -0.7071067811865476,
+          0,
+          0.7071067811865476
+        ],
+        "scale": [
+          0.35,
+          0.35,
+          0.35
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fl.wheel",
+      "nodeName": "JV_R2_Real_owner_fl_wheel",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.fl.wheel"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fr.wheel",
+      "nodeName": "JV_R2_Real_owner_fr_wheel",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.fr.wheel"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rl.wheel",
+      "nodeName": "JV_R2_Real_owner_rl_wheel",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.rl.wheel"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rr.wheel",
+      "nodeName": "JV_R2_Real_owner_rr_wheel",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.rr.wheel"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "diagnostic.rack.coverage",
+      "nodeName": "JV_R2_Diagnostic_diagnostic_rack_coverage",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.rack"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fl.upper-arm",
+      "nodeName": "JV_R2_Real_owner_fl_upper_arm",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.fl.upper-arm"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fl.lower-arm",
+      "nodeName": "JV_R2_Real_owner_fl_lower_arm",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.fl.lower-arm"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fl.knuckle.socket-chassismount-b",
+      "nodeName": "JV_R2_Real_owner_fl_knuckle_socket_chassismount_b",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.fl.knuckle"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fl.knuckle.socket-wheelcenter",
+      "nodeName": "JV_R2_Real_owner_fl_knuckle_socket_wheelcenter",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.fl.knuckle"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fl.chassis-bracket.socket-chassismount-a",
+      "nodeName": "JV_R2_Real_owner_fl_chassis_bracket_socket_chassismount_a",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.chassis"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fl.chassis-bracket.socket-singledamper-mount",
+      "nodeName": "JV_R2_Real_owner_fl_chassis_bracket_socket_singledamper_mount",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.chassis"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fl.coilover.upper",
+      "nodeName": "JV_R2_Real_owner_fl_coilover_upper",
+      "source": {
+        "kind": "SEGMENT_ENDPOINT_AIM",
+        "segmentId": "m6.fl.coilover",
+        "endpoint": "START",
+        "axis": "-Y"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          -0.5249999999999999,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          0.35,
+          0.35,
+          0.35
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fl.coilover.stretch",
+      "nodeName": "JV_R2_Real_owner_fl_coilover_stretch",
+      "source": {
+        "kind": "SEGMENT_STRETCH",
+        "segmentId": "m6.fl.coilover",
+        "axis": "+Y",
+        "referenceLengthMeters": 0.31171875
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fl.coilover.lower",
+      "nodeName": "JV_R2_Real_owner_fl_coilover_lower",
+      "source": {
+        "kind": "SEGMENT_ENDPOINT_AIM",
+        "segmentId": "m6.fl.coilover",
+        "endpoint": "END",
+        "axis": "+Y"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0.1640625,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          0.35,
+          0.35,
+          0.35
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fl.steering-link",
+      "nodeName": "JV_R2_Real_owner_fl_steering_link",
+      "source": {
+        "kind": "SEGMENT_STRETCH",
+        "segmentId": "m6.fl.steering-link",
+        "axis": "+Y",
+        "referenceLengthMeters": 0.73828125
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fl.cardan.drive-end",
+      "nodeName": "JV_R2_Real_owner_fl_cardan_drive_end",
+      "source": {
+        "kind": "PART_PAIR_ENDPOINT_AIM",
+        "startPartId": "m6.chassis",
+        "startLocalPosition": [
+          1.25,
+          -0.55,
+          -0.32812500000000006
+        ],
+        "endPartId": "m6.fl.knuckle",
+        "endLocalPosition": [
+          0,
+          0,
+          0.17500000000000004
+        ],
+        "endpoint": "START",
+        "axis": "-X"
+      },
+      "localFromSource": {
+        "position": [
+          -0.06562499999999999,
+          -0.175,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          0.35,
+          0.35,
+          0.35
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fl.cardan.mid",
+      "nodeName": "JV_R2_Real_owner_fl_cardan_mid",
+      "source": {
+        "kind": "PART_PAIR_STRETCH",
+        "startPartId": "m6.chassis",
+        "startLocalPosition": [
+          1.25,
+          -0.55,
+          -0.32812500000000006
+        ],
+        "endPartId": "m6.fl.knuckle",
+        "endLocalPosition": [
+          0,
+          0,
+          0.17500000000000004
+        ],
+        "axis": "-X",
+        "referenceLengthMeters": 0.37187499999999996
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fl.cardan.hub-end",
+      "nodeName": "JV_R2_Real_owner_fl_cardan_hub_end",
+      "source": {
+        "kind": "PART_PAIR_ENDPOINT_AIM",
+        "startPartId": "m6.chassis",
+        "startLocalPosition": [
+          1.25,
+          -0.55,
+          -0.32812500000000006
+        ],
+        "endPartId": "m6.fl.knuckle",
+        "endLocalPosition": [
+          0,
+          0,
+          0.17500000000000004
+        ],
+        "endpoint": "END",
+        "axis": "+X"
+      },
+      "localFromSource": {
+        "position": [
+          0.21875,
+          -0.175,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          0.35,
+          0.35,
+          0.35
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fr.upper-arm",
+      "nodeName": "JV_R2_Real_owner_fr_upper_arm",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.fr.upper-arm"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fr.lower-arm",
+      "nodeName": "JV_R2_Real_owner_fr_lower_arm",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.fr.lower-arm"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fr.knuckle.socket-chassismount-b",
+      "nodeName": "JV_R2_Real_owner_fr_knuckle_socket_chassismount_b",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.fr.knuckle"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fr.knuckle.socket-wheelcenter",
+      "nodeName": "JV_R2_Real_owner_fr_knuckle_socket_wheelcenter",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.fr.knuckle"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fr.chassis-bracket.socket-chassismount-a",
+      "nodeName": "JV_R2_Real_owner_fr_chassis_bracket_socket_chassismount_a",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.chassis"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fr.chassis-bracket.socket-singledamper-mount",
+      "nodeName": "JV_R2_Real_owner_fr_chassis_bracket_socket_singledamper_mount",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.chassis"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fr.coilover.upper",
+      "nodeName": "JV_R2_Real_owner_fr_coilover_upper",
+      "source": {
+        "kind": "SEGMENT_ENDPOINT_AIM",
+        "segmentId": "m6.fr.coilover",
+        "endpoint": "START",
+        "axis": "-Y"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          -0.5249999999999999,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          0.35,
+          0.35,
+          0.35
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fr.coilover.stretch",
+      "nodeName": "JV_R2_Real_owner_fr_coilover_stretch",
+      "source": {
+        "kind": "SEGMENT_STRETCH",
+        "segmentId": "m6.fr.coilover",
+        "axis": "+Y",
+        "referenceLengthMeters": 0.31171875
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fr.coilover.lower",
+      "nodeName": "JV_R2_Real_owner_fr_coilover_lower",
+      "source": {
+        "kind": "SEGMENT_ENDPOINT_AIM",
+        "segmentId": "m6.fr.coilover",
+        "endpoint": "END",
+        "axis": "+Y"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0.1640625,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          0.35,
+          0.35,
+          0.35
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fr.steering-link",
+      "nodeName": "JV_R2_Real_owner_fr_steering_link",
+      "source": {
+        "kind": "SEGMENT_STRETCH",
+        "segmentId": "m6.fr.steering-link",
+        "axis": "+Y",
+        "referenceLengthMeters": 0.73828125
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fr.cardan.drive-end",
+      "nodeName": "JV_R2_Real_owner_fr_cardan_drive_end",
+      "source": {
+        "kind": "PART_PAIR_ENDPOINT_AIM",
+        "startPartId": "m6.chassis",
+        "startLocalPosition": [
+          1.25,
+          -0.55,
+          0.32812500000000006
+        ],
+        "endPartId": "m6.fr.knuckle",
+        "endLocalPosition": [
+          0,
+          0,
+          -0.17500000000000004
+        ],
+        "endpoint": "START",
+        "axis": "-X"
+      },
+      "localFromSource": {
+        "position": [
+          -0.06562499999999999,
+          -0.175,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          0.35,
+          0.35,
+          0.35
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fr.cardan.mid",
+      "nodeName": "JV_R2_Real_owner_fr_cardan_mid",
+      "source": {
+        "kind": "PART_PAIR_STRETCH",
+        "startPartId": "m6.chassis",
+        "startLocalPosition": [
+          1.25,
+          -0.55,
+          0.32812500000000006
+        ],
+        "endPartId": "m6.fr.knuckle",
+        "endLocalPosition": [
+          0,
+          0,
+          -0.17500000000000004
+        ],
+        "axis": "-X",
+        "referenceLengthMeters": 0.37187499999999996
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.fr.cardan.hub-end",
+      "nodeName": "JV_R2_Real_owner_fr_cardan_hub_end",
+      "source": {
+        "kind": "PART_PAIR_ENDPOINT_AIM",
+        "startPartId": "m6.chassis",
+        "startLocalPosition": [
+          1.25,
+          -0.55,
+          0.32812500000000006
+        ],
+        "endPartId": "m6.fr.knuckle",
+        "endLocalPosition": [
+          0,
+          0,
+          -0.17500000000000004
+        ],
+        "endpoint": "END",
+        "axis": "+X"
+      },
+      "localFromSource": {
+        "position": [
+          0.21875,
+          -0.175,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          0.35,
+          0.35,
+          0.35
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rl.upper-arm",
+      "nodeName": "JV_R2_Real_owner_rl_upper_arm",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.rl.upper-arm"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rl.lower-arm",
+      "nodeName": "JV_R2_Real_owner_rl_lower_arm",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.rl.lower-arm"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rl.knuckle.socket-wheelcenter",
+      "nodeName": "JV_R2_Real_owner_rl_knuckle_socket_wheelcenter",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.rl.knuckle"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rl.chassis-bracket.socket-chassismount",
+      "nodeName": "JV_R2_Real_owner_rl_chassis_bracket_socket_chassismount",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.chassis"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rl.coilover.upper",
+      "nodeName": "JV_R2_Real_owner_rl_coilover_upper",
+      "source": {
+        "kind": "SEGMENT_ENDPOINT_AIM",
+        "segmentId": "m6.rl.coilover",
+        "endpoint": "START",
+        "axis": "-Y"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          -0.5249999999999999,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          0.35,
+          0.35,
+          0.35
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rl.coilover.stretch",
+      "nodeName": "JV_R2_Real_owner_rl_coilover_stretch",
+      "source": {
+        "kind": "SEGMENT_STRETCH",
+        "segmentId": "m6.rl.coilover",
+        "axis": "+Y",
+        "referenceLengthMeters": 0.31171875
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rl.coilover.lower",
+      "nodeName": "JV_R2_Real_owner_rl_coilover_lower",
+      "source": {
+        "kind": "SEGMENT_ENDPOINT_AIM",
+        "segmentId": "m6.rl.coilover",
+        "endpoint": "END",
+        "axis": "+Y"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0.1640625,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          0.35,
+          0.35,
+          0.35
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rl.steering-link",
+      "nodeName": "JV_R2_Real_owner_rl_steering_link",
+      "source": {
+        "kind": "SEGMENT_STRETCH",
+        "segmentId": "m6.rl.steering-link",
+        "axis": "+Y",
+        "referenceLengthMeters": 0.73828125
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rl.cardan.drive-end",
+      "nodeName": "JV_R2_Real_owner_rl_cardan_drive_end",
+      "source": {
+        "kind": "PART_PAIR_ENDPOINT_AIM",
+        "startPartId": "m6.chassis",
+        "startLocalPosition": [
+          -1.25,
+          -0.55,
+          -0.32812500000000006
+        ],
+        "endPartId": "m6.rl.knuckle",
+        "endLocalPosition": [
+          0,
+          0,
+          0.21875
+        ],
+        "endpoint": "START",
+        "axis": "-X"
+      },
+      "localFromSource": {
+        "position": [
+          -0.06562499999999999,
+          -0.175,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          0.35,
+          0.35,
+          0.35
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rl.cardan.mid",
+      "nodeName": "JV_R2_Real_owner_rl_cardan_mid",
+      "source": {
+        "kind": "PART_PAIR_STRETCH",
+        "startPartId": "m6.chassis",
+        "startLocalPosition": [
+          -1.25,
+          -0.55,
+          -0.32812500000000006
+        ],
+        "endPartId": "m6.rl.knuckle",
+        "endLocalPosition": [
+          0,
+          0,
+          0.21875
+        ],
+        "axis": "-X",
+        "referenceLengthMeters": 0.37187499999999996
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rl.cardan.hub-end",
+      "nodeName": "JV_R2_Real_owner_rl_cardan_hub_end",
+      "source": {
+        "kind": "PART_PAIR_ENDPOINT_AIM",
+        "startPartId": "m6.chassis",
+        "startLocalPosition": [
+          -1.25,
+          -0.55,
+          -0.32812500000000006
+        ],
+        "endPartId": "m6.rl.knuckle",
+        "endLocalPosition": [
+          0,
+          0,
+          0.21875
+        ],
+        "endpoint": "END",
+        "axis": "+X"
+      },
+      "localFromSource": {
+        "position": [
+          0.21875,
+          -0.175,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          0.35,
+          0.35,
+          0.35
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rr.upper-arm",
+      "nodeName": "JV_R2_Real_owner_rr_upper_arm",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.rr.upper-arm"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rr.lower-arm",
+      "nodeName": "JV_R2_Real_owner_rr_lower_arm",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.rr.lower-arm"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rr.knuckle.socket-wheelcenter",
+      "nodeName": "JV_R2_Real_owner_rr_knuckle_socket_wheelcenter",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.rr.knuckle"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rr.chassis-bracket.socket-chassismount",
+      "nodeName": "JV_R2_Real_owner_rr_chassis_bracket_socket_chassismount",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.chassis"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rr.coilover.upper",
+      "nodeName": "JV_R2_Real_owner_rr_coilover_upper",
+      "source": {
+        "kind": "SEGMENT_ENDPOINT_AIM",
+        "segmentId": "m6.rr.coilover",
+        "endpoint": "START",
+        "axis": "-Y"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          -0.5249999999999999,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          0.35,
+          0.35,
+          0.35
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rr.coilover.stretch",
+      "nodeName": "JV_R2_Real_owner_rr_coilover_stretch",
+      "source": {
+        "kind": "SEGMENT_STRETCH",
+        "segmentId": "m6.rr.coilover",
+        "axis": "+Y",
+        "referenceLengthMeters": 0.31171875
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rr.coilover.lower",
+      "nodeName": "JV_R2_Real_owner_rr_coilover_lower",
+      "source": {
+        "kind": "SEGMENT_ENDPOINT_AIM",
+        "segmentId": "m6.rr.coilover",
+        "endpoint": "END",
+        "axis": "+Y"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0.1640625,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          0.35,
+          0.35,
+          0.35
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rr.steering-link",
+      "nodeName": "JV_R2_Real_owner_rr_steering_link",
+      "source": {
+        "kind": "SEGMENT_STRETCH",
+        "segmentId": "m6.rr.steering-link",
+        "axis": "+Y",
+        "referenceLengthMeters": 0.73828125
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rr.cardan.drive-end",
+      "nodeName": "JV_R2_Real_owner_rr_cardan_drive_end",
+      "source": {
+        "kind": "PART_PAIR_ENDPOINT_AIM",
+        "startPartId": "m6.chassis",
+        "startLocalPosition": [
+          -1.25,
+          -0.55,
+          0.32812500000000006
+        ],
+        "endPartId": "m6.rr.knuckle",
+        "endLocalPosition": [
+          0,
+          0,
+          -0.21875
+        ],
+        "endpoint": "START",
+        "axis": "-X"
+      },
+      "localFromSource": {
+        "position": [
+          -0.06562499999999999,
+          -0.175,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          0.35,
+          0.35,
+          0.35
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rr.cardan.mid",
+      "nodeName": "JV_R2_Real_owner_rr_cardan_mid",
+      "source": {
+        "kind": "PART_PAIR_STRETCH",
+        "startPartId": "m6.chassis",
+        "startLocalPosition": [
+          -1.25,
+          -0.55,
+          0.32812500000000006
+        ],
+        "endPartId": "m6.rr.knuckle",
+        "endLocalPosition": [
+          0,
+          0,
+          -0.21875
+        ],
+        "axis": "-X",
+        "referenceLengthMeters": 0.37187499999999996
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "owner.rr.cardan.hub-end",
+      "nodeName": "JV_R2_Real_owner_rr_cardan_hub_end",
+      "source": {
+        "kind": "PART_PAIR_ENDPOINT_AIM",
+        "startPartId": "m6.chassis",
+        "startLocalPosition": [
+          -1.25,
+          -0.55,
+          0.32812500000000006
+        ],
+        "endPartId": "m6.rr.knuckle",
+        "endLocalPosition": [
+          0,
+          0,
+          -0.21875
+        ],
+        "endpoint": "END",
+        "axis": "+X"
+      },
+      "localFromSource": {
+        "position": [
+          0.21875,
+          -0.175,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          0.35,
+          0.35,
+          0.35
+        ]
+      }
+    }
+  ]
+}
