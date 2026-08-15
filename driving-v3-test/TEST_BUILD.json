@@ -1,0 +1,24 @@
+{
+  "schema": "JV_WEB_MOBILE_DRIVING_V3_DEVICE_GATE_V1",
+  "classification": "NONCANONICAL_OWNER_DEVICE_EXPERIMENT",
+  "base": {
+    "publicAnalogV1": "b6b91cad54966944af47f31d11721d2695066992",
+    "privateSteeringV2": "b9dd4f98ecee192af3302150c95542c772033949",
+    "private35DegreeBridge": "d6c646b65a0d57306e138175209c0f652bdbfbda"
+  },
+  "experiment": {
+    "steering": "X-only POSITION gesture with panoramic rotating wheel-arc feedback",
+    "throttle": "relative upward 0..1 analog pedal",
+    "brake": "relative upward 0..1 analog pedal",
+    "pedalGestureGeometry": "frozen at pointerdown so animated scaling cannot change command",
+    "reverse": "existing binary reverse retained for this slice"
+  },
+  "excluded": [
+    "final steering design",
+    "D/R selector semantics",
+    "final throttle/brake curves or haptics",
+    "final rig/handling authority",
+    "canonical Node24/npm11/TypeScript7/Vite build",
+    "ordinary Friends release promotion"
+  ]
+}

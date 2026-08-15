@@ -1,0 +1,257 @@
+/* JV Web Mobile Driving V3 — panoramic wheel + analog pedals.
+   Input geometry stays stable while internal visuals animate. */
+
+.mobile-steering-joystick {
+  --steering-angle: 0deg;
+  --steering-strength: 0;
+  width: clamp(168px, 44vw, 222px);
+  height: clamp(72px, 19vw, 88px);
+  overflow: hidden;
+  border-color: rgba(163, 205, 255, .4);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 50% 130%, rgba(74, 121, 171, .2), transparent 52%),
+    linear-gradient(180deg, rgba(42, 66, 94, .96), rgba(17, 29, 46, .98));
+}
+
+/* V2's linear rack becomes a shallow steering wheel viewed from a steep angle.
+   The touch contract is still strictly X-only. */
+.mobile-steering-joystick::before {
+  left: 7%;
+  right: 7%;
+  top: auto;
+  bottom: -53px;
+  height: 120px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow:
+    0 -1px 0 rgba(213, 232, 252, .12),
+    inset 0 13px 22px rgba(0, 0, 0, .2);
+  pointer-events: none;
+}
+
+.mobile-steering-joystick::after {
+  z-index: 5;
+  left: 50%;
+  top: 18px;
+  width: 3px;
+  height: 10px;
+  border: 0;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  background: rgba(255, 205, 71, .88);
+  box-shadow: 0 0 9px rgba(255, 205, 71, .32);
+}
+
+.mobile-steering-axis {
+  left: 50%;
+  top: -15px;
+  width: 174px;
+  height: 174px;
+  inset: auto;
+  transform: translateX(-50%) scaleY(.34);
+  transform-origin: 50% 50%;
+  transition: transform 110ms ease, filter 100ms ease;
+}
+
+.mobile-steering-thumb {
+  left: 0;
+  top: 0;
+  width: 174px;
+  height: 174px;
+  aspect-ratio: 1;
+  transform: rotate(var(--steering-angle));
+  transform-origin: 50% 50%;
+  border: 0;
+  border-radius: 50%;
+  background:
+    conic-gradient(
+      from -2deg,
+      #ffd35a 0 3deg,
+      rgba(212, 231, 249, .95) 3deg 8deg,
+      rgba(62, 91, 121, .92) 8deg 43deg,
+      rgba(154, 189, 222, .78) 43deg 49deg,
+      rgba(48, 76, 105, .94) 49deg 91deg,
+      rgba(161, 196, 229, .78) 91deg 97deg,
+      rgba(48, 76, 105, .94) 97deg 271deg,
+      rgba(161, 196, 229, .78) 271deg 277deg,
+      rgba(48, 76, 105, .94) 277deg 319deg,
+      rgba(154, 189, 222, .78) 319deg 325deg,
+      rgba(62, 91, 121, .92) 325deg 352deg,
+      rgba(212, 231, 249, .95) 352deg 357deg,
+      #ffd35a 357deg 360deg
+    );
+  -webkit-mask: radial-gradient(circle, transparent 0 63%, #000 64% 78%, transparent 79%);
+  mask: radial-gradient(circle, transparent 0 63%, #000 64% 78%, transparent 79%);
+  box-shadow: none;
+  transition: transform 54ms linear, filter 90ms ease;
+}
+
+.mobile-steering-joystick[data-active] .mobile-steering-axis {
+  transform: translateX(-50%) scale(1.055) scaleY(.36) translateY(-2px);
+  filter: brightness(1.08);
+}
+
+.mobile-steering-joystick[data-active] .mobile-steering-thumb {
+  transform: rotate(var(--steering-angle));
+  filter: brightness(1.07);
+}
+
+.mobile-steering-joystick small {
+  bottom: 5px;
+}
+
+.mobile-drive-controls {
+  --pedal-gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(58px, 72px));
+  grid-template-areas:
+    "throttle brake"
+    "reverse reverse";
+  align-items: end;
+  justify-items: center;
+  gap: var(--pedal-gap);
+  width: auto;
+  margin-right: clamp(8px, 2.4vw, 16px);
+  margin-bottom: clamp(12px, 2.8vh, 22px);
+}
+
+.mobile-pedal {
+  --pedal-value: 0;
+  position: relative;
+  width: clamp(60px, 16vw, 76px);
+  height: clamp(116px, 30vw, 150px);
+  overflow: hidden;
+  padding: 10px 7px 9px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 17px;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  color: #f7fbff;
+  transform-origin: 50% 100%;
+  transition:
+    transform 115ms cubic-bezier(.2,.75,.2,1),
+    opacity 115ms ease,
+    filter 90ms ease,
+    border-color 90ms ease;
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, .3),
+    inset 0 1px rgba(255,255,255,.12);
+}
+
+.mobile-pedal-throttle { grid-area: throttle; background: linear-gradient(180deg, rgba(37, 111, 71, .92), rgba(19, 70, 45, .97)); }
+.mobile-pedal-brake { grid-area: brake; background: linear-gradient(180deg, rgba(133, 64, 55, .94), rgba(90, 40, 35, .98)); }
+
+.mobile-pedal::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(var(--pedal-value) * 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.22));
+  box-shadow: 0 -2px 14px rgba(255,255,255,.08);
+  transition: height 42ms linear;
+}
+
+.mobile-pedal::after {
+  content: attr(data-value-text);
+  position: absolute;
+  z-index: 3;
+  top: 7px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font: 800 .48rem/1 ui-monospace, monospace;
+  letter-spacing: .06em;
+  color: rgba(239, 247, 255, .8);
+  pointer-events: none;
+}
+
+.mobile-pedal-face {
+  position: absolute;
+  z-index: 2;
+  left: 18%;
+  right: 18%;
+  top: 28px;
+  height: 55%;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 10px;
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.18) 0 2px, transparent 2px 9px),
+    linear-gradient(180deg, rgba(255,255,255,.11), rgba(0,0,0,.08));
+  transform: translateY(calc(var(--pedal-value) * 7px)) scaleY(calc(1 - var(--pedal-value) * .06));
+  transform-origin: 50% 100%;
+  transition: transform 45ms linear;
+  pointer-events: none;
+}
+
+.mobile-pedal small {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  font-size: .48rem;
+  letter-spacing: .07em;
+  pointer-events: none;
+}
+
+.mobile-pedal[data-active] {
+  transform: scaleX(1.09) scaleY(1.055) translateY(-3px);
+  filter: brightness(1.08);
+  border-color: rgba(221, 238, 255, .48);
+}
+
+.mobile-drive-controls[data-throttle-active] .mobile-pedal-brake:not([data-active]),
+.mobile-drive-controls[data-brake-active] .mobile-pedal-throttle:not([data-active]) {
+  transform: scale(.9);
+  opacity: .68;
+}
+
+.mobile-drive-controls .mobile-control-drive[data-pointer-control="REVERSE"] {
+  grid-area: reverse;
+  width: 100%;
+  min-height: 42px;
+  height: 42px;
+  border-radius: 12px;
+  padding: 6px 10px;
+}
+
+.mobile-drive-controls .mobile-control-drive[data-pointer-control="REVERSE"] span {
+  display: none;
+}
+
+.mobile-drive-controls .mobile-control-drive[data-pointer-control="REVERSE"] small {
+  font-size: .58rem;
+}
+
+@media (hover: none) and (pointer: coarse) and (orientation: landscape) {
+  .mobile-steering-joystick {
+    width: clamp(178px, 25vw, 230px);
+    height: clamp(66px, 16vh, 78px);
+  }
+  .mobile-steering-axis {
+    top: -24px;
+  }
+  .mobile-drive-controls {
+    grid-template-columns: repeat(2, minmax(52px, 64px));
+    margin-right: clamp(8px, 1.6vw, 18px);
+    margin-bottom: clamp(8px, 2vh, 16px);
+  }
+  .mobile-pedal {
+    width: clamp(54px, 8vw, 66px);
+    height: clamp(88px, 23vh, 112px);
+    border-radius: 14px;
+  }
+  .mobile-pedal-face {
+    top: 22px;
+  }
+  .mobile-drive-controls .mobile-control-drive[data-pointer-control="REVERSE"] {
+    height: 34px;
+    min-height: 34px;
+  }
+}
