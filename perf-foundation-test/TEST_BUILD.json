@@ -31,5 +31,12 @@
     "Not a canonical Node 24/npm 11/Vite build",
     "Do not use this transport to judge final cold-start packaging/network timing",
     "Use it to validate real browser runtime, scan rendering, physics, telemetry and steady-state performance"
-  ]
+  ],
+  "deviceExperiments": {
+    "uiFx": {
+      "baseline": "omit jvUiFx or set jvUiFx=full",
+      "lite": "jvUiFx=lite disables mobile backdrop-filter and heavy UI/HUD box-shadows only",
+      "purpose": "isolate browser compositor/UI effects from JV renderer, physics, scan and texture workload"
+    }
+  }
 }

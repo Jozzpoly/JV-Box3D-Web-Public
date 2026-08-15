@@ -6,6 +6,13 @@
   <meta name="theme-color" content="#111318" />
   <title>JV Web — Performance Foundation Device Gate</title>
   <base href="../" />
+  <script>
+    (() => {
+      const params = new URLSearchParams(window.location.search);
+      document.documentElement.dataset.jvUiFx = params.get("jvUiFx") === "lite" ? "lite" : "full";
+    })();
+  </script>
+  <link rel="stylesheet" href="perf-foundation-test/ui-fx-ab.css" />
 </head>
 <body>
   <div id="app"></div>
