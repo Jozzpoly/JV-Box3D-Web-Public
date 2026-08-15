@@ -1,42 +1,33 @@
 {
-  "schema": "JV_WEB_PERF_FOUNDATION_DEVICE_GATE_V1",
-  "status": "NONCANONICAL_DEVICE_GATE",
-  "purpose": "Real Chrome/A53 runtime validation before canonical Vite promotion",
-  "source": {
-    "rehearsalCommit": "1a3a526007bf4a5042f0a003fbb5ae9928f811ac",
+  "schema": "JV_WEB_PERF_FOUNDATION_DEVICE_GATE_V2",
+  "status": "NONCANONICAL_PASS2_OBSERVABILITY_GATE",
+  "purpose": "A53 Chrome scan bottleneck classification after owner-validated compositor P0",
+  "base": {
     "tree": "a7f7e643a94b2e4cffc911032878031f3428551d",
-    "bundleSha256": "6de1a8dc307e671526597660a9cb3e8d012621ce0d3142c07451ad9d78262028"
+    "payloadSha256": "9c05c1fb1377dd5f78a75dca9d1e879d2f49c9f9af2867cce9f2eb1aaea1d86a",
+    "ownerValidatedP0PublicCommit": "3beee60d1820735fe8940976c05130f52ea1f1dd"
   },
-  "payload": {
-    "partsPattern": "payload-XX.b64",
-    "partCount": 24,
-    "base64Chars": 142136,
-    "decodedGzipBytes": 106600,
-    "sha256": "9c05c1fb1377dd5f78a75dca9d1e879d2f49c9f9af2867cce9f2eb1aaea1d86a",
-    "moduleCount": 88
+  "target": {
+    "localBundleCommit": "7c18d04d503a1a0f4262434220378b70aa92c489",
+    "tree": "32f3cc4763c79ac6c5fd9b3812b7a6d6874b557b",
+    "bundleSha256": "c6ca33d89855cd2381e3914d4716173fb252b84138b21b602f645390b1a7df4b"
   },
-  "box3d": {
-    "packageVersion": "0.0.2",
-    "bindingCommit": "2617a0ff763a60c9f17cee57c6ea72aab75a5077",
-    "variant": "inline-single-threaded",
-    "transport": "jsDelivr GitHub commit-pinned module"
+  "patch": {
+    "partsPattern": "pass2-patch-XX.b64",
+    "partCount": 4,
+    "base64Chars": 19084,
+    "decodedGzipBytes": 14313,
+    "sha256": "8ca5180bdc6eeea950ebe569f855c9efa4bccb7606ca7d074c8390b99ed0b3ec",
+    "moduleCount": 5
   },
-  "defaults": {
-    "jvSpawn": "scan",
-    "jvPerfHud": "1",
-    "jvRenderScale": "1",
-    "scanCulling": true
-  },
-  "boundaries": [
-    "Not a canonical Node 24/npm 11/Vite build",
-    "Do not use this transport to judge final cold-start packaging/network timing",
-    "Use it to validate real browser runtime, scan rendering, physics, telemetry and steady-state performance"
+  "observability": [
+    "scan index load ms",
+    "tile pipeline wall ms",
+    "cumulative synchronous parseTile CPU ms",
+    "collision merge ms",
+    "texture ready/pending/failed counts",
+    "cumulative synchronous texImage2D upload CPU ms",
+    "SETTLED waits for texture completion"
   ],
-  "deviceExperiments": {
-    "uiFx": {
-      "baseline": "omit jvUiFx or set jvUiFx=full",
-      "lite": "jvUiFx=lite disables mobile backdrop-filter and heavy UI/HUD box-shadows only",
-      "purpose": "isolate browser compositor/UI effects from JV renderer, physics, scan and texture workload"
-    }
-  }
+  "boundary": "Instrumentation only: loader/texture/physics/render policy unchanged versus grounded A+B+C"
 }
