@@ -1,6 +1,6 @@
 {
-  "schema": "JV_WEB_FRIENDS_LIVE_OVERLAY_V2",
-  "purpose": "PHONE_SCAN_PERFORMANCE_A_B",
+  "schema": "JV_WEB_FRIENDS_LIVE_OVERLAY_V3",
+  "purpose": "PHONE_SCAN_PERFORMANCE_AND_SHORT_LANDSCAPE",
   "baseKnownGoodPublicCommit": "7161215e47f00573b8c1b5c31e5931c89f9d709a",
   "knownGoodCheckpointBranch": "checkpoint/pages-friends-r1-known-good-2026-08-15",
   "privatePerformanceCheckpoint": "20eca0451c81581649e061c8bc61d45001e32601",
@@ -15,6 +15,7 @@
     "ROLLING_FRAME_HUD",
     "WEBGL_DRAW_TELEMETRY"
   ],
+  "liveUiSlices": ["SHORT_LANDSCAPE_CONTROLS_V1"],
   "defaultBehaviorPreserved": true,
   "preservedPublicPayload": ["compiled-app", "__jv_scan__", "vehicles", "scenes", "receipts"],
   "queryControls": {
@@ -38,9 +39,21 @@
     ],
     "drawTelemetryScope": "ALL_WEBGL_DRAW_ARRAYS_AND_DRAW_ELEMENTS"
   },
+  "shortLandscape": {
+    "stylesheet": "jv-live-mobile.css",
+    "media": "orientation:landscape, max-height:520px, max-width:980px",
+    "changes": [
+      "drive controls collapse from two rows to one",
+      "touch buttons shrink for short viewport",
+      "speed readout hides",
+      "camera/reset actions move above touch controls",
+      "portrait and normal desktop remain outside the media query"
+    ]
+  },
   "validation": {
     "kind": "LIVE_TEST_SUPPLEMENTAL",
     "overlaySyntax": "PASS_NODE_CHECK",
+    "shortLandscapeRenderedValidation": "PENDING_OWNER_DEVICE",
     "forcedDevicePixelRatio": 3,
     "observedBackingScale": {
       "default": 2,
