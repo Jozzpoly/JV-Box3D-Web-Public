@@ -1,21 +1,46 @@
 {
-  "schema": "JV_WEB_FRIENDS_LIVE_OVERLAY_V1",
+  "schema": "JV_WEB_FRIENDS_LIVE_OVERLAY_V2",
   "purpose": "PHONE_SCAN_PERFORMANCE_A_B",
   "baseKnownGoodPublicCommit": "7161215e47f00573b8c1b5c31e5931c89f9d709a",
   "knownGoodCheckpointBranch": "checkpoint/pages-friends-r1-known-good-2026-08-15",
   "privatePerformanceCheckpoint": "20eca0451c81581649e061c8bc61d45001e32601",
+  "privateLiveObserverCommits": [
+    "fa597c202e19f74ec7acd99ca6f27057856262a2",
+    "331920ff5691ad4f1970defef8e16be8e400dd2a"
+  ],
   "deployedSourceScope": "PUBLIC_LIVE_OVERLAY_ONLY",
   "performanceSlicesInPrivateCheckpoint": ["PERF-S1", "PERF-S2", "PERF-S3"],
-  "performanceSlicesDeployedByThisOverlay": ["RENDER_SCALE_A_B", "PERF_HUD"],
+  "performanceSlicesDeployedByThisOverlay": [
+    "RENDER_SCALE_A_B",
+    "ROLLING_FRAME_HUD",
+    "WEBGL_DRAW_TELEMETRY"
+  ],
   "defaultBehaviorPreserved": true,
   "preservedPublicPayload": ["compiled-app", "__jv_scan__", "vehicles", "scenes", "receipts"],
   "queryControls": {
     "jvRenderScale": ["1", "1.5", "2"],
     "jvPerfHud": ["1"]
   },
+  "telemetry": {
+    "rollingWindowMs": 2000,
+    "settledAfterMs": 1500,
+    "updateEveryMs": 500,
+    "reports": [
+      "averageFrameMs",
+      "fps",
+      "p95FrameMs",
+      "canvasBackingResolution",
+      "effectiveRenderScale",
+      "drawCallsPerFrame",
+      "trianglesPerFrame",
+      "nativeDevicePixelRatio",
+      "renderScaleCap"
+    ],
+    "drawTelemetryScope": "ALL_WEBGL_DRAW_ARRAYS_AND_DRAW_ELEMENTS"
+  },
   "validation": {
     "kind": "LIVE_TEST_SUPPLEMENTAL",
-    "browser": "Chromium 144 headless",
+    "overlaySyntax": "PASS_NODE_CHECK",
     "forcedDevicePixelRatio": 3,
     "observedBackingScale": {
       "default": 2,
