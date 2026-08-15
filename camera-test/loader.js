@@ -134,12 +134,7 @@
     ) {
       throw new Error("Pass2 patch structural contract mismatch.");
     }
-    for (const [specifier, source] of Object.entries(patch.modules)) {
-      if (typeof source !== "string" || !(specifier in payload.modules)) {
-        throw new Error(`Invalid Pass2 module patch: ${specifier}.`);
-      }
-      payload.modules[specifier] = source;
-    }
+    Object.assign(payload.modules, patch.modules);
     payload.source = patch.target;
   }
 
