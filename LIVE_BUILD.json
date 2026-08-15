@@ -1,0 +1,27 @@
+{
+  "schema": "JV_WEB_FRIENDS_LIVE_OVERLAY_V1",
+  "purpose": "PHONE_SCAN_PERFORMANCE_A_B",
+  "baseKnownGoodPublicCommit": "7161215e47f00573b8c1b5c31e5931c89f9d709a",
+  "knownGoodCheckpointBranch": "checkpoint/pages-friends-r1-known-good-2026-08-15",
+  "privatePerformanceCheckpoint": "20eca0451c81581649e061c8bc61d45001e32601",
+  "deployedSourceScope": "PUBLIC_LIVE_OVERLAY_ONLY",
+  "performanceSlicesInPrivateCheckpoint": ["PERF-S1", "PERF-S2", "PERF-S3"],
+  "performanceSlicesDeployedByThisOverlay": ["RENDER_SCALE_A_B", "PERF_HUD"],
+  "defaultBehaviorPreserved": true,
+  "preservedPublicPayload": ["compiled-app", "__jv_scan__", "vehicles", "scenes", "receipts"],
+  "queryControls": {
+    "jvRenderScale": ["1", "1.5", "2"],
+    "jvPerfHud": ["1"]
+  },
+  "validation": {
+    "kind": "LIVE_TEST_SUPPLEMENTAL",
+    "browser": "Chromium 144 headless",
+    "forcedDevicePixelRatio": 3,
+    "observedBackingScale": {
+      "default": 2,
+      "jvRenderScale=1.5": 1.5,
+      "jvRenderScale=1": 1,
+      "jvRenderScale=2": 2
+    }
+  }
+}
