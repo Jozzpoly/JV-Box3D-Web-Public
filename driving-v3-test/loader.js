@@ -69,7 +69,7 @@
       throw new Error("Driving V3 analog timeline identity mismatch.");
     }
     if (!pedalAdapterSource.includes("export class PointerLongitudinalPedalAdapter")) {
-      throw new Error,"Driving V3 pedal adapter identity mismatch.");
+      throw new Error("Driving V3 pedal adapter identity mismatch.");
     }
     payload.modules["jv/input/analog-longitudinal-timeline.js"] = analogTimelineSource;
     payload.modules["jv/input/pointer-longitudinal-pedal-adapter.js"] = pedalAdapterSource;
