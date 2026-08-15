@@ -1,0 +1,95 @@
+.mobile-steering-controls {
+  grid-template-columns: 1fr !important;
+  place-items: end start;
+}
+
+.mobile-steering-joystick {
+  --steering-x: 0%;
+  position: relative;
+  width: clamp(118px, 32vw, 154px);
+  height: clamp(118px, 32vw, 154px);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 45%, rgba(73,111,158,.94), rgba(31,56,88,.9) 68%, rgba(18,31,49,.94));
+  color: #f6f8fb;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.mobile-steering-joystick::before {
+  content: "";
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  top: 50%;
+  height: 2px;
+  transform: translateY(-50%);
+  border-radius: 2px;
+  background: rgba(215,229,248,.28);
+}
+
+.mobile-steering-joystick::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 31%;
+  bottom: 31%;
+  width: 2px;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  background: rgba(215,229,248,.2);
+}
+
+.mobile-steering-axis {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.mobile-steering-thumb {
+  position: absolute;
+  z-index: 2;
+  left: calc(50% + var(--steering-x));
+  top: 50%;
+  width: 42%;
+  aspect-ratio: 1;
+  transform: translate(-50%,-50%);
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 50%;
+  background: rgba(219,232,248,.92);
+  box-shadow: 0 6px 18px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.75);
+  transition: left 55ms linear, transform 70ms ease;
+}
+
+.mobile-steering-joystick[data-active] .mobile-steering-thumb {
+  transform: translate(-50%,-50%) scale(.94);
+}
+
+.mobile-steering-joystick small {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 9%;
+  transform: translateX(-50%);
+  font-size: .54rem;
+  font-weight: 850;
+  letter-spacing: .11em;
+  text-shadow: 0 1px 3px rgba(0,0,0,.55);
+  pointer-events: none;
+}
+
+@media (hover: none) and (pointer: coarse), (max-width: 620px) {
+  .mobile-steering-joystick,
+  .mobile-steering-thumb {
+    box-shadow: none;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) and (orientation: landscape) {
+  .mobile-steering-joystick {
+    width: clamp(108px, 27vh, 138px);
+    height: clamp(108px, 27vh, 138px);
+  }
+}
