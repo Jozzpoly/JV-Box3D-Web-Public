@@ -8,10 +8,12 @@
     "bundleSha256": "6de1a8dc307e671526597660a9cb3e8d012621ce0d3142c07451ad9d78262028"
   },
   "payload": {
-    "path": "payload.json.gz",
+    "partsPattern": "payload-XX.b64",
+    "partCount": 24,
+    "base64Chars": 142136,
+    "decodedGzipBytes": 106600,
     "sha256": "9c05c1fb1377dd5f78a75dca9d1e879d2f49c9f9af2867cce9f2eb1aaea1d86a",
-    "moduleCount": 88,
-    "gzipBytes": 106600
+    "moduleCount": 88
   },
   "box3d": {
     "packageVersion": "0.0.2",

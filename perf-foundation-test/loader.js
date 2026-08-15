@@ -2,6 +2,8 @@
   const SOURCE_COMMIT = "1a3a526007bf4a5042f0a003fbb5ae9928f811ac";
   const SOURCE_TREE = "a7f7e643a94b2e4cffc911032878031f3428551d";
   const PAYLOAD_SHA256 = "9c05c1fb1377dd5f78a75dca9d1e879d2f49c9f9af2867cce9f2eb1aaea1d86a";
+  const PAYLOAD_PART_COUNT = 24;
+  const PAYLOAD_BASE64_CHARS = 142136;
   const DEFAULTS = {
     jvSpawn: "scan",
     jvPerfHud: "1",
@@ -18,6 +20,8 @@
   }
   if (changed) window.history.replaceState(null, "", url.href);
 
+  // Classic-script globals intentionally provide the same free identifiers
+  // normally injected by Vite in the canonical build.
   globalThis.__JV_BUILD_SOURCE_COMMIT__ = SOURCE_COMMIT;
   globalThis.__JV_BUILD_SOURCE_MARKER__ = `JV_BUILD_SOURCE:${SOURCE_COMMIT}`;
   globalThis.__JV_PERF_TEST_TRANSPORT__ = Object.freeze({
@@ -44,12 +48,23 @@
       throw new Error("This Chrome build does not expose DecompressionStream(gzip).");
     }
     setBoot("Loading performance test payload…");
-    const payloadUrl = new URL("payload.json.gz", window.location.href);
-    const response = await fetch(payloadUrl, { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error(`Performance payload fetch failed: HTTP ${response.status}.`);
+    const partUrls = Array.from({ length: PAYLOAD_PART_COUNT }, (_, index) =>
+      new URL(`payload-${String(index).padStart(2, "0")}.b64`, window.location.href),
+    );
+    const parts = await Promise.all(partUrls.map(async (partUrl) => {
+      const response = await fetch(partUrl, { cache: "no-store" });
+      if (!response.ok) {
+        throw new Error(`Performance payload part fetch failed: HTTP ${response.status} ${partUrl.pathname}.`);
+      }
+      return (await response.text()).trim();
+    }));
+    const encoded = parts.join("");
+    if (encoded.length !== PAYLOAD_BASE64_CHARS) {
+      throw new Error(`Performance payload base64 length mismatch: ${encoded.length}.`);
     }
-    const compressed = await response.arrayBuffer();
+    const decoded = atob(encoded);
+    const compressedBytes = Uint8Array.from(decoded, (character) => character.charCodeAt(0));
+    const compressed = compressedBytes.buffer;
     const actualSha = await sha256Hex(compressed);
     if (actualSha !== PAYLOAD_SHA256) {
       throw new Error(`Performance payload SHA-256 mismatch: ${actualSha}.`);
