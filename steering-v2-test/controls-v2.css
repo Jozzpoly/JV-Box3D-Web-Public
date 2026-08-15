@@ -1,0 +1,27 @@
+/* Steering Control V2 — owner-facing mobile driving surface.
+   This layer intentionally overrides the original Analog Steering V1 probe
+   without changing its X-only POSITION input semantics. */
+.mobile-control[hidden] { display: none !important; }
+.mobile-steering-controls { margin-left: clamp(8px, 2.5vw, 16px); margin-bottom: clamp(12px, 2.8vh, 22px); }
+.mobile-steering-joystick { --steering-x: 0%; position: relative; width: clamp(144px, 40vw, 194px); height: clamp(66px, 18vw, 82px); overflow: hidden; border: 1px solid rgba(165,205,255,.34); border-radius: 18px; background: linear-gradient(180deg,rgba(51,78,111,.94),rgba(24,40,61,.96)); color:#f6f8fb; touch-action:none; user-select:none; -webkit-user-select:none; box-shadow:0 8px 24px rgba(0,0,0,.36),inset 0 1px 0 rgba(255,255,255,.13); }
+.mobile-steering-joystick::before { content:""; position:absolute; left:10%; right:10%; top:48%; height:16px; transform:translateY(-50%); border:1px solid rgba(213,229,249,.22); border-radius:7px; background:repeating-linear-gradient(90deg,rgba(227,238,251,.04) 0 10px,rgba(227,238,251,.18) 10px 11px),linear-gradient(180deg,rgba(8,15,24,.58),rgba(20,33,49,.72)); box-shadow:inset 0 2px 5px rgba(0,0,0,.36); }
+.mobile-steering-joystick::after { content:""; position:absolute; z-index:1; left:50%; top:48%; width:7px; height:7px; transform:translate(-50%,-50%) rotate(45deg); border:1px solid rgba(196,224,255,.64); background:rgba(113,169,226,.72); box-shadow:0 0 0 3px rgba(83,137,196,.12); }
+.mobile-steering-axis { position:absolute; inset:0; pointer-events:none; }
+.mobile-steering-thumb { position:absolute; z-index:2; left:calc(50% + var(--steering-x)); top:48%; width:27%; height:38px; aspect-ratio:auto; transform:translate(-50%,-50%); border:1px solid rgba(236,246,255,.62); border-radius:10px; background:repeating-linear-gradient(90deg,rgba(255,255,255,.12) 0 4px,rgba(255,255,255,0) 4px 8px),linear-gradient(180deg,rgba(218,235,252,.96),rgba(150,186,222,.94)); box-shadow:0 5px 14px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.78); transition:left 42ms linear,transform 70ms ease,filter 70ms ease; }
+.mobile-steering-joystick[data-active] .mobile-steering-thumb { transform:translate(-50%,-50%) scale(.96); filter:brightness(1.08); }
+.mobile-steering-joystick small { position:absolute; z-index:3; left:50%; bottom:6px; transform:translateX(-50%); font-size:.5rem; font-weight:850; letter-spacing:.16em; color:rgba(235,244,253,.86); text-shadow:0 1px 3px rgba(0,0,0,.6); pointer-events:none; }
+.mobile-steering-joystick:focus-visible { outline:2px solid rgba(165,211,255,.95); outline-offset:3px; }
+.panel[data-open] { z-index:18; }
+.scene-actions { z-index:22; }
+@media (hover:none) and (pointer:coarse), (max-width:620px) {
+  .mobile-steering-joystick { box-shadow:none; }
+  .scene-actions { top:calc(max(10px,env(safe-area-inset-top)) + 98px); right:max(12px,env(safe-area-inset-right)); bottom:auto; display:flex; flex-direction:column; align-items:flex-end; gap:5px; }
+  .scene-action { min-height:31px; padding:6px 8px; font-size:.58rem; }
+  .panel[data-open] { z-index:18; }
+}
+@media (hover:none) and (pointer:coarse) and (orientation:landscape) {
+  .mobile-steering-controls { margin-left:clamp(8px,1.8vw,18px); margin-bottom:clamp(8px,2vh,16px); }
+  .mobile-steering-joystick { width:clamp(158px,23vw,214px); height:clamp(60px,15vh,72px); }
+  .mobile-steering-thumb { height:34px; }
+  .scene-actions { top:calc(max(8px,env(safe-area-inset-top)) + 72px); bottom:auto; }
+}
