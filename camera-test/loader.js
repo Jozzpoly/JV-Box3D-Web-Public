@@ -7,11 +7,14 @@
   const PASS2_PATCH_SHA256 = "8ca5180bdc6eeea950ebe569f855c9efa4bccb7606ca7d074c8390b99ed0b3ec";
   const PASS2_PATCH_PART_COUNT = 4;
   const PASS2_PATCH_BASE64_CHARS = 19084;
+  const BASE_PAYLOAD_SCHEMA = "JV_WEB_PERF_FOUNDATION_NATIVE_ESM_PAYLOAD_V1";
+  const PASS2_PATCH_SCHEMA = "JV_WEB_PERF_FOUNDATION_NATIVE_ESM_PATCH_V1";
+  const CAMERA_PATCH_SCHEMA = "JV_WEB_CAMERA_NATIVE_ESM_PATCH_V1";
   const CAMERA_CANDIDATE_COMMIT = "fde0127aa726bd57a97b5815572a4067e94c3807";
   const CAMERA_CANDIDATE_TREE = "fa672d549ff5703766b150ea3d4e1c72a1dd4470";
   const PRIVATE_REMOTE_BASE = "dc8eab1ef3a24dcaab4b8fdff61da020c2518d5e";
   const CAMERA_PATCH_SHA256 = "fcc82118d607bed941b487d1f8222d291882c8f5ea51b600ade5b8ee04f1be78";
-  const CAMERA_PATCH_PART_COUNT = 2;
+  const CAMERA_PATCH_PART_COUNT = 8;
   const CAMERA_PATCH_BASE64_CHARS = 10532;
   const DEFAULTS = { jvSpawn: "offroad", jvRenderScale: "1" };
 
@@ -29,7 +32,7 @@
   globalThis.__JV_BUILD_SOURCE_COMMIT__ = "DEV";
   globalThis.__JV_BUILD_SOURCE_MARKER__ = `JV_CAMERA_GATE:${CAMERA_CANDIDATE_COMMIT}`;
   globalThis.__JV_CAMERA_DEVICE_GATE__ = Object.freeze({
-    kind: "NONCANONICAL_CAMERA_1B_PATCH_GATE",
+    kind: "NONCANONICAL_CAMERA_1B_PATCH_GATE_V2",
     baseTree: BASE_TREE,
     pass2Tree: PASS2_TARGET_TREE,
     cameraCandidateCommit: CAMERA_CANDIDATE_COMMIT,
@@ -95,15 +98,19 @@
       BASE64_CHARS,
     );
     const payload = await gunzipJson(bytes, BASE_PAYLOAD_SHA256, "Base payload");
+    if (payload?.schema !== BASE_PAYLOAD_SCHEMA) {
+      throw new Error(
+        `Base payload schema mismatch: expected ${BASE_PAYLOAD_SCHEMA}, got ${String(payload?.schema)}.`,
+      );
+    }
     if (
-      payload?.schema !== "JV_WEB_NATIVE_ESM_PAYLOAD_V1" ||
       payload?.source?.tree !== BASE_TREE ||
       typeof payload?.entry !== "string" ||
       typeof payload?.css !== "string" ||
       typeof payload?.modules !== "object" || payload.modules === null ||
       typeof payload?.external !== "object" || payload.external === null
     ) {
-      throw new Error("Base payload contract mismatch.");
+      throw new Error("Base payload structural contract mismatch.");
     }
     return payload;
   }
@@ -115,13 +122,17 @@
       PASS2_PATCH_BASE64_CHARS,
     );
     const patch = await gunzipJson(bytes, PASS2_PATCH_SHA256, "Pass2 patch");
+    if (patch?.schema !== PASS2_PATCH_SCHEMA) {
+      throw new Error(
+        `Pass2 patch schema mismatch: expected ${PASS2_PATCH_SCHEMA}, got ${String(patch?.schema)}.`,
+      );
+    }
     if (
-      patch?.schema !== "JV_WEB_NATIVE_ESM_MODULE_PATCH_V1" ||
-      patch?.base?.tree !== BASE_TREE ||
+      patch?.baseTree !== BASE_TREE ||
       patch?.target?.tree !== PASS2_TARGET_TREE ||
       typeof patch?.modules !== "object" || patch.modules === null
     ) {
-      throw new Error("Pass2 patch contract mismatch.");
+      throw new Error("Pass2 patch structural contract mismatch.");
     }
     for (const [specifier, source] of Object.entries(patch.modules)) {
       if (typeof source !== "string" || !(specifier in payload.modules)) {
@@ -134,13 +145,13 @@
 
   async function applyCameraPatch(payload) {
     const bytes = await fetchJoinedParts(
-      "camera-test/camera-patch",
+      "camera-test/camera-patch-v2",
       CAMERA_PATCH_PART_COUNT,
       CAMERA_PATCH_BASE64_CHARS,
     );
     const patch = await gunzipJson(bytes, CAMERA_PATCH_SHA256, "Camera patch");
     if (
-      patch?.schema !== "JV_WEB_CAMERA_NATIVE_ESM_PATCH_V1" ||
+      patch?.schema !== CAMERA_PATCH_SCHEMA ||
       patch?.base?.pass2Tree !== PASS2_TARGET_TREE ||
       patch?.candidate?.commit !== CAMERA_CANDIDATE_COMMIT ||
       patch?.candidate?.tree !== CAMERA_CANDIDATE_TREE ||

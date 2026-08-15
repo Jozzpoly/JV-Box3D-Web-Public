@@ -1,6 +1,6 @@
 {
-  "schema": "JV_WEB_CAMERA_DEVICE_GATE_V2",
-  "status": "NONCANONICAL_OWNER_DEVICE_GATE",
+  "schema": "JV_WEB_CAMERA_DEVICE_GATE_V3",
+  "status": "NONCANONICAL_OWNER_DEVICE_GATE_CONTRACT_FIXED",
   "purpose": "Manual Camera 1B owner feel validation with only three camera runtime modules changed over the already owner-tested Pass2 device payload.",
   "base": {
     "performancePayloadTree": "a7f7e643a94b2e4cffc911032878031f3428551d",
@@ -17,13 +17,14 @@
     "moduleCount": 3,
     "gzipBytes": 7898,
     "base64Chars": 10532,
-    "partCount": 2,
+    "partCount": 8,
     "sha256": "fcc82118d607bed941b487d1f8222d291882c8f5ea51b600ade5b8ee04f1be78",
     "modules": [
       "jv/render/m6-camera-viewport.js",
       "jv/render/m6-chase-camera.js",
       "jv/render/m6-world-renderer.js"
-    ]
+    ],
+    "partsPattern": "camera-patch-v2-XX.b64"
   },
   "externalBoundary": "Reuses the existing noncanonical native-ESM performance device payload with box3d.js@0.0.2; this is an owner feel gate, not a canonical Friends release.",
   "gestureContract": {
@@ -31,5 +32,15 @@
     "touch2": "pinch zoom + centroid pan",
     "mouse": "drag orbit; Shift+left or middle drag pan; wheel zoom",
     "reset": "clears manual pan/zoom/orbit and uses current responsive viewport distance"
+  },
+  "recovery": {
+    "failedPublicCommit": "cc294856f4fe7c5e26549be25e4a549cc5fa0a4e",
+    "failure": "two independent publication-harness faults were recovered: the loader expected generic/obsolete base and Pass2 contracts, and the published camera-patch-01 blob was not byte-identical to the locally verified Camera 1B patch",
+    "fix": "reuse the exact performance-gate base/pass2 contracts and repartition the unchanged exact Camera 1B gzip into small v2 parts; Camera 1B source and camera patch SHA remain unchanged",
+    "cameraSourceChanged": false,
+    "obsoletePublicFiles": [
+      "camera-test/camera-patch-00.b64",
+      "camera-test/camera-patch-01.b64"
+    ]
   }
 }
