@@ -37,6 +37,17 @@ THIRD_PARTY_NOTICES.md
 
 This is descriptive, not a blanket allowlist. The exact candidate file table/manifest is authority for a given release. A path is not approved merely because it matches one of these broad categories.
 
+## Evidence layering
+
+`build-manifest.json` and `LIVE_BUILD.json` describe different lifecycle stages and must not be collapsed into one status signal.
+
+- `build-manifest.json` is produced with the private candidate and binds source/tool/build/file identity. Its `publication` fields describe the state **at private build time**. A value such as `DORMANT`, `publicReady:false` or `pagesPublicationApproved:false` is therefore not evidence that a later promoted artifact is currently unpublished.
+- `LIVE_BUILD.json` records release-layer identity/provenance after the reviewed private build is assembled for Friends, including exact source commit and preserved-scan policy.
+- live Git refs plus the GitHub Pages configuration establish which public commit is actually deployed.
+- direct Owner/browser/device evidence establishes user-visible acceptance claims.
+
+When these layers appear to conflict, interpret them by lifecycle stage instead of rewriting historical build metadata. Never use old build-time publication fields to override later live Git/Pages evidence.
+
 ## Prohibited payload and behavior
 
 The public artifact must not contain:
