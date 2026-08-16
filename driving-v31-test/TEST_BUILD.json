@@ -1,0 +1,38 @@
+{
+  "schema": "JV_WEB_MOBILE_DRIVING_V31_DEVICE_GATE_V4",
+  "status": "OWNER_DEVICE_VALIDATION_PENDING",
+  "privateSourceCandidate": "c0b3ed2223a451cdacfd79f179efd2b88be7434f",
+  "inputFoundation": "db61b6610428032e17676583dc36cf84d44e84d1",
+  "uiCandidate": "e651209f3e67439ed1ffeafedeb1c0f919208020",
+  "shortLandscapeHardening": "c0b3ed2223a451cdacfd79f179efd2b88be7434f",
+  "acceptedSteeringV1Public": "b6b91cad54966944af47f31d11721d2695066992",
+  "acceptedSteeringV2Proof": "2acd652f68d57497c8ce8886b2875789a70f4be3",
+  "supersededFailedV3": "e94ab696d05b4a976a2673a69e40d5ddffea94d7",
+  "staticRuntime": {
+    "sourceSha256": "aaba046436c0227246503ff81df24f1636e3bdb377f25d3f6750eaf84fe493ea",
+    "gzipSha256": "802ff53ab0a6f57cf9c358244e5dd9249a277f1ace0dd3cfee3ebcaf7f39aaa2",
+    "base64Chars": 9428,
+    "parts": 3
+  },
+  "sourceModuleSha256": {
+    "longitudinal-input-timeline.js": "31090ea2c881797b218d8eb83ed0a6eb7aeefeae046de621ddb94c12205b3443",
+    "pointer-vehicle-control-adapter.js": "59d4b9cb84016845b51f241095bbda92912a8763ffdd833280bceb8b296d45d5",
+    "mobile-driving-v3-ui.js": "ae742b7eade17ab445a8247c339f1bbd3485f6ded5c01e1e73779d9aa6c45e3a",
+    "device-ui-bridge.js": "84ce4c0834b43acadfb759f99e242c9988471ebe648b18488a50047294b866d1",
+    "controls-v31.css": "307de19368ad2ec79ec445d472b6044d2d9d8cbfc691e4317ec742370f04025f"
+  },
+  "localEvidence": [
+    "22/22 focused analog/pointer tests PASS",
+    "TypeScript 5.8 scoped compile PASS",
+    "all JS node --check PASS",
+    "exact source blob identity PASS",
+    "headless rendered proof environment-blocked"
+  ],
+  "notProven": [
+    "canonical Node24/npm11/TS7/Vite repository gate",
+    "canonical Friends build",
+    "owner device runtime",
+    "owner driving feel",
+    "promotion to main"
+  ]
+}
