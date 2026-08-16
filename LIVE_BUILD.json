@@ -1,65 +1,27 @@
 {
-  "schema": "JV_WEB_FRIENDS_LIVE_OVERLAY_V3",
-  "purpose": "PHONE_SCAN_PERFORMANCE_AND_SHORT_LANDSCAPE",
-  "baseKnownGoodPublicCommit": "7161215e47f00573b8c1b5c31e5931c89f9d709a",
-  "knownGoodCheckpointBranch": "checkpoint/pages-friends-r1-known-good-2026-08-15",
-  "privatePerformanceCheckpoint": "20eca0451c81581649e061c8bc61d45001e32601",
-  "privateLiveObserverCommits": [
-    "fa597c202e19f74ec7acd99ca6f27057856262a2",
-    "331920ff5691ad4f1970defef8e16be8e400dd2a"
-  ],
-  "deployedSourceScope": "PUBLIC_LIVE_OVERLAY_ONLY",
-  "performanceSlicesInPrivateCheckpoint": ["PERF-S1", "PERF-S2", "PERF-S3"],
-  "performanceSlicesDeployedByThisOverlay": [
-    "RENDER_SCALE_A_B",
-    "ROLLING_FRAME_HUD",
-    "WEBGL_DRAW_TELEMETRY"
-  ],
-  "liveUiSlices": ["SHORT_LANDSCAPE_CONTROLS_V1"],
-  "defaultBehaviorPreserved": true,
-  "preservedPublicPayload": ["compiled-app", "__jv_scan__", "vehicles", "scenes", "receipts"],
-  "queryControls": {
-    "jvRenderScale": ["1", "1.5", "2"],
-    "jvPerfHud": ["1"]
+  "schema": "JV_WEB_FRIENDS_MOBILE_DRIVING_ALPHA_V2",
+  "sourceCommit": "d96e393c466aa41c6436c12bcb1b4ab1861828b0",
+  "publicBaseline": "fa00f4c3a3c19f1319302bc1728f9cf6490ce462",
+  "rollbackCheckpoint": "checkpoint/pages-before-mobile-driving-2026-08-16",
+  "releaseClass": "OWNER_DEVICE_ALPHA",
+  "releaseIntegrity": {
+    "preservedScanFromGitObjects": true,
+    "preservedScanReceiptMutated": false,
+    "scanIndexSha256": "64a2cdf8ef30f245544d90786528e867186f0740c37aac415a5b8b0c4d7b885e",
+    "scanIndexBytes": 7256,
+    "publicCheckoutTextConversionDisabled": true,
+    "artifactGitAttributes": "* -text -filter -ident -working-tree-encoding"
   },
-  "telemetry": {
-    "rollingWindowMs": 2000,
-    "settledAfterMs": 1500,
-    "updateEveryMs": 500,
-    "reports": [
-      "averageFrameMs",
-      "fps",
-      "p95FrameMs",
-      "canvasBackingResolution",
-      "effectiveRenderScale",
-      "drawCallsPerFrame",
-      "trianglesPerFrame",
-      "nativeDevicePixelRatio",
-      "renderScaleCap"
-    ],
-    "drawTelemetryScope": "ALL_WEBGL_DRAW_ARRAYS_AND_DRAW_ELEMENTS"
+  "preservedPerformanceOverlay": {
+    "path": "jv-live-performance.js",
+    "sha256": "af5987c8d7c2e7dedf70e6b291db2aa61c852ee84eae0197902ca03a754c4554"
   },
-  "shortLandscape": {
-    "stylesheet": "jv-live-mobile.css",
-    "media": "orientation:landscape, max-height:520px, max-width:980px",
-    "changes": [
-      "drive controls collapse from two rows to one",
-      "touch buttons shrink for short viewport",
-      "speed readout hides",
-      "camera/reset actions move above touch controls",
-      "portrait and normal desktop remain outside the media query"
-    ]
+  "legacyShortLandscapeCssPreserved": false,
+  "legacyShortLandscapeCssReason": "new source mobile-driving-controls.css owns the analog-control landscape layout",
+  "testUrls": {
+    "normal": "https://jozzpoly.github.io/JV-Box3D-Web-Public/",
+    "a53Render1x": "https://jozzpoly.github.io/JV-Box3D-Web-Public/?jvRenderScale=1",
+    "diagnostic": "https://jozzpoly.github.io/JV-Box3D-Web-Public/?jvRenderScale=1&jvPerfHud=1"
   },
-  "validation": {
-    "kind": "LIVE_TEST_SUPPLEMENTAL",
-    "overlaySyntax": "PASS_NODE_CHECK",
-    "shortLandscapeRenderedValidation": "PENDING_OWNER_DEVICE",
-    "forcedDevicePixelRatio": 3,
-    "observedBackingScale": {
-      "default": 2,
-      "jvRenderScale=1.5": 1.5,
-      "jvRenderScale=1": 1,
-      "jvRenderScale=2": 2
-    }
-  }
+  "generatedAt": "2026-08-16T13:14:58.189Z"
 }
