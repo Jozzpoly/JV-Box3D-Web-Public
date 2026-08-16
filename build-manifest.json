@@ -8,11 +8,11 @@
   "source": {
     "repository": "Jozzpoly/JV-Box3D-Web-experiment",
     "ref": {
-      "state": "BRANCH",
-      "fingerprint": "98b465181f7c"
+      "state": "DETACHED",
+      "fingerprint": null
     },
-    "commit": "d96e393c466aa41c6436c12bcb1b4ab1861828b0",
-    "commitDate": "2026-08-16T13:53:52+02:00",
+    "commit": "c9b5990b226685abe35851fc5e9496323096ecf7",
+    "commitDate": "2026-08-16T18:18:12+02:00",
     "workingTreeClean": true
   },
   "runtimeBackend": {
@@ -221,27 +221,27 @@
       "sha256": "d7f5932de1313b3114c9bb06a6a5f9ca426be7a2ef25ad94a9ffce806ebdb4be"
     },
     {
-      "path": "assets/index-C38K2YRz.css",
-      "bytes": 10846,
-      "sha256": "f73d92464e36391fb32f6bacb292928a3458db0c9d767f8033dbbd37642b011a"
+      "path": "assets/index-g-YNmfpp.css",
+      "bytes": 8607,
+      "sha256": "57c13288b442cd38f713cac7bb7f2996614a0213b5319651788b6325173aad55"
     },
     {
-      "path": "assets/index-DeRRtrRb.js",
-      "bytes": 25144,
-      "sha256": "a600bdd2e30e024ba0aa93a501c346702b8c5bda7d712a27343008ee7571cc0e"
+      "path": "assets/index-g2HlQ22Q.js",
+      "bytes": 25154,
+      "sha256": "502f02d4f294629c96c0756bf2754f3833ef575325f0c521f9007ef77f29c5ff"
     },
     {
-      "path": "assets/main-aKpBoyEj.css",
+      "path": "assets/main-DmjjlkoL.js",
+      "bytes": 1319803,
+      "sha256": "a93ec53e381e41be5041608f6f9a1e1d33d0cf6ce693e3625a6abbd1ce303832"
+    },
+    {
+      "path": "assets/preload-helper-aKpBoyEj.css",
       "bytes": 11057,
       "sha256": "bac169a675a96f9e6fc7dc2c03e14447686d73beaacef90749f4daf490a4c305"
     },
     {
-      "path": "assets/main-BmRke85_.js",
-      "bytes": 1319803,
-      "sha256": "6b7bd4947d84b49aa50eb08dac955e986571d3a1b370c9841cb62b34e897beb6"
-    },
-    {
-      "path": "assets/preload-helper-Dazaqmol.js",
+      "path": "assets/preload-helper-CglLYZWr.js",
       "bytes": 14624,
       "sha256": "2b95e07be03544f8ac68eca86862d474df311212d679f1060e9da3c6a455cc85"
     },
@@ -252,18 +252,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 659,
-      "sha256": "c06dea5194c3105e6d2e1360a3e16f05ae2902d3e93ee65bf98ea9fbb99abadf"
-    },
-    {
-      "path": "jv-live-performance.js",
-      "bytes": 6959,
-      "sha256": "af5987c8d7c2e7dedf70e6b291db2aa61c852ee84eae0197902ca03a754c4554"
+      "bytes": 688,
+      "sha256": "93e54d09580b1e2f9a513c9a4c286434c71407e8d77784730611be719102bfcb"
     },
     {
       "path": "LIVE_BUILD.json",
-      "bytes": 1293,
-      "sha256": "766aa1985d43f1355236d480a739db2f618925d6ab6a5e323c432df451bbd5b7"
+      "bytes": 839,
+      "sha256": "9f07b087393fc1f815e68ed3af56efbab1af160ff3bf80cf438975f06d4168ad"
     },
     {
       "path": "receipts/jv_friends_scan_receipt.json",

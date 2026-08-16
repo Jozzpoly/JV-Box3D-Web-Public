@@ -1,27 +1,20 @@
 {
-  "schema": "JV_WEB_FRIENDS_MOBILE_DRIVING_ALPHA_V2",
-  "sourceCommit": "d96e393c466aa41c6436c12bcb1b4ab1861828b0",
-  "publicBaseline": "fa00f4c3a3c19f1319302bc1728f9cf6490ce462",
-  "rollbackCheckpoint": "checkpoint/pages-before-mobile-driving-2026-08-16",
-  "releaseClass": "OWNER_DEVICE_ALPHA",
-  "releaseIntegrity": {
-    "preservedScanFromGitObjects": true,
-    "preservedScanReceiptMutated": false,
-    "scanIndexSha256": "64a2cdf8ef30f245544d90786528e867186f0740c37aac415a5b8b0c4d7b885e",
-    "scanIndexBytes": 7256,
-    "publicCheckoutTextConversionDisabled": true,
-    "artifactGitAttributes": "* -text -filter -ident -working-tree-encoding"
-  },
-  "preservedPerformanceOverlay": {
-    "path": "jv-live-performance.js",
-    "sha256": "af5987c8d7c2e7dedf70e6b291db2aa61c852ee84eae0197902ca03a754c4554"
-  },
+  "schema": "JV_WEB_FRIENDS_P1_FOUNDATION_V1",
+  "sourceCommit": "c9b5990b226685abe35851fc5e9496323096ecf7",
+  "publicBaseline": "7766f711390a33ea8f24a3ddba6eeed4e2eeb4bf",
+  "rollbackCheckpoint": "checkpoint/pages-before-p1-foundation-2026-08-16",
+  "releaseClass": "OWNER_DEVICE_POLISH_ALPHA",
+  "slices": [
+    "P1.0a_CSS_ENTRY_AUTHORITY",
+    "P1.0b_CURRENT_MOBILE_CSS_AUTHORITY",
+    "P1.1a_MOBILE_VIEWPORT_FLOOR_REMOVAL"
+  ],
+  "preservedScanFromGitObjects": true,
+  "scanSourcePublicCommit": "7766f711390a33ea8f24a3ddba6eeed4e2eeb4bf",
+  "scanIndexBytes": 7256,
+  "scanIndexSha256": "64a2cdf8ef30f245544d90786528e867186f0740c37aac415a5b8b0c4d7b885e",
+  "executableRootFromPrivateBuildOnly": true,
+  "publicRuntimeOverlayPreserved": false,
   "legacyShortLandscapeCssPreserved": false,
-  "legacyShortLandscapeCssReason": "new source mobile-driving-controls.css owns the analog-control landscape layout",
-  "testUrls": {
-    "normal": "https://jozzpoly.github.io/JV-Box3D-Web-Public/",
-    "a53Render1x": "https://jozzpoly.github.io/JV-Box3D-Web-Public/?jvRenderScale=1",
-    "diagnostic": "https://jozzpoly.github.io/JV-Box3D-Web-Public/?jvRenderScale=1&jvPerfHud=1"
-  },
-  "generatedAt": "2026-08-16T13:14:58.189Z"
+  "generatedAt": "2026-08-16T16:28:19.949Z"
 }
