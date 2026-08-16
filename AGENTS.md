@@ -1,53 +1,40 @@
 # JV Box3D Web Public — agent guard
 
-This repository is public and artifact-only. Private JV Web source authority lives in `Jozzpoly/JV-Box3D-Web-experiment`.
+This repository is public and artifact-only. Authoritative product source is private in `Jozzpoly/JV-Box3D-Web-experiment`.
 
-## Branch roles
+## Authority
 
-- `main`: publication control plane and documentation. It is the default branch but **not** the deployed application.
-- `release/friends-r1`: moving validated Friends artifact and current GitHub Pages source at repository root.
-- `release/r0`: immutable historical rollback/fallback. Never rewrite it.
-- `checkpoint/*`: historical rollback/evidence navigation only. A checkpoint name does not make a branch current authority.
+- `main` is the steady-state public artifact and GitHub Pages authority.
+- Private JV-Web `main` remains product/source authority.
+- Exact Git commits are rollback/evidence anchors; branch names are not archives.
+- A temporary second public branch is allowed only while an Owner validation/rollback need is active.
 
-Always resolve live refs and the GitHub Pages source before acting. Documentation and branch names are not sufficient publication evidence.
+Always resolve live private `main`, public `main`, and the GitHub Pages source before making publication claims.
 
-## Public/private boundary
+## Do not develop here
 
-This public repository may contain only reviewed static artifact bytes and public control-plane documentation. It must not become a development workspace or a mirror of the private source repository.
+Do not add private source, `node_modules`, build workspaces, source maps, credentials, local paths, arbitrary private scan data, or experimental runtime overlays.
 
-Do not add:
-
-- private `src/` or private Git history;
-- `node_modules`, package caches, package-manager workspaces or development/test outputs;
-- absolute local filesystem paths, secrets, tokens or credentials;
-- unreviewed source maps or provenance containing private machine data;
-- a build/deployment workflow merely to avoid validating and promoting the already-built private artifact;
-- a license or implied license grant without deliberate Owner approval.
-
-Approved release assets such as the current JSPREV2 scan are allowed only when their exact identity/provenance is part of the reviewed release. Do not generalize that approval to arbitrary local scan data.
+Do not patch compiled JavaScript/CSS as a normal fix. Product changes belong in the private typed source and must be rebuilt and re-promoted.
 
 ## Executable-root rule
 
-The moving Friends root must not inherit executable JavaScript/CSS from an older public release layer. Executable root behavior must be traceable to the exact private source build. Carry-forward is limited to explicitly approved static data/assets and necessary release metadata.
-
-Do not patch compiled public JavaScript/CSS as a normal development method. Product fixes belong in private typed source, followed by a new validated artifact promotion.
+Executable JavaScript/CSS must come from the exact reviewed private build. Carry-forward is limited to explicitly approved static data/assets and public release metadata. The current approved JSPREV2 scan may be preserved byte-for-byte for a code-only release when that preservation is recorded and validated.
 
 ## Promotion rule
 
-For `release/friends-r1`:
+1. resolve exact private source and public baseline;
+2. build outside this public repository;
+3. validate source/type/tests/build and the Friends artifact contract;
+4. preserve or replace scan data only under an explicit provenance rule;
+5. compare the candidate with the previously accepted artifact;
+6. promote reviewed bytes to public `main` by normal Git ancestry;
+7. verify Pages source and live delivery;
+8. obtain Owner/browser/device validation for user-visible claims;
+9. retire any temporary rollback branch after acceptance.
 
-1. resolve exact accepted private source;
-2. build and validate the static candidate outside this public repository;
-3. bind source/build identity and exact artifact files;
-4. preserve or replace approved scan data only under an explicit evidence-backed rule;
-5. promote the already-reviewed bytes by normal Git history;
-6. verify the resulting public branch and live Pages artifact;
-7. keep a known rollback commit.
+A Git push or green static validator is not Owner acceptance.
 
-A branch update is not by itself Owner acceptance. User-visible changes require the appropriate browser/device validation for the claim being made.
+## Current promotion basis
 
-## Repository settings
-
-Do not change repository visibility, default branch, GitHub Pages source, custom domain, or release/r0 history without explicit Owner intent. Pages is already enabled from `release/friends-r1` root; do not treat activation as pending work.
-
-Historical checkpoint branches should be retired when they are redundant and safely reachable from accepted history. Do not create new checkpoint branches as permanent trophies.
+This public artifact was prepared from private source `0260c8b39c0bb9594afe423b30d8e3536918f24c`. The previous accepted Friends artifact was `a325c279cfe63a0607dba33c3c635a1716e09f8f`. The exact neutral-foundation Windows execution PASS remains separately anchored to `3606e59368cac47d2fa7c505dbe4b5875a6a6c48`; do not transfer that exact execution claim to later source changes.

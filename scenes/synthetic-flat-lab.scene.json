@@ -1,0 +1,23 @@
+{
+  "format": "jv-web-scene-package",
+  "schemaVersion": 1,
+  "id": "synthetic-flat-lab",
+  "displayName": "Synthetic flat validation lab",
+  "units": "meter",
+  "axes": {
+    "forward": "+X",
+    "up": "+Y",
+    "right": "+Z"
+  },
+  "spawn": {
+    "position": [0, 1.2, 0],
+    "yawRadians": 0
+  },
+  "render": {
+    "kind": "NONE"
+  },
+  "collision": {
+    "kind": "BUILTIN_GROUND_PLANE",
+    "heightMeters": 0
+  }
+}

@@ -1,0 +1,2 @@
+# Friends Pages is a byte-pinned build artifact. Preserve every file exactly.
+* -text -filter -ident -working-tree-encoding

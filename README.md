@@ -2,53 +2,56 @@
 
 Public, artifact-only deployment repository for JV Web.
 
-## Current live state
+## Authority
+
+- **Private source authority:** `Jozzpoly/JV-Box3D-Web-experiment`
+- **Public publication authority:** this repository's `main`
+- **GitHub Pages target:** repository root of `main`
+- **Private source used for this artifact:** `0260c8b39c0bb9594afe423b30d8e3536918f24c`
+
+The public repository is not a development workspace. Product changes belong in the private repository, are built and validated there, and only the reviewed static artifact is promoted here.
+
+## Current artifact model
+
+The root contains the runnable static site plus the minimum metadata needed to audit it:
 
 ```text
-repository role:       PUBLIC ARTIFACT CONTROL PLANE + DEPLOYED STATIC ARTIFACT
-default branch:        main (documentation/control plane; not the deployed app)
-GitHub Pages source:   release/friends-r1 /
-GitHub Pages status:   built
-HTTPS:                 enforced
-live Friends commit:   a325c279cfe63a0607dba33c3c635a1716e09f8f
-private source commit: c9b5990b226685abe35851fc5e9496323096ecf7
-immutable fallback:    release/r0@c3e33e3dcd343a6d3b5f60df6e07a4a78a64dd44
+index.html
+assets/**
+__jv_scan__/**
+vehicles/**
+scenes/**
+receipts/**
+LIVE_BUILD.json
+build-manifest.json
+THIRD_PARTY_NOTICES.md
+README.md
+AGENTS.md
+HANDOFF.md
+PUBLICATION_CONTRACT.md
+SECURITY.md
+.nojekyll
+.gitattributes
 ```
 
-The deployed application is **not** the content of `main`. Resolve the live Pages source and `release/friends-r1` tip before making publication claims.
+`build-manifest.json` binds the candidate to the exact private source commit and file bytes. `LIVE_BUILD.json` records the public release-layer provenance, including preservation of the already-approved JSPREV2 scan.
 
-The current Friends artifact is Owner-tested on desktop and Galaxy A53 / Chrome. It contains the accepted P1 mobile/browser foundation, approved JSPREV2 scan, owner vehicle and current product assets. Its `LIVE_BUILD.json` binds the public artifact to the exact private source commit and records preserved-scan provenance.
+## Branch policy
 
-## Repository roles
+Steady state is deliberately simple:
 
 ```text
 main
-  public control-plane documentation only
-
-release/friends-r1
-  moving, validated Friends GitHub Pages artifact
-
-release/r0
-  immutable historical rollback/fallback artifact
-
-checkpoint/*
-  historical rollback/evidence navigation only; not publication authority
 ```
 
-Private source authority remains `Jozzpoly/JV-Box3D-Web-experiment`. This public repository must never become a second development/source repository.
+A second rollback branch may exist **temporarily** while a newly promoted `main` is undergoing Owner/browser/device validation. It is not a second source of truth and should be removed after acceptance. Historical rollback remains available through exact Git commit ancestry.
 
-## Publication model
+Do not recreate permanent `release/*` or `checkpoint/*` branch forests.
 
-A Friends release is built and validated from the private source repository, then the already-reviewed static bytes are promoted here. This repository does not rebuild private source.
+## Scan policy
 
-Code-only Friends releases may preserve exact approved static data such as the already-published scan. A scan-changing release must pin and validate the new approved scan input. Executable root JavaScript/CSS must remain traceable to the exact private build; historical public runtime overlays must not be carried forward.
-
-See `PUBLICATION_CONTRACT.md` for the durable artifact and rollback rules and `AGENTS.md` for agent guardrails.
-
-## Branch hygiene
-
-Historical checkpoint branches may still exist physically, but their names do not grant authority. If a checkpoint is already ancestral to an accepted release and has no unique recovery value, retire the redundant branch ref when branch deletion is available instead of accumulating permanent branch navigation.
+The current approved JSPREV2 scan is an explicit public release asset. Code-only releases may preserve its exact already-published Git bytes. A scan-changing release requires separate exact source/provenance validation.
 
 ## Licensing
 
-No general license grant is implied by this repository. Required third-party notices accompany release artifacts. Do not add or change licensing without deliberate Owner approval.
+No general license grant is implied by this repository. Required third-party notices accompany the artifact. Do not add or change licensing without deliberate Owner approval.

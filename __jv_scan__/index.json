@@ -1,0 +1,264 @@
+{
+  "schema": "JV_WEB_JSPREV2_INDEX_V2",
+  "available": true,
+  "packId": "scan/photogrammetry-primary",
+  "tileCount": 7,
+  "groupCount": 25,
+  "textureCount": 25,
+  "vertexCount": 1409687,
+  "indexCount": 5327325,
+  "triangleCount": 1775775,
+  "manifestBytes": 10590,
+  "binaryBytes": 66419624,
+  "textureBytes": 44858270,
+  "totalBytes": 111288484,
+  "estimatedCpuGeometryBytes": 104644828,
+  "estimatedGpuGeometryBytes": 55764634,
+  "tiles": [
+    {
+      "tileId": 0,
+      "binaryUrl": "tiles/tile_000.bin",
+      "binaryBytes": 7307412,
+      "vertexCount": 157208,
+      "indexCount": 569172,
+      "triangleCount": 189724,
+      "groups": [
+        {
+          "textureUrl": "textures/tile_000_group_000.png",
+          "textureBytes": 2114244,
+          "vertexCount": 85811,
+          "indexCount": 304860,
+          "triangleCount": 101620
+        },
+        {
+          "textureUrl": "textures/tile_000_group_001.png",
+          "textureBytes": 1761823,
+          "vertexCount": 23631,
+          "indexCount": 98448,
+          "triangleCount": 32816
+        },
+        {
+          "textureUrl": "textures/tile_000_group_002.png",
+          "textureBytes": 1955657,
+          "vertexCount": 37680,
+          "indexCount": 138642,
+          "triangleCount": 46214
+        },
+        {
+          "textureUrl": "textures/tile_000_group_003.png",
+          "textureBytes": 1251955,
+          "vertexCount": 3877,
+          "indexCount": 11832,
+          "triangleCount": 3944
+        },
+        {
+          "textureUrl": "textures/tile_000_group_004.png",
+          "textureBytes": 1393961,
+          "vertexCount": 5158,
+          "indexCount": 12951,
+          "triangleCount": 4317
+        },
+        {
+          "textureUrl": "textures/tile_000_group_005.png",
+          "textureBytes": 272692,
+          "vertexCount": 1051,
+          "indexCount": 2439,
+          "triangleCount": 813
+        }
+      ]
+    },
+    {
+      "tileId": 1,
+      "binaryUrl": "tiles/tile_001.bin",
+      "binaryBytes": 8878636,
+      "vertexCount": 189686,
+      "indexCount": 702162,
+      "triangleCount": 234054,
+      "groups": [
+        {
+          "textureUrl": "textures/tile_001_group_000.png",
+          "textureBytes": 2172292,
+          "vertexCount": 96163,
+          "indexCount": 349782,
+          "triangleCount": 116594
+        },
+        {
+          "textureUrl": "textures/tile_001_group_001.png",
+          "textureBytes": 1913201,
+          "vertexCount": 93523,
+          "indexCount": 352380,
+          "triangleCount": 117460
+        }
+      ]
+    },
+    {
+      "tileId": 2,
+      "binaryUrl": "tiles/tile_002.bin",
+      "binaryBytes": 11615388,
+      "vertexCount": 242952,
+      "indexCount": 960216,
+      "triangleCount": 320072,
+      "groups": [
+        {
+          "textureUrl": "textures/tile_002_group_000.png",
+          "textureBytes": 2115284,
+          "vertexCount": 80920,
+          "indexCount": 334956,
+          "triangleCount": 111652
+        },
+        {
+          "textureUrl": "textures/tile_002_group_001.png",
+          "textureBytes": 2230759,
+          "vertexCount": 105935,
+          "indexCount": 410034,
+          "triangleCount": 136678
+        },
+        {
+          "textureUrl": "textures/tile_002_group_002.png",
+          "textureBytes": 1956226,
+          "vertexCount": 34217,
+          "indexCount": 137949,
+          "triangleCount": 45983
+        },
+        {
+          "textureUrl": "textures/tile_002_group_003.png",
+          "textureBytes": 1806702,
+          "vertexCount": 16455,
+          "indexCount": 60342,
+          "triangleCount": 20114
+        },
+        {
+          "textureUrl": "textures/tile_002_group_004.png",
+          "textureBytes": 1363977,
+          "vertexCount": 5425,
+          "indexCount": 16935,
+          "triangleCount": 5645
+        }
+      ]
+    },
+    {
+      "tileId": 3,
+      "binaryUrl": "tiles/tile_003.bin",
+      "binaryBytes": 12094156,
+      "vertexCount": 258909,
+      "indexCount": 952254,
+      "triangleCount": 317418,
+      "groups": [
+        {
+          "textureUrl": "textures/tile_003_group_000.png",
+          "textureBytes": 2152711,
+          "vertexCount": 98557,
+          "indexCount": 358245,
+          "triangleCount": 119415
+        },
+        {
+          "textureUrl": "textures/tile_003_group_001.png",
+          "textureBytes": 2139448,
+          "vertexCount": 91682,
+          "indexCount": 354690,
+          "triangleCount": 118230
+        },
+        {
+          "textureUrl": "textures/tile_003_group_002.png",
+          "textureBytes": 1941008,
+          "vertexCount": 30793,
+          "indexCount": 118215,
+          "triangleCount": 39405
+        },
+        {
+          "textureUrl": "textures/tile_003_group_003.png",
+          "textureBytes": 1599098,
+          "vertexCount": 37877,
+          "indexCount": 121104,
+          "triangleCount": 40368
+        }
+      ]
+    },
+    {
+      "tileId": 4,
+      "binaryUrl": "tiles/tile_004.bin",
+      "binaryBytes": 9904340,
+      "vertexCount": 208792,
+      "indexCount": 805740,
+      "triangleCount": 268580,
+      "groups": [
+        {
+          "textureUrl": "textures/tile_004_group_000.png",
+          "textureBytes": 2160289,
+          "vertexCount": 97275,
+          "indexCount": 380097,
+          "triangleCount": 126699
+        },
+        {
+          "textureUrl": "textures/tile_004_group_001.png",
+          "textureBytes": 2116442,
+          "vertexCount": 111517,
+          "indexCount": 425643,
+          "triangleCount": 141881
+        }
+      ]
+    },
+    {
+      "tileId": 5,
+      "binaryUrl": "tiles/tile_005.bin",
+      "binaryBytes": 7895780,
+      "vertexCount": 167993,
+      "indexCount": 629988,
+      "triangleCount": 209996,
+      "groups": [
+        {
+          "textureUrl": "textures/tile_005_group_000.png",
+          "textureBytes": 2057087,
+          "vertexCount": 72781,
+          "indexCount": 280587,
+          "triangleCount": 93529
+        },
+        {
+          "textureUrl": "textures/tile_005_group_001.png",
+          "textureBytes": 2070526,
+          "vertexCount": 86960,
+          "indexCount": 329022,
+          "triangleCount": 109674
+        },
+        {
+          "textureUrl": "textures/tile_005_group_002.png",
+          "textureBytes": 1259060,
+          "vertexCount": 4581,
+          "indexCount": 12213,
+          "triangleCount": 4071
+        },
+        {
+          "textureUrl": "textures/tile_005_group_003.png",
+          "textureBytes": 914496,
+          "vertexCount": 3671,
+          "indexCount": 8166,
+          "triangleCount": 2722
+        }
+      ]
+    },
+    {
+      "tileId": 6,
+      "binaryUrl": "tiles/tile_006.bin",
+      "binaryBytes": 8723912,
+      "vertexCount": 184147,
+      "indexCount": 707793,
+      "triangleCount": 235931,
+      "groups": [
+        {
+          "textureUrl": "textures/tile_006_group_000.png",
+          "textureBytes": 2173644,
+          "vertexCount": 94821,
+          "indexCount": 359484,
+          "triangleCount": 119828
+        },
+        {
+          "textureUrl": "textures/tile_006_group_001.png",
+          "textureBytes": 1965688,
+          "vertexCount": 89326,
+          "indexCount": 348309,
+          "triangleCount": 116103
+        }
+      ]
+    }
+  ]
+}

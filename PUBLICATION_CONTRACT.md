@@ -1,119 +1,73 @@
-# Public artifact contract
+# JV Web public artifact contract
 
-Status: `FRIENDS R1 LIVE / ARTIFACT-ONLY / PAGES FROM release/friends-r1`
+Status: `MAIN-BASED PUBLICATION / ARTIFACT-ONLY`
 
-Target project subpath:
+Target Pages subpath:
 
 ```text
 /JV-Box3D-Web-Public/
 ```
 
-GitHub Pages currently serves repository root from `release/friends-r1`. `main` remains the documentation/control-plane branch and is not the deployed application.
+## Repository model
 
-## Branch contract
+`main` is both the default branch and the steady-state public artifact branch. GitHub Pages should serve `main` from repository root.
 
-- `release/friends-r1` is the moving Friends artifact line.
-- `release/r0` is an immutable historical rollback/fallback and must never be rewritten.
-- `main` contains public control-plane documentation only.
-- `checkpoint/*` refs are historical evidence/rollback navigation, not current publication authority.
+The public repository does not rebuild or author JV-Web. Private source authority remains `Jozzpoly/JV-Box3D-Web-experiment`.
 
-## Allowed release payload
+Permanent release/checkpoint branch families are intentionally retired. Rollback authority is an exact known commit SHA in `main` ancestry. A temporary rollback branch is permitted only during an active Owner validation window.
 
-A reviewed Friends artifact may contain only files required to run, audit or identify the exact static application. The current artifact shape includes categories such as:
+## Evidence layers
 
-```text
-index.html
-assets/**
-__jv_scan__/**          exact approved public scan only
-vehicles/**
-scenes/**
-receipts/**
-LIVE_BUILD.json
-build-manifest.json
-THIRD_PARTY_NOTICES.md
-.nojekyll
-.gitattributes          when required for exact artifact storage/transport
-```
+`build-manifest.json` is generated from the clean private candidate and records exact private repository/source/file identity at build time.
 
-This is descriptive, not a blanket allowlist. The exact candidate file table/manifest is authority for a given release. A path is not approved merely because it matches one of these broad categories.
+`LIVE_BUILD.json` is release-layer provenance. It records the exact private source used for the executable root and whether already-approved static data was preserved from a prior public artifact.
 
-## Evidence layering
+Live public Git `main` plus the GitHub Pages configuration establish what is deployed.
 
-`build-manifest.json` and `LIVE_BUILD.json` describe different lifecycle stages and must not be collapsed into one status signal.
+Owner/browser/device evidence establishes user-visible acceptance. Never infer Owner acceptance from a branch update alone.
 
-- `build-manifest.json` is produced with the private candidate and binds source/tool/build/file identity. Its `publication` fields describe the state **at private build time**. A value such as `DORMANT`, `publicReady:false` or `pagesPublicationApproved:false` is therefore not evidence that a later promoted artifact is currently unpublished.
-- `LIVE_BUILD.json` records release-layer identity/provenance after the reviewed private build is assembled for Friends, including exact source commit and preserved-scan policy.
-- live Git refs plus the GitHub Pages configuration establish which public commit is actually deployed.
-- direct Owner/browser/device evidence establishes user-visible acceptance claims.
+## Allowed payload
 
-When these layers appear to conflict, interpret them by lifecycle stage instead of rewriting historical build metadata. Never use old build-time publication fields to override later live Git/Pages evidence.
+A reviewed artifact may contain only files required to run, identify, document, or audit the public static application, including the executable root, approved assets, receipts, manifests, third-party notices and the small public-repository documentation set.
 
-## Prohibited payload and behavior
+The exact `build-manifest.json` file table is authoritative for this promoted artifact.
 
-The public artifact must not contain:
+## Prohibited payload
 
-- the private source tree or private Git history;
-- `node_modules`, package caches, package-manager workspaces or temporary test/build workspaces;
-- arbitrary local/private scan data that has not been explicitly approved and pinned;
-- absolute Windows, Linux or container paths;
-- secrets, credentials, personal data or unreviewed provenance fields;
-- unreviewed remote network dependencies or URLs outside the release policy;
-- source maps unless separately reviewed and approved;
-- unused laboratory/development assets that are not part of the intended product;
-- a manifest claiming source identity, validation or acceptance that did not occur.
+Do not publish:
 
-The moving Friends executable root must come from the exact reviewed private build. Do not carry executable JavaScript/CSS forward from an older public artifact layer and do not patch compiled public runtime as a substitute for private-source implementation.
+- private source/history;
+- `node_modules`, caches or build workspaces;
+- secrets, credentials, private paths or personal data;
+- arbitrary/unapproved local scan packs;
+- unreviewed source maps;
+- obsolete test/laboratory overlays in the production root;
+- executable JS/CSS carried forward from an older public layer instead of rebuilt private source;
+- provenance or validation claims that did not occur.
 
-## Scan preservation rule
+## Approved scan preservation
 
-The approved JSPREV2 scan is a public release asset for the current Friends line.
+The current JSPREV2 scan may be preserved byte-for-byte from the previously accepted public artifact for a code-only release. Preservation must keep its index, tile/texture bytes and release receipt exact.
 
-A code-only release may preserve its **exact already-published Git object bytes** when the private release process explicitly records that preservation. A scan-changing release must independently pin and validate the replacement scan source and resulting public bytes.
+A scan-changing release requires its own pinned source pack and independent validation.
 
-Approval of one exact scan does not authorize arbitrary local scan packs.
-
-## Required release evidence
-
-Before promoting a materially changed Friends artifact, evidence should bind the claims relevant to that release, including as applicable:
-
-- private source repository identity and exact source commit/tree;
-- clean source state for the build;
-- canonical Node/npm/TypeScript/Vite and lockfile identity;
-- target base path `/JV-Box3D-Web-Public/`;
-- complete reviewed artifact file table and/or deterministic build manifest;
-- executable-root build identity;
-- exact preserved or replaced scan identity;
-- third-party notices;
-- path/network/privacy validation;
-- browser execution for runtime claims;
-- real-device/Owner validation for user-visible feel/layout claims;
-- known previous accepted public commit for rollback.
-
-Validation claims must state what actually ran. A static fetch is not browser execution, and a branch update is not Owner acceptance.
-
-## Promotion and rollback
-
-The public repository does not rebuild private source. Promotion copies the already-reviewed artifact bytes into normal Git history on `release/friends-r1`, then verifies the exact public branch/live Pages result.
-
-Keep rollback straightforward by retaining the exact prior accepted commit identity. `release/r0@c3e33e3dcd343a6d3b5f60df6e07a4a78a64dd44` remains the immutable historical fallback.
-
-GitHub Pages is already enabled from `release/friends-r1` root with HTTPS enforcement. Changing the Pages source, repository visibility, default branch or domain is a separate Owner-level operation and is not part of an ordinary Friends artifact update.
-
-## Current evidence snapshot — 2026-08-16
+## Current promotion basis
 
 ```text
-live Friends branch:
-  release/friends-r1@a325c279cfe63a0607dba33c3c635a1716e09f8f
+private source:
+  0260c8b39c0bb9594afe423b30d8e3536918f24c
 
-private source recorded by LIVE_BUILD.json:
-  c9b5990b226685abe35851fc5e9496323096ecf7
+previous accepted Friends artifact:
+  a325c279cfe63a0607dba33c3c635a1716e09f8f
 
-scan index:
-  bytes: 7256
-  sha256: 64a2cdf8ef30f245544d90786528e867186f0740c37aac415a5b8b0c4d7b885e
-
-executableRootFromPrivateBuildOnly: true
-publicRuntimeOverlayPreserved: false
+historical R0 commit:
+  c3e33e3dcd343a6d3b5f60df6e07a4a78a64dd44
 ```
 
-Resolve moving refs live before future publication work; this snapshot is evidence, not a permanent moving-ref substitute.
+The historical R0 commit remains Git evidence even when its branch name is removed.
+
+## Rollback
+
+Before Owner acceptance of a newly promoted `main`, retain one exact prior accepted public commit and, if useful, one temporary rollback branch. After acceptance, remove the redundant branch; the commit remains reachable through merged `main` history.
+
+Never use force-push as ordinary publication mechanics.

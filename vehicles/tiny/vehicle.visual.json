@@ -1,0 +1,714 @@
+{
+  "format": "jv-web-vehicle-visual-package",
+  "schemaVersion": 1,
+  "id": "m6-tiny-rig-proof-v1",
+  "displayName": "M6 Tiny Rig Proof V1",
+  "vehicleFamily": "M6",
+  "rigProfile": "M6_FULL_RIG_V1",
+  "units": "meter",
+  "axes": {
+    "forward": "+X",
+    "up": "+Y",
+    "right": "+Z"
+  },
+  "asset": {
+    "kind": "GLB",
+    "url": "models/m6-rig-proof.glb",
+    "sha256": "b243bf5ae6ed0b185885b6d341ab0a12fd377743408040e14226c1fecbb31281",
+    "byteLength": 2628
+  },
+  "bindings": [
+    {
+      "bindingId": "bind.m6.chassis",
+      "nodeName": "JV_m6_chassis",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.chassis"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.rack",
+      "nodeName": "JV_m6_rack",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.rack"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.fl.wheel",
+      "nodeName": "JV_m6_fl_wheel",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.fl.wheel"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.fl.knuckle",
+      "nodeName": "JV_m6_fl_knuckle",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.fl.knuckle"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.fl.upper-arm",
+      "nodeName": "JV_m6_fl_upper_arm",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.fl.upper-arm"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.fl.lower-arm",
+      "nodeName": "JV_m6_fl_lower_arm",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.fl.lower-arm"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.fr.wheel",
+      "nodeName": "JV_m6_fr_wheel",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.fr.wheel"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.fr.knuckle",
+      "nodeName": "JV_m6_fr_knuckle",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.fr.knuckle"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.fr.upper-arm",
+      "nodeName": "JV_m6_fr_upper_arm",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.fr.upper-arm"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.fr.lower-arm",
+      "nodeName": "JV_m6_fr_lower_arm",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.fr.lower-arm"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.rl.wheel",
+      "nodeName": "JV_m6_rl_wheel",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.rl.wheel"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.rl.knuckle",
+      "nodeName": "JV_m6_rl_knuckle",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.rl.knuckle"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.rl.upper-arm",
+      "nodeName": "JV_m6_rl_upper_arm",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.rl.upper-arm"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.rl.lower-arm",
+      "nodeName": "JV_m6_rl_lower_arm",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.rl.lower-arm"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.rr.wheel",
+      "nodeName": "JV_m6_rr_wheel",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.rr.wheel"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.rr.knuckle",
+      "nodeName": "JV_m6_rr_knuckle",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.rr.knuckle"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.rr.upper-arm",
+      "nodeName": "JV_m6_rr_upper_arm",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.rr.upper-arm"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.rr.lower-arm",
+      "nodeName": "JV_m6_rr_lower_arm",
+      "source": {
+        "kind": "PART",
+        "partId": "m6.rr.lower-arm"
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.fl.coilover",
+      "nodeName": "JV_m6_fl_coilover",
+      "source": {
+        "kind": "SEGMENT_STRETCH",
+        "segmentId": "m6.fl.coilover",
+        "axis": "+Y",
+        "referenceLengthMeters": 1
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.fl.steering-link",
+      "nodeName": "JV_m6_fl_steering_link",
+      "source": {
+        "kind": "SEGMENT_STRETCH",
+        "segmentId": "m6.fl.steering-link",
+        "axis": "+Y",
+        "referenceLengthMeters": 1
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.fr.coilover",
+      "nodeName": "JV_m6_fr_coilover",
+      "source": {
+        "kind": "SEGMENT_STRETCH",
+        "segmentId": "m6.fr.coilover",
+        "axis": "+Y",
+        "referenceLengthMeters": 1
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.fr.steering-link",
+      "nodeName": "JV_m6_fr_steering_link",
+      "source": {
+        "kind": "SEGMENT_STRETCH",
+        "segmentId": "m6.fr.steering-link",
+        "axis": "+Y",
+        "referenceLengthMeters": 1
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.rl.coilover",
+      "nodeName": "JV_m6_rl_coilover",
+      "source": {
+        "kind": "SEGMENT_STRETCH",
+        "segmentId": "m6.rl.coilover",
+        "axis": "+Y",
+        "referenceLengthMeters": 1
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.rl.steering-link",
+      "nodeName": "JV_m6_rl_steering_link",
+      "source": {
+        "kind": "SEGMENT_STRETCH",
+        "segmentId": "m6.rl.steering-link",
+        "axis": "+Y",
+        "referenceLengthMeters": 1
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.rr.coilover",
+      "nodeName": "JV_m6_rr_coilover",
+      "source": {
+        "kind": "SEGMENT_STRETCH",
+        "segmentId": "m6.rr.coilover",
+        "axis": "+Y",
+        "referenceLengthMeters": 1
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "bindingId": "bind.m6.rr.steering-link",
+      "nodeName": "JV_m6_rr_steering_link",
+      "source": {
+        "kind": "SEGMENT_STRETCH",
+        "segmentId": "m6.rr.steering-link",
+        "axis": "+Y",
+        "referenceLengthMeters": 1
+      },
+      "localFromSource": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ]
+}

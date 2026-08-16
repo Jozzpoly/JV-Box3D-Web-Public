@@ -1,0 +1,21 @@
+{
+    "schema":  "JV_WEB_PUBLIC_MAIN_TAKEOFF_V1",
+    "sourceCommit":  "0260c8b39c0bb9594afe423b30d8e3536918f24c",
+    "previousAcceptedPublicCommit":  "a325c279cfe63a0607dba33c3c635a1716e09f8f",
+    "historicalR0Commit":  "c3e33e3dcd343a6d3b5f60df6e07a4a78a64dd44",
+    "neutralFoundationExactWindowsPass":  "3606e59368cac47d2fa7c505dbe4b5875a6a6c48",
+    "publicationBranch":  "main",
+    "executableRootFromPrivateBuildOnly":  true,
+    "preservedScanFromGitObjects":  true,
+    "preservedScanSourcePublicCommit":  "a325c279cfe63a0607dba33c3c635a1716e09f8f",
+    "publicRuntimeOverlayPreserved":  false,
+    "repositoryMetadataFiles":  [
+                                    "README.md",
+                                    "AGENTS.md",
+                                    "HANDOFF.md",
+                                    "PUBLICATION_CONTRACT.md",
+                                    "SECURITY.md"
+                                ],
+    "ownerValidation":  "REQUIRED_EXTERNALLY_AFTER_PAGES_SWITCH",
+    "generatedAt":  "2026-08-16T23:07:11.7338755Z"
+}

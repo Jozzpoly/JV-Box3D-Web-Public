@@ -1,0 +1,1922 @@
+{
+  "schema": "JV_WEB_OWNER_M6_FULL_RIG_R3",
+  "sourceAuthority": {
+    "sourceSha256": {
+      "chassis": "45055fee11458290d107e8442d1da0d032ed9a094bea98a069d99e1a87954ca8",
+      "wheel": "1fe1d08dd068157d699dc5232054ee61f6aa5a14af15480be0c77aeb55b5b617",
+      "frontSuspension": "57cda983f8f728bc819460540d2ee39b1b17288ecdac1f0dc8bb1a3e6f9ab750",
+      "rearSuspension": "374e54eb420f0b3e31bba0d749fdf1cf942db2389361dde1313d7a6b29e77ec2",
+      "damper": "eca8770078d9df4ed6d7649473fa35d57501c3951232ffe8d91429a6f1f67118",
+      "cardan": "16f4eab46d526c273f434e109331586df2cd7e3ab0792a4dfbd21d7ed4ef0860"
+    },
+    "contractSha256": {
+      "wheel": "24cf7d68bff367a6fcf267dd5efd841e13658736693881099fd52b2e7c613bfb",
+      "frontSuspension": "86da0ce06730317b1274d7a03079044c89cac15ea825b088772b7188028717ed",
+      "rearSuspension": "110e71595ba88dff11d4a29be533616b54980bcb25f035d9a0531a587e8dce01",
+      "damper": "6dfae948e67e9e5e73aaead3811a5f1105358ebf1d5418e87e523e45865e0812",
+      "cardan": "72c65b9e1527e69aac20b17d6ce305d9f808564bd71f7d17ea7984f95961919c"
+    }
+  },
+  "sourceAuthorityInterpretation": "LEGACY_REPORT_FIELD_NAME_HASH_PINNED_INPUTS_NOT_PROJECT_AUTHORITY",
+  "sources": {
+    "chassis": {
+      "nodeCount": 15,
+      "primitiveCount": 5,
+      "vertexCount": 16320,
+      "triangleCount": 1632,
+      "skinCount": 1,
+      "validatedJointCount": 14,
+      "bindPoseFlattening": "VERIFIED",
+      "textureCount": 1
+    },
+    "wheel": {
+      "nodeCount": 13,
+      "primitiveCount": 1,
+      "vertexCount": 1224,
+      "triangleCount": 612,
+      "skinCount": 1,
+      "validatedJointCount": 12,
+      "bindPoseFlattening": "VERIFIED",
+      "textureCount": 1
+    },
+    "frontSuspension": {
+      "nodeCount": 15,
+      "primitiveCount": 1,
+      "vertexCount": 624,
+      "triangleCount": 312,
+      "skinCount": 1,
+      "validatedJointCount": 14,
+      "bindPoseFlattening": "VERIFIED",
+      "textureCount": 1
+    },
+    "rearSuspension": {
+      "nodeCount": 14,
+      "primitiveCount": 1,
+      "vertexCount": 456,
+      "triangleCount": 228,
+      "skinCount": 1,
+      "validatedJointCount": 13,
+      "bindPoseFlattening": "VERIFIED",
+      "textureCount": 1
+    },
+    "damper": {
+      "nodeCount": 5,
+      "primitiveCount": 1,
+      "vertexCount": 240,
+      "triangleCount": 120,
+      "skinCount": 1,
+      "validatedJointCount": 4,
+      "bindPoseFlattening": "VERIFIED",
+      "textureCount": 1
+    },
+    "cardan": {
+      "nodeCount": 5,
+      "primitiveCount": 1,
+      "vertexCount": 456,
+      "triangleCount": 228,
+      "skinCount": 1,
+      "validatedJointCount": 4,
+      "bindPoseFlattening": "VERIFIED",
+      "textureCount": 1
+    }
+  },
+  "wheelCalibration": {
+    "markerContract": "VERIFIED",
+    "requiredMarkers": [
+      "Socket_WheelMount",
+      "Marker_TireRadiusOuter",
+      "Marker_TireWidthLeft",
+      "Marker_TireWidthRight"
+    ],
+    "authoredCenter": [
+      -0.125,
+      0.5,
+      0
+    ],
+    "authoredRadius": 1.46875,
+    "authoredWidth": 1.25,
+    "requestedRadius": 0.514062464,
+    "requestedWidth": 0.4375,
+    "radialScale": 0.3499999754893617,
+    "axialScale": 0.35,
+    "centerError": 0,
+    "mountOffset": 0.13124999999999998,
+    "mountAxisError": 0,
+    "radiusError": 0,
+    "widthError": 0,
+    "sourceAuthority": {
+      "repository": "Jozzpoly/Box3d_FunProject",
+      "sourceAuthorityCommit": "33722127777248b3dcb228fb47f7de2fad847036",
+      "wheelSourceGitBlob": "c13c77a8e5552175ee8266b2da33a54691f1dae9",
+      "factoryReceiptGitBlob": "6a5cb337a7d4707946835e83e036365130c52459",
+      "historicalVisualCommit": "891c7561142b601f62ea76b68b0f55f8fababc6c"
+    }
+  },
+  "calibration": {
+    "corners": {
+      "fl": {
+        "placement": {
+          "translation": [
+            1.25,
+            -0.7250000000000001,
+            -0.503125
+          ],
+          "attach": [
+            1.25,
+            -0.55,
+            -0.9187500000000001
+          ],
+          "mirrored": false
+        },
+        "physical": {
+          "wheelCenter": [
+            1.25,
+            -0.55,
+            -1.05
+          ],
+          "upperHinge": [
+            1.2342520405653337,
+            -0.27889727457341834,
+            -0.5478987790374772
+          ],
+          "upperBall": [
+            1.2342520405653337,
+            -0.37000000000000005,
+            -0.8878987790374773
+          ],
+          "lowerHinge": [
+            1.2657479594346663,
+            -0.6067433714816836,
+            -0.4721012209625229
+          ],
+          "lowerBall": [
+            1.2657479594346663,
+            -0.73,
+            -0.9321012209625229
+          ],
+          "steeringStart": [
+            1.08,
+            -0.4267433714816836,
+            0
+          ],
+          "steeringArm": [
+            0.9437500000000001,
+            -0.47343750000000007,
+            -1.05
+          ],
+          "coiloverChassis": [
+            1.25,
+            -0.13000000000000006,
+            -0.93
+          ],
+          "coiloverKnuckle": [
+            1.2657479594346663,
+            -0.73,
+            -0.9321012209625229
+          ],
+          "steeringCenter": [
+            1.25,
+            -0.55,
+            -1.05
+          ],
+          "steeringAxisDirection": [
+            0,
+            1,
+            0
+          ],
+          "chassisMountB": [
+            1.25,
+            -0.38593750000000004,
+            -0.9078125
+          ],
+          "authority": "S2_FL_SOURCE_REGISTERED_CENTER_AND_OUTBOARD__CURRENT_SUSPENSION_HARDPOINTS_PRESERVED_AS_PROVISIONAL"
+        },
+        "arms": {
+          "upper": {
+            "mode": "LEGACY_R3_AUTHORED_REFERENCE_TO_CURRENT_WEB_SUSPENSION_HARDPOINT",
+            "sourceHinge": [
+              0.5,
+              0.96875,
+              0
+            ],
+            "sourceOutboard": [
+              -0.8125,
+              0.96875,
+              0
+            ],
+            "sourceAxialLength": 1.3125,
+            "targetAxialLength": 0.35199390133942826,
+            "axialScale": 0.26818582959194537,
+            "sourceSpreadLength": 1.0625,
+            "targetSpreadLength": 0.48,
+            "spreadScale": 0.4517647058823529,
+            "thicknessScale": 0.35,
+            "mirrored": false,
+            "mappedHinge": [
+              0,
+              0,
+              0
+            ],
+            "mappedOutboard": [
+              0,
+              -0.09110272542658174,
+              -0.34000000000000014
+            ],
+            "targetBallLocal": [
+              0,
+              -0.09110272542658171,
+              -0.3400000000000001
+            ],
+            "hingeErrorMeters": 0,
+            "outboardErrorMeters": 6.206335383118183e-17,
+            "referenceAuthority": {
+              "hinge": "AUTHORED_RIGID_GEOMETRY_X_EXTREME:Chassis_Top_CHASSIS_END",
+              "outboard": "AUTHORED_RIGID_GEOMETRY_X_EXTREME:Chassis_Top_WHEEL_END",
+              "physicalTarget": "CURRENT_WEB_SUSPENSION_HARDPOINT_DEFERRED_RIG_REFERENCE"
+            }
+          },
+          "lower": {
+            "mode": "LEGACY_R3_AUTHORED_REFERENCE_TO_CURRENT_WEB_SUSPENSION_HARDPOINT",
+            "sourceHinge": [
+              0.5,
+              0.03125,
+              0
+            ],
+            "sourceOutboard": [
+              -0.8125,
+              0.03125,
+              0
+            ],
+            "sourceAxialLength": 1.3125,
+            "targetAxialLength": 0.47622704298863816,
+            "axialScale": 0.3628396518008672,
+            "sourceSpreadLength": 1.0625,
+            "targetSpreadLength": 0.48,
+            "spreadScale": 0.4517647058823529,
+            "thicknessScale": 0.35,
+            "mirrored": false,
+            "mappedHinge": [
+              0,
+              0,
+              0
+            ],
+            "mappedOutboard": [
+              0,
+              -0.12325662851831642,
+              -0.45999999999999996
+            ],
+            "targetBallLocal": [
+              0,
+              -0.12325662851831642,
+              -0.46
+            ],
+            "hingeErrorMeters": 0,
+            "outboardErrorMeters": 5.551115123125783e-17,
+            "referenceAuthority": {
+              "hinge": "AUTHORED_RIGID_GEOMETRY_X_EXTREME:Chassis_Bottom_CHASSIS_END",
+              "outboard": "AUTHORED_RIGID_GEOMETRY_X_EXTREME:Chassis_Bottom_WHEEL_END",
+              "physicalTarget": "CURRENT_WEB_SUSPENSION_HARDPOINT_DEFERRED_RIG_REFERENCE"
+            }
+          }
+        },
+        "cardan": {
+          "start": [
+            1.25,
+            -0.55,
+            -0.32812500000000006
+          ],
+          "end": [
+            1.25,
+            -0.55,
+            -0.875
+          ],
+          "length": 0.546875
+        },
+        "knuckle": {
+          "socket-chassismount-b": {
+            "mode": "S2_FL_EXACT_AUTHORED_RIGID_PLACEMENT_NO_KINGPIN_AFFINE",
+            "bodyRole": "lower-arm",
+            "bodyOrigin": [
+              1.2657479594346663,
+              -0.6067433714816836,
+              -0.4721012209625229
+            ],
+            "sourceWheelCenter": [
+              -1.1875,
+              0.5,
+              0
+            ],
+            "mappedWheelCenter": [
+              -0.015747959434666337,
+              0.05674337148168351,
+              -0.5778987790374772
+            ],
+            "steeringCenter": [
+              1.25,
+              -0.55,
+              -1.05
+            ],
+            "steeringAxisDirection": [
+              0,
+              1,
+              0
+            ],
+            "scaleMetersPerBU": 0.35,
+            "transform": "SOURCE_DELTA_FROM_WHEELCENTER_YAW_MINUS_90_UNIFORM_SCALE",
+            "affineKingpinCalibration": false
+          },
+          "socket-wheelcenter": {
+            "mode": "S2_FL_EXACT_AUTHORED_RIGID_PLACEMENT_NO_KINGPIN_AFFINE",
+            "bodyRole": "knuckle",
+            "bodyOrigin": [
+              1.25,
+              -0.55,
+              -1.05
+            ],
+            "sourceWheelCenter": [
+              -1.1875,
+              0.5,
+              0
+            ],
+            "mappedWheelCenter": [
+              0,
+              0,
+              0
+            ],
+            "steeringCenter": [
+              1.25,
+              -0.55,
+              -1.05
+            ],
+            "steeringAxisDirection": [
+              0,
+              1,
+              0
+            ],
+            "scaleMetersPerBU": 0.35,
+            "transform": "SOURCE_DELTA_FROM_WHEELCENTER_YAW_MINUS_90_UNIFORM_SCALE",
+            "affineKingpinCalibration": false
+          }
+        },
+        "chassis": {
+          "socket-chassismount-a": {
+            "mode": "LEGACY_R3_AUTHORED_CHASSIS_REFERENCE_TO_CURRENT_WEB_WISHBONE_FRAME",
+            "radialScale": 0.3454329829280961,
+            "verticalScale": 0.36049597593207616,
+            "thicknessScale": 0.35,
+            "targetRadialVerticalDot": -0.03113085473171953,
+            "determinant": 0.04337362659025689,
+            "mirrored": false,
+            "mappedWheelCenter": [
+              1.25,
+              -0.55,
+              -1.05
+            ],
+            "mappedUpperHinge": [
+              1.2342520405653337,
+              -0.2788972745734183,
+              -0.5478987790374772
+            ],
+            "mappedLowerHinge": [
+              1.2657479594346663,
+              -0.6067433714816836,
+              -0.4721012209625228
+            ],
+            "wheelCenterErrorMeters": 0,
+            "upperHingeErrorMeters": 5.551115123125783e-17,
+            "lowerHingeErrorMeters": 5.551115123125783e-17,
+            "referenceAuthority": {
+              "sourceFrame": "AUTHORED_WHEEL_CENTER_PLUS_UPPER_LOWER_WISHBONE_HINGES",
+              "physicalTarget": "CURRENT_WEB_WHEELCENTER_PLUS_SUSPENSION_HINGES_DEFERRED_RIG_REFERENCE",
+              "longitudinal": "CURRENT_WEB_WISHBONE_FRONT_REAR_AXIS_DEFERRED_RIG_REFERENCE"
+            }
+          },
+          "socket-singledamper-mount": {
+            "mode": "LEGACY_R3_AUTHORED_CHASSIS_REFERENCE_TO_CURRENT_WEB_WISHBONE_FRAME",
+            "radialScale": 0.3454329829280961,
+            "verticalScale": 0.36049597593207616,
+            "thicknessScale": 0.35,
+            "targetRadialVerticalDot": -0.03113085473171953,
+            "determinant": 0.04337362659025689,
+            "mirrored": false,
+            "mappedWheelCenter": [
+              1.25,
+              -0.55,
+              -1.05
+            ],
+            "mappedUpperHinge": [
+              1.2342520405653337,
+              -0.2788972745734183,
+              -0.5478987790374772
+            ],
+            "mappedLowerHinge": [
+              1.2657479594346663,
+              -0.6067433714816836,
+              -0.4721012209625228
+            ],
+            "wheelCenterErrorMeters": 0,
+            "upperHingeErrorMeters": 5.551115123125783e-17,
+            "lowerHingeErrorMeters": 5.551115123125783e-17,
+            "referenceAuthority": {
+              "sourceFrame": "AUTHORED_WHEEL_CENTER_PLUS_UPPER_LOWER_WISHBONE_HINGES",
+              "physicalTarget": "CURRENT_WEB_WHEELCENTER_PLUS_SUSPENSION_HINGES_DEFERRED_RIG_REFERENCE",
+              "longitudinal": "CURRENT_WEB_WISHBONE_FRONT_REAR_AXIS_DEFERRED_RIG_REFERENCE"
+            }
+          }
+        },
+        "damperVisual": {
+          "treatment": "VISUAL_AUTHORED_CHASSIS_TO_LOWER_ARM_PART_PAIR",
+          "upperChassisLocal": [
+            1.4892308496206232,
+            0.0029244494981554015,
+            -0.7404078724564542
+          ],
+          "lowerArmLocal": [
+            0.3670588235294117,
+            -0.11445258362415098,
+            -0.42714285714285716
+          ],
+          "restVisualLengthMeters": 0.7551114813219556,
+          "physicalSpringLengthMeters": 0.6002103076055002,
+          "referenceAuthority": {
+            "upper": "AUTHORED_NODE:Socket_SingleDamperUpper",
+            "lower": "AUTHORED_NODE:Socket_SingleDamperLower_CHILD_OF_Chassis_Bottom",
+            "physicalSpring": "M6_COILOVER_CONSTRAINT_UNCHANGED"
+          }
+        }
+      },
+      "fr": {
+        "placement": {
+          "translation": [
+            1.25,
+            -0.7250000000000001,
+            0.503125
+          ],
+          "attach": [
+            1.25,
+            -0.55,
+            0.9187500000000001
+          ],
+          "mirrored": true
+        },
+        "physical": {
+          "wheelCenter": [
+            1.25,
+            -0.55,
+            1.05
+          ],
+          "upperHinge": [
+            1.2342520405653337,
+            -0.27889727457341834,
+            0.5478987790374772
+          ],
+          "upperBall": [
+            1.2342520405653337,
+            -0.37000000000000005,
+            0.8878987790374773
+          ],
+          "lowerHinge": [
+            1.2657479594346663,
+            -0.6067433714816836,
+            0.4721012209625229
+          ],
+          "lowerBall": [
+            1.2657479594346663,
+            -0.73,
+            0.9321012209625229
+          ],
+          "steeringStart": [
+            1.08,
+            -0.4267433714816836,
+            0.45
+          ],
+          "steeringArm": [
+            1.08,
+            -0.55,
+            0.86716
+          ],
+          "coiloverChassis": [
+            1.25,
+            -0.13000000000000006,
+            0.93
+          ],
+          "coiloverKnuckle": [
+            1.2657479594346663,
+            -0.73,
+            0.9321012209625229
+          ]
+        },
+        "arms": {
+          "upper": {
+            "mode": "LEGACY_R3_AUTHORED_REFERENCE_TO_CURRENT_WEB_SUSPENSION_HARDPOINT",
+            "sourceHinge": [
+              0.40625,
+              0.96875,
+              0
+            ],
+            "sourceOutboard": [
+              -0.78125,
+              0.96875,
+              0
+            ],
+            "sourceAxialLength": 1.1875,
+            "targetAxialLength": 0.35199390133942826,
+            "axialScale": 0.29641591691741326,
+            "sourceSpreadLength": 1.0625,
+            "targetSpreadLength": 0.48,
+            "spreadScale": 0.4517647058823529,
+            "thicknessScale": 0.35,
+            "mirrored": true,
+            "mappedHinge": [
+              0,
+              0,
+              0
+            ],
+            "mappedOutboard": [
+              0,
+              -0.09110272542658172,
+              0.3400000000000001
+            ],
+            "targetBallLocal": [
+              0,
+              -0.09110272542658171,
+              0.3400000000000001
+            ],
+            "hingeErrorMeters": 0,
+            "outboardErrorMeters": 1.3877787807814457e-17,
+            "referenceAuthority": {
+              "hinge": "AUTHORED_NODE:Chassis_Top",
+              "outboard": "AUTHORED_VISUAL_REFERENCE:Socket_ChassisMount_b",
+              "physicalTarget": "CURRENT_WEB_SUSPENSION_HARDPOINT_DEFERRED_RIG_REFERENCE"
+            }
+          },
+          "lower": {
+            "mode": "LEGACY_R3_AUTHORED_REFERENCE_TO_CURRENT_WEB_SUSPENSION_HARDPOINT",
+            "sourceHinge": [
+              0.40625,
+              0.03125,
+              0
+            ],
+            "sourceOutboard": [
+              -0.78125,
+              0.03125,
+              0
+            ],
+            "sourceAxialLength": 1.1875,
+            "targetAxialLength": 0.47622704298863816,
+            "axialScale": 0.4010332993588532,
+            "sourceSpreadLength": 1.0625,
+            "targetSpreadLength": 0.48,
+            "spreadScale": 0.4517647058823529,
+            "thicknessScale": 0.35,
+            "mirrored": true,
+            "mappedHinge": [
+              0,
+              0,
+              0
+            ],
+            "mappedOutboard": [
+              0,
+              -0.12325662851831642,
+              0.45999999999999996
+            ],
+            "targetBallLocal": [
+              0,
+              -0.12325662851831642,
+              0.46
+            ],
+            "hingeErrorMeters": 0,
+            "outboardErrorMeters": 5.551115123125783e-17,
+            "referenceAuthority": {
+              "hinge": "AUTHORED_NODE:Chassis_Bottom",
+              "outboard": "INFERRED_PARALLEL_UPRIGHT_FROM_AUTHORED_UPPER_REFERENCE",
+              "physicalTarget": "CURRENT_WEB_SUSPENSION_HARDPOINT_DEFERRED_RIG_REFERENCE"
+            }
+          }
+        },
+        "cardan": {
+          "start": [
+            1.25,
+            -0.55,
+            0.32812500000000006
+          ],
+          "end": [
+            1.25,
+            -0.55,
+            0.875
+          ],
+          "length": 0.546875
+        },
+        "knuckle": {
+          "socket-chassismount-b": {
+            "mode": "LEGACY_R3_AUTHORED_UPRIGHT_REFERENCE_TO_CURRENT_WEB_KNUCKLE",
+            "sourceWheelCenter": [
+              -1.1875,
+              0.5,
+              0
+            ],
+            "sourceUpper": [
+              -0.78125,
+              0.96875,
+              0
+            ],
+            "sourceLower": [
+              -0.78125,
+              0.03125,
+              0
+            ],
+            "targetUpper": [
+              -0.015747959434666337,
+              0.18,
+              -0.16210122096252277
+            ],
+            "targetLower": [
+              0.015747959434666337,
+              -0.17999999999999994,
+              -0.11789877903747714
+            ],
+            "radialScale": 0.3446153846153845,
+            "kingpinScale": 0.3883396983000865,
+            "thicknessScale": 0.35,
+            "targetRadialKingpinDot": 0.12141244274820746,
+            "determinant": -0.04631630769230767,
+            "mirrored": true,
+            "mappedWheelCenter": [
+              0,
+              0,
+              0
+            ],
+            "mappedUpper": [
+              -0.015747959434666337,
+              0.17999999999999997,
+              -0.16210122096252277
+            ],
+            "mappedLower": [
+              0.015747959434666337,
+              -0.1799999999999999,
+              -0.11789877903747714
+            ],
+            "wheelCenterErrorMeters": 0,
+            "upperBallErrorMeters": 2.7755575615628914e-17,
+            "lowerBallErrorMeters": 2.7755575615628914e-17,
+            "referenceAuthority": {
+              "wheelCenter": "AUTHORED_NODE:Socket_WheelCenter",
+              "upper": "AUTHORED_VISUAL_REFERENCE:Socket_ChassisMount_b",
+              "lower": "INFERRED_PARALLEL_UPRIGHT_FROM_AUTHORED_UPPER_REFERENCE",
+              "physicalTarget": "CURRENT_WEB_LEGACY_KNUCKLE_WHEELCENTER_AND_BALL_HARDPOINTS_NOT_FL_AUTHORITY",
+              "longitudinal": "CURRENT_WEB_WISHBONE_FRONT_REAR_AXIS_DEFERRED_RIG_REFERENCE"
+            }
+          },
+          "socket-wheelcenter": {
+            "mode": "LEGACY_R3_AUTHORED_UPRIGHT_REFERENCE_TO_CURRENT_WEB_KNUCKLE",
+            "sourceWheelCenter": [
+              -1.1875,
+              0.5,
+              0
+            ],
+            "sourceUpper": [
+              -0.78125,
+              0.96875,
+              0
+            ],
+            "sourceLower": [
+              -0.78125,
+              0.03125,
+              0
+            ],
+            "targetUpper": [
+              -0.015747959434666337,
+              0.18,
+              -0.16210122096252277
+            ],
+            "targetLower": [
+              0.015747959434666337,
+              -0.17999999999999994,
+              -0.11789877903747714
+            ],
+            "radialScale": 0.3446153846153845,
+            "kingpinScale": 0.3883396983000865,
+            "thicknessScale": 0.35,
+            "targetRadialKingpinDot": 0.12141244274820746,
+            "determinant": -0.04631630769230767,
+            "mirrored": true,
+            "mappedWheelCenter": [
+              0,
+              0,
+              0
+            ],
+            "mappedUpper": [
+              -0.015747959434666337,
+              0.17999999999999997,
+              -0.16210122096252277
+            ],
+            "mappedLower": [
+              0.015747959434666337,
+              -0.1799999999999999,
+              -0.11789877903747714
+            ],
+            "wheelCenterErrorMeters": 0,
+            "upperBallErrorMeters": 2.7755575615628914e-17,
+            "lowerBallErrorMeters": 2.7755575615628914e-17,
+            "referenceAuthority": {
+              "wheelCenter": "AUTHORED_NODE:Socket_WheelCenter",
+              "upper": "AUTHORED_VISUAL_REFERENCE:Socket_ChassisMount_b",
+              "lower": "INFERRED_PARALLEL_UPRIGHT_FROM_AUTHORED_UPPER_REFERENCE",
+              "physicalTarget": "CURRENT_WEB_LEGACY_KNUCKLE_WHEELCENTER_AND_BALL_HARDPOINTS_NOT_FL_AUTHORITY",
+              "longitudinal": "CURRENT_WEB_WISHBONE_FRONT_REAR_AXIS_DEFERRED_RIG_REFERENCE"
+            }
+          }
+        },
+        "chassis": {
+          "socket-chassismount-a": {
+            "mode": "LEGACY_R3_AUTHORED_CHASSIS_REFERENCE_TO_CURRENT_WEB_WISHBONE_FRAME",
+            "radialScale": 0.3454329829280961,
+            "verticalScale": 0.36049597593207616,
+            "thicknessScale": 0.35,
+            "targetRadialVerticalDot": -0.03113085473171953,
+            "determinant": -0.04337362659025689,
+            "mirrored": true,
+            "mappedWheelCenter": [
+              1.25,
+              -0.55,
+              1.05
+            ],
+            "mappedUpperHinge": [
+              1.2342520405653337,
+              -0.2788972745734183,
+              0.5478987790374772
+            ],
+            "mappedLowerHinge": [
+              1.2657479594346663,
+              -0.6067433714816836,
+              0.4721012209625228
+            ],
+            "wheelCenterErrorMeters": 0,
+            "upperHingeErrorMeters": 5.551115123125783e-17,
+            "lowerHingeErrorMeters": 5.551115123125783e-17,
+            "referenceAuthority": {
+              "sourceFrame": "AUTHORED_WHEEL_CENTER_PLUS_UPPER_LOWER_WISHBONE_HINGES",
+              "physicalTarget": "CURRENT_WEB_WHEELCENTER_PLUS_SUSPENSION_HINGES_DEFERRED_RIG_REFERENCE",
+              "longitudinal": "CURRENT_WEB_WISHBONE_FRONT_REAR_AXIS_DEFERRED_RIG_REFERENCE"
+            }
+          },
+          "socket-singledamper-mount": {
+            "mode": "LEGACY_R3_AUTHORED_CHASSIS_REFERENCE_TO_CURRENT_WEB_WISHBONE_FRAME",
+            "radialScale": 0.3454329829280961,
+            "verticalScale": 0.36049597593207616,
+            "thicknessScale": 0.35,
+            "targetRadialVerticalDot": -0.03113085473171953,
+            "determinant": -0.04337362659025689,
+            "mirrored": true,
+            "mappedWheelCenter": [
+              1.25,
+              -0.55,
+              1.05
+            ],
+            "mappedUpperHinge": [
+              1.2342520405653337,
+              -0.2788972745734183,
+              0.5478987790374772
+            ],
+            "mappedLowerHinge": [
+              1.2657479594346663,
+              -0.6067433714816836,
+              0.4721012209625228
+            ],
+            "wheelCenterErrorMeters": 0,
+            "upperHingeErrorMeters": 5.551115123125783e-17,
+            "lowerHingeErrorMeters": 5.551115123125783e-17,
+            "referenceAuthority": {
+              "sourceFrame": "AUTHORED_WHEEL_CENTER_PLUS_UPPER_LOWER_WISHBONE_HINGES",
+              "physicalTarget": "CURRENT_WEB_WHEELCENTER_PLUS_SUSPENSION_HINGES_DEFERRED_RIG_REFERENCE",
+              "longitudinal": "CURRENT_WEB_WISHBONE_FRONT_REAR_AXIS_DEFERRED_RIG_REFERENCE"
+            }
+          }
+        },
+        "damperVisual": {
+          "treatment": "VISUAL_AUTHORED_CHASSIS_TO_LOWER_ARM_PART_PAIR",
+          "upperChassisLocal": [
+            1.4892308496206232,
+            0.0029244494981554015,
+            0.7404078724564542
+          ],
+          "lowerArmLocal": [
+            0.3670588235294117,
+            -0.11676943754366818,
+            0.4357894736842105
+          ],
+          "restVisualLengthMeters": 0.7591940693494738,
+          "physicalSpringLengthMeters": 0.6002103076055002,
+          "referenceAuthority": {
+            "upper": "AUTHORED_NODE:Socket_SingleDamperUpper",
+            "lower": "AUTHORED_NODE:Socket_SingleDamperLower_CHILD_OF_Chassis_Bottom",
+            "physicalSpring": "M6_COILOVER_CONSTRAINT_UNCHANGED"
+          }
+        }
+      },
+      "rl": {
+        "placement": {
+          "translation": [
+            -1.25,
+            -0.7250000000000001,
+            -0.503125
+          ],
+          "attach": [
+            -1.25,
+            -0.55,
+            -0.9187500000000001
+          ],
+          "mirrored": false
+        },
+        "physical": {
+          "wheelCenter": [
+            -1.25,
+            -0.55,
+            -1.05
+          ],
+          "upperHinge": [
+            -1.2657479594346663,
+            -0.27889727457341834,
+            -0.5478987790374772
+          ],
+          "upperBall": [
+            -1.2657479594346663,
+            -0.37000000000000005,
+            -0.8878987790374773
+          ],
+          "lowerHinge": [
+            -1.2342520405653337,
+            -0.6067433714816836,
+            -0.4721012209625229
+          ],
+          "lowerBall": [
+            -1.2342520405653337,
+            -0.73,
+            -0.9321012209625229
+          ],
+          "steeringStart": [
+            -1.42,
+            -0.4267433714816836,
+            -0.40716
+          ],
+          "steeringArm": [
+            -1.42,
+            -0.55,
+            -0.86716
+          ],
+          "coiloverChassis": [
+            -1.25,
+            -0.13000000000000006,
+            -0.93
+          ],
+          "coiloverKnuckle": [
+            -1.2342520405653337,
+            -0.73,
+            -0.9321012209625229
+          ]
+        },
+        "arms": {
+          "upper": {
+            "mode": "GEOMETRY_DERIVED_REAR_REFERENCE_TO_PHYSICAL_HARDPOINT_R3",
+            "sourceHinge": [
+              0.40625,
+              0.96875,
+              0
+            ],
+            "sourceOutboard": [
+              -0.78125,
+              0.96875,
+              0
+            ],
+            "sourceAxialLength": 1.1875,
+            "targetAxialLength": 0.35199390133942826,
+            "axialScale": 0.29641591691741326,
+            "sourceSpreadLength": 1.0625,
+            "sourceSpreadCenter": 0,
+            "targetSpreadLength": 0.48,
+            "spreadScale": 0.4517647058823529,
+            "thicknessScale": 0.35,
+            "mirrored": false,
+            "mappedHinge": [
+              0,
+              0,
+              0
+            ],
+            "mappedOutboard": [
+              0,
+              -0.09110272542658172,
+              -0.3400000000000001
+            ],
+            "targetBallLocal": [
+              0,
+              -0.09110272542658171,
+              -0.3400000000000001
+            ],
+            "hingeErrorMeters": 0,
+            "outboardErrorMeters": 1.3877787807814457e-17,
+            "referenceAuthority": {
+              "hinge": "AUTHORED_NODE:Chassis_Top",
+              "outboard": "GEOMETRY_DERIVED_MATING_SURFACE_MIDPOINT:upper-arm<->hub",
+              "spread": "GEOMETRY_DERIVED_INBOARD_CHASSIS_MOUNTING_FACE:upper-arm",
+              "physicalTarget": "M6_WISHBONE_HARDPOINT"
+            }
+          },
+          "lower": {
+            "mode": "GEOMETRY_DERIVED_REAR_REFERENCE_TO_PHYSICAL_HARDPOINT_R3",
+            "sourceHinge": [
+              0.40625,
+              0.03125,
+              0
+            ],
+            "sourceOutboard": [
+              -0.78125,
+              0.03125,
+              0
+            ],
+            "sourceAxialLength": 1.1875,
+            "targetAxialLength": 0.47622704298863816,
+            "axialScale": 0.4010332993588532,
+            "sourceSpreadLength": 1.0625,
+            "sourceSpreadCenter": 0,
+            "targetSpreadLength": 0.48,
+            "spreadScale": 0.4517647058823529,
+            "thicknessScale": 0.35,
+            "mirrored": false,
+            "mappedHinge": [
+              0,
+              0,
+              0
+            ],
+            "mappedOutboard": [
+              0,
+              -0.12325662851831642,
+              -0.45999999999999996
+            ],
+            "targetBallLocal": [
+              0,
+              -0.12325662851831642,
+              -0.46
+            ],
+            "hingeErrorMeters": 0,
+            "outboardErrorMeters": 5.551115123125783e-17,
+            "referenceAuthority": {
+              "hinge": "AUTHORED_NODE:Chassis_Bottom",
+              "outboard": "GEOMETRY_DERIVED_MATING_SURFACE_MIDPOINT:lower-arm<->hub",
+              "spread": "GEOMETRY_DERIVED_INBOARD_CHASSIS_MOUNTING_FACE:lower-arm",
+              "physicalTarget": "M6_WISHBONE_HARDPOINT"
+            }
+          }
+        },
+        "cardan": {
+          "start": [
+            -1.25,
+            -0.55,
+            -0.32812500000000006
+          ],
+          "end": [
+            -1.25,
+            -0.55,
+            -0.83125
+          ],
+          "length": 0.503125
+        },
+        "knuckle": {
+          "mode": "GEOMETRY_DERIVED_REAR_UPRIGHT_REFERENCE_TO_PHYSICAL_KNUCKLE_R3",
+          "sourceWheelCenter": [
+            -1.1875,
+            0.5,
+            0
+          ],
+          "sourceUpper": [
+            -0.78125,
+            0.96875,
+            0
+          ],
+          "sourceLower": [
+            -0.78125,
+            0.03125,
+            0
+          ],
+          "targetUpper": [
+            -0.015747959434666337,
+            0.18,
+            0.16210122096252277
+          ],
+          "targetLower": [
+            0.015747959434666337,
+            -0.17999999999999994,
+            0.11789877903747714
+          ],
+          "radialScale": 0.3446153846153845,
+          "kingpinScale": 0.3883396983000865,
+          "thicknessScale": 0.35,
+          "targetRadialKingpinDot": 0.12141244274820746,
+          "determinant": 0.04631630769230767,
+          "mirrored": false,
+          "mappedWheelCenter": [
+            0,
+            0,
+            0
+          ],
+          "mappedUpper": [
+            -0.015747959434666337,
+            0.17999999999999997,
+            0.16210122096252277
+          ],
+          "mappedLower": [
+            0.015747959434666337,
+            -0.1799999999999999,
+            0.11789877903747714
+          ],
+          "wheelCenterErrorMeters": 0,
+          "upperBallErrorMeters": 2.7755575615628914e-17,
+          "lowerBallErrorMeters": 2.7755575615628914e-17,
+          "referenceAuthority": {
+            "wheelCenter": "AUTHORED_NODE:Socket_WheelCenter",
+            "upper": "GEOMETRY_DERIVED_MATING_SURFACE_MIDPOINT:upper-arm<->hub",
+            "lower": "GEOMETRY_DERIVED_MATING_SURFACE_MIDPOINT:lower-arm<->hub",
+            "physicalTarget": "CURRENT_WEB_LEGACY_KNUCKLE_WHEELCENTER_AND_BALL_HARDPOINTS_NOT_FL_AUTHORITY",
+            "longitudinal": "CURRENT_WEB_WISHBONE_FRONT_REAR_AXIS_DEFERRED_RIG_REFERENCE"
+          }
+        },
+        "chassis": {
+          "mode": "REAR_AUTHORED_CHASSIS_REFERENCE_TO_PHYSICAL_WISHBONE_FRAME_R3",
+          "radialScale": 0.3454329829280961,
+          "verticalScale": 0.36049597593207616,
+          "thicknessScale": 0.35,
+          "targetRadialVerticalDot": -0.03113085473171953,
+          "determinant": 0.04337362659025689,
+          "mirrored": false,
+          "mappedWheelCenter": [
+            -1.25,
+            -0.55,
+            -1.05
+          ],
+          "mappedUpperHinge": [
+            -1.2657479594346663,
+            -0.2788972745734183,
+            -0.5478987790374772
+          ],
+          "mappedLowerHinge": [
+            -1.2342520405653337,
+            -0.6067433714816836,
+            -0.4721012209625228
+          ],
+          "wheelCenterErrorMeters": 0,
+          "upperHingeErrorMeters": 5.551115123125783e-17,
+          "lowerHingeErrorMeters": 5.551115123125783e-17,
+          "referenceAuthority": {
+            "sourceFrame": "AUTHORED_WHEEL_CENTER_PLUS_UPPER_LOWER_WISHBONE_HINGES",
+            "physicalTarget": "CURRENT_WEB_WHEELCENTER_PLUS_SUSPENSION_HINGES_DEFERRED_RIG_REFERENCE",
+            "longitudinal": "CURRENT_WEB_WISHBONE_FRONT_REAR_AXIS_DEFERRED_RIG_REFERENCE"
+          }
+        },
+        "damperVisual": {
+          "mode": "AUTHORED_TWIN_REAR_DAMPERS_CHASSIS_TO_LOWER_ARM_R3",
+          "sourcePairing": "R_TO_R__L_TO_L",
+          "sourceRRole": "FORE_AFTER_VEHICLE_ORIENTATION",
+          "sourceLRole": "AFT_AFTER_VEHICLE_ORIENTATION",
+          "sourceLineLengthBU": 1.9675715719193039,
+          "sourcePairSeparationBU": 1.625,
+          "sourcePairAxisAlignment": 1,
+          "upperRestSeparationMeters": 0.5687500000000001,
+          "lowerRestSeparationMeters": 0.7341176470588233,
+          "crossPairLengthsMeters": {
+            "foreUpperToAftLower": 0.9510526283743995,
+            "aftUpperToForeLower": 1.031101266420323
+          },
+          "physicalSpringLengthMeters": 0.6002103076055002,
+          "physicalSpringAuthority": "M6_COILOVER_CONSTRAINT_UNCHANGED"
+        }
+      },
+      "rr": {
+        "placement": {
+          "translation": [
+            -1.25,
+            -0.7250000000000001,
+            0.503125
+          ],
+          "attach": [
+            -1.25,
+            -0.55,
+            0.9187500000000001
+          ],
+          "mirrored": true
+        },
+        "physical": {
+          "wheelCenter": [
+            -1.25,
+            -0.55,
+            1.05
+          ],
+          "upperHinge": [
+            -1.2657479594346663,
+            -0.27889727457341834,
+            0.5478987790374772
+          ],
+          "upperBall": [
+            -1.2657479594346663,
+            -0.37000000000000005,
+            0.8878987790374773
+          ],
+          "lowerHinge": [
+            -1.2342520405653337,
+            -0.6067433714816836,
+            0.4721012209625229
+          ],
+          "lowerBall": [
+            -1.2342520405653337,
+            -0.73,
+            0.9321012209625229
+          ],
+          "steeringStart": [
+            -1.42,
+            -0.4267433714816836,
+            0.40716
+          ],
+          "steeringArm": [
+            -1.42,
+            -0.55,
+            0.86716
+          ],
+          "coiloverChassis": [
+            -1.25,
+            -0.13000000000000006,
+            0.93
+          ],
+          "coiloverKnuckle": [
+            -1.2342520405653337,
+            -0.73,
+            0.9321012209625229
+          ]
+        },
+        "arms": {
+          "upper": {
+            "mode": "GEOMETRY_DERIVED_REAR_REFERENCE_TO_PHYSICAL_HARDPOINT_R3",
+            "sourceHinge": [
+              0.40625,
+              0.96875,
+              0
+            ],
+            "sourceOutboard": [
+              -0.78125,
+              0.96875,
+              0
+            ],
+            "sourceAxialLength": 1.1875,
+            "targetAxialLength": 0.35199390133942826,
+            "axialScale": 0.29641591691741326,
+            "sourceSpreadLength": 1.0625,
+            "sourceSpreadCenter": 0,
+            "targetSpreadLength": 0.48,
+            "spreadScale": 0.4517647058823529,
+            "thicknessScale": 0.35,
+            "mirrored": true,
+            "mappedHinge": [
+              0,
+              0,
+              0
+            ],
+            "mappedOutboard": [
+              0,
+              -0.09110272542658172,
+              0.3400000000000001
+            ],
+            "targetBallLocal": [
+              0,
+              -0.09110272542658171,
+              0.3400000000000001
+            ],
+            "hingeErrorMeters": 0,
+            "outboardErrorMeters": 1.3877787807814457e-17,
+            "referenceAuthority": {
+              "hinge": "AUTHORED_NODE:Chassis_Top",
+              "outboard": "GEOMETRY_DERIVED_MATING_SURFACE_MIDPOINT:upper-arm<->hub",
+              "spread": "GEOMETRY_DERIVED_INBOARD_CHASSIS_MOUNTING_FACE:upper-arm",
+              "physicalTarget": "M6_WISHBONE_HARDPOINT"
+            }
+          },
+          "lower": {
+            "mode": "GEOMETRY_DERIVED_REAR_REFERENCE_TO_PHYSICAL_HARDPOINT_R3",
+            "sourceHinge": [
+              0.40625,
+              0.03125,
+              0
+            ],
+            "sourceOutboard": [
+              -0.78125,
+              0.03125,
+              0
+            ],
+            "sourceAxialLength": 1.1875,
+            "targetAxialLength": 0.47622704298863816,
+            "axialScale": 0.4010332993588532,
+            "sourceSpreadLength": 1.0625,
+            "sourceSpreadCenter": 0,
+            "targetSpreadLength": 0.48,
+            "spreadScale": 0.4517647058823529,
+            "thicknessScale": 0.35,
+            "mirrored": true,
+            "mappedHinge": [
+              0,
+              0,
+              0
+            ],
+            "mappedOutboard": [
+              0,
+              -0.12325662851831642,
+              0.45999999999999996
+            ],
+            "targetBallLocal": [
+              0,
+              -0.12325662851831642,
+              0.46
+            ],
+            "hingeErrorMeters": 0,
+            "outboardErrorMeters": 5.551115123125783e-17,
+            "referenceAuthority": {
+              "hinge": "AUTHORED_NODE:Chassis_Bottom",
+              "outboard": "GEOMETRY_DERIVED_MATING_SURFACE_MIDPOINT:lower-arm<->hub",
+              "spread": "GEOMETRY_DERIVED_INBOARD_CHASSIS_MOUNTING_FACE:lower-arm",
+              "physicalTarget": "M6_WISHBONE_HARDPOINT"
+            }
+          }
+        },
+        "cardan": {
+          "start": [
+            -1.25,
+            -0.55,
+            0.32812500000000006
+          ],
+          "end": [
+            -1.25,
+            -0.55,
+            0.83125
+          ],
+          "length": 0.503125
+        },
+        "knuckle": {
+          "mode": "GEOMETRY_DERIVED_REAR_UPRIGHT_REFERENCE_TO_PHYSICAL_KNUCKLE_R3",
+          "sourceWheelCenter": [
+            -1.1875,
+            0.5,
+            0
+          ],
+          "sourceUpper": [
+            -0.78125,
+            0.96875,
+            0
+          ],
+          "sourceLower": [
+            -0.78125,
+            0.03125,
+            0
+          ],
+          "targetUpper": [
+            -0.015747959434666337,
+            0.18,
+            -0.16210122096252277
+          ],
+          "targetLower": [
+            0.015747959434666337,
+            -0.17999999999999994,
+            -0.11789877903747714
+          ],
+          "radialScale": 0.3446153846153845,
+          "kingpinScale": 0.3883396983000865,
+          "thicknessScale": 0.35,
+          "targetRadialKingpinDot": 0.12141244274820746,
+          "determinant": -0.04631630769230767,
+          "mirrored": true,
+          "mappedWheelCenter": [
+            0,
+            0,
+            0
+          ],
+          "mappedUpper": [
+            -0.015747959434666337,
+            0.17999999999999997,
+            -0.16210122096252277
+          ],
+          "mappedLower": [
+            0.015747959434666337,
+            -0.1799999999999999,
+            -0.11789877903747714
+          ],
+          "wheelCenterErrorMeters": 0,
+          "upperBallErrorMeters": 2.7755575615628914e-17,
+          "lowerBallErrorMeters": 2.7755575615628914e-17,
+          "referenceAuthority": {
+            "wheelCenter": "AUTHORED_NODE:Socket_WheelCenter",
+            "upper": "GEOMETRY_DERIVED_MATING_SURFACE_MIDPOINT:upper-arm<->hub",
+            "lower": "GEOMETRY_DERIVED_MATING_SURFACE_MIDPOINT:lower-arm<->hub",
+            "physicalTarget": "CURRENT_WEB_LEGACY_KNUCKLE_WHEELCENTER_AND_BALL_HARDPOINTS_NOT_FL_AUTHORITY",
+            "longitudinal": "CURRENT_WEB_WISHBONE_FRONT_REAR_AXIS_DEFERRED_RIG_REFERENCE"
+          }
+        },
+        "chassis": {
+          "mode": "REAR_AUTHORED_CHASSIS_REFERENCE_TO_PHYSICAL_WISHBONE_FRAME_R3",
+          "radialScale": 0.3454329829280961,
+          "verticalScale": 0.36049597593207616,
+          "thicknessScale": 0.35,
+          "targetRadialVerticalDot": -0.03113085473171953,
+          "determinant": -0.04337362659025689,
+          "mirrored": true,
+          "mappedWheelCenter": [
+            -1.25,
+            -0.55,
+            1.05
+          ],
+          "mappedUpperHinge": [
+            -1.2657479594346663,
+            -0.2788972745734183,
+            0.5478987790374772
+          ],
+          "mappedLowerHinge": [
+            -1.2342520405653337,
+            -0.6067433714816836,
+            0.4721012209625228
+          ],
+          "wheelCenterErrorMeters": 0,
+          "upperHingeErrorMeters": 5.551115123125783e-17,
+          "lowerHingeErrorMeters": 5.551115123125783e-17,
+          "referenceAuthority": {
+            "sourceFrame": "AUTHORED_WHEEL_CENTER_PLUS_UPPER_LOWER_WISHBONE_HINGES",
+            "physicalTarget": "CURRENT_WEB_WHEELCENTER_PLUS_SUSPENSION_HINGES_DEFERRED_RIG_REFERENCE",
+            "longitudinal": "CURRENT_WEB_WISHBONE_FRONT_REAR_AXIS_DEFERRED_RIG_REFERENCE"
+          }
+        },
+        "damperVisual": {
+          "mode": "AUTHORED_TWIN_REAR_DAMPERS_CHASSIS_TO_LOWER_ARM_R3",
+          "sourcePairing": "R_TO_R__L_TO_L",
+          "sourceRRole": "FORE_AFTER_VEHICLE_ORIENTATION",
+          "sourceLRole": "AFT_AFTER_VEHICLE_ORIENTATION",
+          "sourceLineLengthBU": 1.9675715719193039,
+          "sourcePairSeparationBU": 1.625,
+          "sourcePairAxisAlignment": 1,
+          "upperRestSeparationMeters": 0.5687500000000001,
+          "lowerRestSeparationMeters": 0.7341176470588233,
+          "crossPairLengthsMeters": {
+            "foreUpperToAftLower": 0.9510526283743995,
+            "aftUpperToForeLower": 1.031101266420323
+          },
+          "physicalSpringLengthMeters": 0.6002103076055002,
+          "physicalSpringAuthority": "M6_COILOVER_CONSTRAINT_UNCHANGED"
+        }
+      }
+    }
+  },
+  "output": {
+    "byteLength": 829936,
+    "sha256": "1e2619eb841c9d46e33d5a92918fe00c72af6a03202ab29dfe4c8e8ec07a12dc",
+    "nodeCount": 64,
+    "meshCount": 51,
+    "imageCount": 3,
+    "textureCount": 3,
+    "bindingCount": 64,
+    "realBindingCount": 59,
+    "realBindingIds": [
+      "owner.chassis",
+      "owner.fl.wheel",
+      "owner.fr.wheel",
+      "owner.rl.wheel",
+      "owner.rr.wheel",
+      "owner.fl.upper-arm",
+      "owner.fl.lower-arm",
+      "owner.fl.knuckle.socket-chassismount-b",
+      "owner.fl.knuckle.socket-wheelcenter",
+      "owner.fl.chassis-bracket.socket-chassismount-a",
+      "owner.fl.chassis-bracket.socket-singledamper-mount",
+      "owner.fl.coilover.upper",
+      "owner.fl.coilover.stretch",
+      "owner.fl.coilover.lower",
+      "owner.fl.steering-link",
+      "owner.fl.cardan.drive-end",
+      "owner.fl.cardan.mid",
+      "owner.fl.cardan.hub-end",
+      "owner.fr.upper-arm",
+      "owner.fr.lower-arm",
+      "owner.fr.knuckle.socket-chassismount-b",
+      "owner.fr.knuckle.socket-wheelcenter",
+      "owner.fr.chassis-bracket.socket-chassismount-a",
+      "owner.fr.chassis-bracket.socket-singledamper-mount",
+      "owner.fr.coilover.upper",
+      "owner.fr.coilover.stretch",
+      "owner.fr.coilover.lower",
+      "owner.fr.steering-link",
+      "owner.fr.cardan.drive-end",
+      "owner.fr.cardan.mid",
+      "owner.fr.cardan.hub-end",
+      "owner.rl.upper-arm",
+      "owner.rl.lower-arm",
+      "owner.rl.knuckle.socket-wheelcenter",
+      "owner.rl.chassis-bracket.socket-chassismount",
+      "owner.rl.coilover.upper",
+      "owner.rl.coilover.stretch",
+      "owner.rl.coilover.lower",
+      "owner.rl.steering-link",
+      "owner.rl.cardan.drive-end",
+      "owner.rl.cardan.mid",
+      "owner.rl.cardan.hub-end",
+      "owner.rr.upper-arm",
+      "owner.rr.lower-arm",
+      "owner.rr.knuckle.socket-wheelcenter",
+      "owner.rr.chassis-bracket.socket-chassismount",
+      "owner.rr.coilover.upper",
+      "owner.rr.coilover.stretch",
+      "owner.rr.coilover.lower",
+      "owner.rr.steering-link",
+      "owner.rr.cardan.drive-end",
+      "owner.rr.cardan.mid",
+      "owner.rr.cardan.hub-end",
+      "owner.rl.coilover-aft.upper",
+      "owner.rl.coilover-aft.stretch",
+      "owner.rl.coilover-aft.lower",
+      "owner.rr.coilover-aft.upper",
+      "owner.rr.coilover-aft.stretch",
+      "owner.rr.coilover-aft.lower"
+    ],
+    "diagnosticBindingIds": [
+      "diagnostic.rack.coverage",
+      "diagnostic.fl.physical-coilover.coverage",
+      "diagnostic.fr.physical-coilover.coverage",
+      "diagnostic.rl.physical-coilover.coverage",
+      "diagnostic.rr.physical-coilover.coverage"
+    ],
+    "textureRendering": "EMBEDDED_BASE_COLOR_MASK_V1",
+    "cardanTreatment": "VISUAL_ONLY_PART_PAIR_NO_TORQUE_TRANSFER",
+    "rearDamperTreatment": "AUTHORED_TWIN_PART_PAIR_NO_PHYSICS_CHANGE",
+    "physicalCoiloverCoverage": "DIAGNOSTIC_SEGMENT_ENDPOINT_BINDINGS_NOT_RENDERED"
+  },
+  "calibrationStrategy": {
+    "frontWishbones": "FL_S2_SOURCE_RIGID_ENDS_TO_CURRENT_SUSPENSION_HARDPOINTS_DEFERRED_RIG__FR_R3_LEGACY_VISUAL",
+    "frontKnuckle": "FL_S2_WHEELCENTER_SOURCE_REGISTERED_NO_KINGPIN_AFFINE__FR_R3_LEGACY_VISUAL",
+    "frontChassis": "R3_AUTHORED_CHASSIS_REFERENCE_PATCH_OVER_EXACT_R2",
+    "frontDamper": "VISUAL_AUTHORED_CHASSIS_TO_LOWER_ARM_PART_PAIR",
+    "rearWishbones": "R3_GEOMETRY_MATING_AND_CHASSIS_FACE_REFERENCE_PATCH_OVER_EXACT_R2",
+    "rearKnuckle": "R3_GEOMETRY_MATING_UPRIGHT_REFERENCE_PATCH_OVER_EXACT_R2",
+    "rearChassis": "R3_AUTHORED_CHASSIS_REFERENCE_PATCH_OVER_EXACT_R2",
+    "rearDamper": "R3_AUTHORED_TWIN_CHASSIS_TO_LOWER_ARM_PART_PAIRS",
+    "cardan": "R3_DIFFERENTIAL_OUTPUT_FACE_TO_AUTHORED_HUB_PART_PAIR",
+    "wheelMount": "R3_AUTHORED_SOCKET_WHEELMOUNT_HANDED_VISUAL_INTERFACE",
+    "otherSubsystems": "R2_BYTE_LAYOUT_INHERITED"
+  },
+  "cardanCalibration": {
+    "fl": {
+      "mode": "DIFFERENTIAL_OUTPUT_FACE_TO_AUTHORED_HUB_R3",
+      "axle": "front",
+      "side": "left",
+      "differentialPiece": "Diferential_F",
+      "differentialOutputAuthority": "GEOMETRY_DERIVED_DIFFERENTIAL_OUTPUT_FACE",
+      "differentialOutputFaceVertexCount": 24,
+      "differentialWidthMeters": 0.49672667160630235,
+      "sourceHub": [
+        -1.0625,
+        0.5,
+        0
+      ],
+      "hubAuthority": "AUTHORED_NODE:Socket_CardanHub",
+      "hubInboardFromWheelCenterMeters": 0.04307692307692307,
+      "restLengthMeters": 0.7593279722074499,
+      "historicalDriveSocket": [
+        0.5,
+        0.5,
+        0
+      ],
+      "historicalDriveChassisLocal": [
+        1.25,
+        -0.43651563614681865,
+        -0.4782352941176471
+      ],
+      "historicalDriveMismatchMeters": 0.2672218945699647,
+      "historicalDriveAuthority": "REJECTED_AS_FINAL_ENDPOINT_BY_DIFFERENTIAL_GEOMETRY",
+      "physicsAuthority": "VISUAL_ONLY_NO_TORQUE_TRANSFER"
+    },
+    "fr": {
+      "mode": "DIFFERENTIAL_OUTPUT_FACE_TO_AUTHORED_HUB_R3",
+      "axle": "front",
+      "side": "right",
+      "differentialPiece": "Diferential_F",
+      "differentialOutputAuthority": "GEOMETRY_DERIVED_DIFFERENTIAL_OUTPUT_FACE",
+      "differentialOutputFaceVertexCount": 24,
+      "differentialWidthMeters": 0.49672667160630235,
+      "sourceHub": [
+        -1.0625,
+        0.5,
+        0
+      ],
+      "hubAuthority": "AUTHORED_NODE:Socket_CardanHub",
+      "hubInboardFromWheelCenterMeters": 0.04307692307692307,
+      "restLengthMeters": 0.7593279565770595,
+      "historicalDriveSocket": [
+        0.5,
+        0.5,
+        0
+      ],
+      "historicalDriveChassisLocal": [
+        1.25,
+        -0.43651563614681865,
+        0.4782352941176471
+      ],
+      "historicalDriveMismatchMeters": 0.26722188111063605,
+      "historicalDriveAuthority": "REJECTED_AS_FINAL_ENDPOINT_BY_DIFFERENTIAL_GEOMETRY",
+      "physicsAuthority": "VISUAL_ONLY_NO_TORQUE_TRANSFER"
+    },
+    "rl": {
+      "mode": "DIFFERENTIAL_OUTPUT_FACE_TO_AUTHORED_HUB_R3",
+      "axle": "rear",
+      "side": "left",
+      "differentialPiece": "Diferential_B",
+      "differentialOutputAuthority": "GEOMETRY_DERIVED_DIFFERENTIAL_OUTPUT_FACE",
+      "differentialOutputFaceVertexCount": 24,
+      "differentialWidthMeters": 0.49672667160630224,
+      "sourceHub": [
+        -0.9375,
+        0.5,
+        0
+      ],
+      "hubAuthority": "AUTHORED_NODE:Socket_CardanHub",
+      "hubInboardFromWheelCenterMeters": 0.08615384615384614,
+      "restLengthMeters": 0.7161063561158454,
+      "historicalDriveSocket": [
+        0.5,
+        0.5,
+        0
+      ],
+      "historicalDriveChassisLocal": [
+        -1.25,
+        -0.43651563614681865,
+        -0.4782352941176471
+      ],
+      "historicalDriveMismatchMeters": 0.2667097737945897,
+      "historicalDriveAuthority": "REJECTED_AS_FINAL_ENDPOINT_BY_DIFFERENTIAL_GEOMETRY",
+      "physicsAuthority": "VISUAL_ONLY_NO_TORQUE_TRANSFER"
+    },
+    "rr": {
+      "mode": "DIFFERENTIAL_OUTPUT_FACE_TO_AUTHORED_HUB_R3",
+      "axle": "rear",
+      "side": "right",
+      "differentialPiece": "Diferential_B",
+      "differentialOutputAuthority": "GEOMETRY_DERIVED_DIFFERENTIAL_OUTPUT_FACE",
+      "differentialOutputFaceVertexCount": 24,
+      "differentialWidthMeters": 0.49672667160630224,
+      "sourceHub": [
+        -0.9375,
+        0.5,
+        0
+      ],
+      "hubAuthority": "AUTHORED_NODE:Socket_CardanHub",
+      "hubInboardFromWheelCenterMeters": 0.08615384615384614,
+      "restLengthMeters": 0.7161063404832496,
+      "historicalDriveSocket": [
+        0.5,
+        0.5,
+        0
+      ],
+      "historicalDriveChassisLocal": [
+        -1.25,
+        -0.43651563614681865,
+        0.4782352941176471
+      ],
+      "historicalDriveMismatchMeters": 0.2667097603094178,
+      "historicalDriveAuthority": "REJECTED_AS_FINAL_ENDPOINT_BY_DIFFERENTIAL_GEOMETRY",
+      "physicsAuthority": "VISUAL_ONLY_NO_TORQUE_TRANSFER"
+    }
+  },
+  "wheelInterface": {
+    "mountLocalPosition": [
+      0,
+      0.13124999999999998,
+      0
+    ],
+    "mountOffsetMeters": 0.13124999999999998,
+    "provenance": {
+      "mount": "AUTHORED_NODE:Socket_WheelMount",
+      "center": "AUTHORED_MARKER_MIDPOINT:Marker_TireWidthLeft+Marker_TireWidthRight",
+      "dimensions": "VERIFIED_R1_WHEEL_RADIUS_WIDTH_MARKERS"
+    },
+    "treatment": "WHEEL_CENTER_REMAINS_PHYSICAL_SPIN_CENTER_SOCKET_WHEELMOUNT_IS_VISUAL_HUB_INTERFACE"
+  },
+  "frontUpperPilot": {
+    "corner": "fl",
+    "treatment": "VISUAL_ONLY_ROLL_PINNED_SPLIT_AXIS_CHASSIS_TO_PHYSICAL_OUTBOARD",
+    "chassisLocal": [
+      1.2342520405653337,
+      -0.2828125,
+      -0.21965118050575239
+    ],
+    "authoredChassisIntentLocal": [
+      1.25,
+      -0.3859375000000001,
+      -0.3609375
+    ],
+    "chassisMate": {
+      "chassisLocal": [
+        1.0785810947418215,
+        -0.2828125,
+        -0.21965118050575239
+      ],
+      "selectionRule": "AUTHORED_SUSPENSION_ATTACHMENT_INTENT_NEAREST_ON_SEMANTIC_MAIN_CHASSIS_PIECE",
+      "semanticPiece": "group5",
+      "authoredIntentLocal": [
+        1.25,
+        -0.3859375000000001,
+        -0.3609375
+      ],
+      "selected": {
+        "point": [
+          1.0785810947418215,
+          -0.2828125,
+          -0.21965118050575239
+        ],
+        "distanceMeters": 0.2449102504615579,
+        "provenance": {
+          "sourceAsset": "Nadwozie.gltf",
+          "pieceName": "group5",
+          "jointSlot": 3,
+          "jointNodeIndex": 2,
+          "pieceTriangleCount": 564,
+          "primitiveIndex": 0,
+          "triangleIndex": 26,
+          "triangleVertexIndices": [
+            52,
+            53,
+            54
+          ],
+          "trianglePointsChassisLocal": [
+            [
+              1.0785810947418215,
+              -0.2390625,
+              -0.21965118050575239
+            ],
+            [
+              1.0785810947418215,
+              -0.2828125,
+              -0.21965118050575239
+            ],
+            [
+              0.3308160662651063,
+              -0.2390625,
+              -0.5293855309486388
+            ]
+          ],
+          "closestRegion": "B",
+          "barycentric": [
+            0,
+            1,
+            0
+          ],
+          "triangleNormalChassisLocal": [
+            0.3826833629519157,
+            0,
+            -0.9238795612631618
+          ]
+        }
+      },
+      "physicalHingeComparison": {
+        "queryLocal": [
+          1.2342520405653337,
+          -0.27889727457341834,
+          -0.5478987790374772
+        ],
+        "result": {
+          "point": [
+            1.076246178150177,
+            -0.21505427360534668,
+            -0.22968749999999982
+          ],
+          "distanceMeters": 0.3609711892060554,
+          "provenance": {
+            "sourceAsset": "Nadwozie.gltf",
+            "pieceName": "group5",
+            "jointSlot": 3,
+            "jointNodeIndex": 2,
+            "pieceTriangleCount": 564,
+            "primitiveIndex": 0,
+            "triangleIndex": 254,
+            "triangleVertexIndices": [
+              508,
+              509,
+              510
+            ],
+            "trianglePointsChassisLocal": [
+              [
+                1.076246178150177,
+                -0.21505427360534668,
+                -0.22968749999999982
+              ],
+              [
+                1.059503722190857,
+                -0.25547400712966917,
+                -0.22968749999999982
+              ],
+              [
+                0.3284811496734619,
+                0.09468011856079095,
+                -0.2296875
+              ]
+            ],
+            "closestRegion": "A",
+            "barycentric": [
+              1,
+              0,
+              0
+            ],
+            "triangleNormalChassisLocal": [
+              1.9009330863483833e-16,
+              -7.873948120081214e-17,
+              -1
+            ]
+          }
+        },
+        "authority": "DIAGNOSTIC_ONLY_NOT_SELECTION_INPUT"
+      },
+      "unrestrictedDiagnostic": {
+        "queryLocal": [
+          1.25,
+          -0.3859375000000001,
+          -0.3609375
+        ],
+        "result": {
+          "point": [
+            1.3014637827873232,
+            -0.5453125,
+            -0.24836332798004124
+          ],
+          "distanceMeters": 0.20179657026262865,
+          "provenance": {
+            "sourceAsset": "Nadwozie.gltf",
+            "pieceName": "Diferential_F",
+            "jointSlot": 1,
+            "jointNodeIndex": 0,
+            "pieceTriangleCount": 216,
+            "primitiveIndex": 0,
+            "triangleIndex": 26,
+            "triangleVertexIndices": [
+              52,
+              53,
+              54
+            ],
+            "trianglePointsChassisLocal": [
+              [
+                1.3418835163116456,
+                -0.5453125,
+                -0.23162095546722394
+              ],
+              [
+                1.3418835163116456,
+                -0.5890624999999999,
+                -0.23162095546722394
+              ],
+              [
+                1.3014637827873232,
+                -0.5453125,
+                -0.24836332798004124
+              ]
+            ],
+            "closestRegion": "C",
+            "barycentric": [
+              0,
+              0,
+              1
+            ],
+            "triangleNormalChassisLocal": [
+              0.3826828607189843,
+              0,
+              -0.9238797692946493
+            ]
+          }
+        },
+        "authority": "DIAGNOSTIC_ONLY_NOT_SELECTION_AUTHORITY"
+      }
+    },
+    "splitAuthority": {
+      "compositionRule": "LONGITUDINAL_PHYSICAL_UPPER_HINGE_AXIS_MIDPOINT_WITH_S1C_SEMANTIC_YZ",
+      "chassisLocal": [
+        1.2342520405653337,
+        -0.2828125,
+        -0.21965118050575239
+      ],
+      "semanticChassisLocal": [
+        1.0785810947418215,
+        -0.2828125,
+        -0.21965118050575239
+      ],
+      "longitudinalAuthority": {
+        "axis": "X",
+        "source": "PHYSICAL_UPPER_HINGE_AXIS_MIDPOINT",
+        "upperFrontLocal": [
+          1.4742520405653337,
+          -0.27889727457341834,
+          -0.5478987790374772
+        ],
+        "upperRearLocal": [
+          0.9942520405653337,
+          -0.27889727457341834,
+          -0.5478987790374772
+        ],
+        "midpointLocal": [
+          1.2342520405653337,
+          -0.27889727457341834,
+          -0.5478987790374772
+        ],
+        "upperHingeLocal": [
+          1.2342520405653337,
+          -0.27889727457341834,
+          -0.5478987790374772
+        ],
+        "upperBallLocal": [
+          1.2342520405653337,
+          -0.37000000000000005,
+          -0.8878987790374773
+        ]
+      },
+      "provisionalFrontProjectionAuthority": {
+        "axes": [
+          "Y",
+          "Z"
+        ],
+        "source": "S1C_SEMANTIC_MAIN_CHASSIS_GROUP5_MATE",
+        "sourcePointLocal": [
+          1.0785810947418215,
+          -0.2828125,
+          -0.21965118050575239
+        ]
+      },
+      "longitudinalResidualMeters": {
+        "beforeSigned": -0.15567094582351215,
+        "beforeAbsolute": 0.15567094582351215,
+        "afterSigned": 0,
+        "afterAbsolute": 0
+      },
+      "contactClaim": "NONE_CONSTRAINT_COMPOSED_VISUAL_ATTACHMENT"
+    },
+    "outboardLocal": [
+      0,
+      -0.09110272542658171,
+      -0.3400000000000001
+    ],
+    "referenceStartLocal": [
+      0,
+      0,
+      0
+    ],
+    "referenceEndLocal": [
+      0,
+      -0.09110272542658174,
+      -0.34000000000000014
+    ],
+    "referenceUpDirection": [
+      0,
+      0.9659258262890684,
+      -0.25881904510252074
+    ],
+    "physics": "UNCHANGED"
+  },
+  "s2FrontLeftSourceRegistered": {
+    "treatment": "SOURCE_REGISTERED_CENTER_DOF__PROVISIONAL_STEERING_IMPLEMENTATION",
+    "wheelCenter": [
+      1.25,
+      -0.55,
+      -1.05
+    ],
+    "steeringAxisDirection": [
+      0,
+      1,
+      0
+    ],
+    "upperArmVisualWheelEnd": [
+      -0.8125,
+      0.96875,
+      0
+    ],
+    "lowerArmVisualWheelEnd": [
+      -0.8125,
+      0.03125,
+      0
+    ],
+    "chassisMountB": [
+      -0.78125,
+      0.96875,
+      0
+    ],
+    "steeringRodOutboard": [
+      -1.1875,
+      0.71875,
+      0.875
+    ],
+    "steeringRodInboardAuthority": "CURRENT_WEB_RACK_CENTER_ENGINEERING_REFERENCE_NOT_AUTHORED_NOT_OWNER_ACCEPTED",
+    "steeringLinkPhysics": "VISUAL_REFERENCE_ONLY__PROVISIONAL_RACK_TO_ANGLE__NO_FINAL_BACKDRIVE_CLAIM",
+    "sourceAuthority": {
+      "wheelCenter": "AUTHORED_NODE:Socket_WheelCenter",
+      "steeringAxis": "AUTHORED_AXIS:Axis_SuspensionTravel_Bottom->Top_THROUGH_WHEELCENTER",
+      "upperWheelEnd": "AUTHORED_RIGID_GEOMETRY_X_EXTREME:Chassis_Top",
+      "lowerWheelEnd": "AUTHORED_RIGID_GEOMETRY_X_EXTREME:Chassis_Bottom",
+      "chassisMountB": "AUTHORED_NODE:Socket_ChassisMount_b_NON_STEERING_STRUCTURAL_MEMBER",
+      "steeringRodOutboard": "AUTHORED_RIGID_GEOMETRY_X_EXTREME:Socket_SteeringRod",
+      "steeringRodInboard": "CURRENT_WEB_RACK_CENTER_ENGINEERING_REFERENCE_NOT_AUTHORED_NOT_OWNER_ACCEPTED"
+    },
+    "oldKingpinAffineAuthority": "REJECTED_FOR_FL",
+    "suspensionHardpoints": "CURRENT_S1_RUNTIME_HARDPOINTS_PRESERVED_AS_PROVISIONAL_CARRIER_CONSTRAINTS__DEFERRED_RIG_NOT_STEERING_AUTHORITY"
+  }
+}
