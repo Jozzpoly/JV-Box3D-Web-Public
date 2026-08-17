@@ -11,8 +11,8 @@
       "state": "DETACHED",
       "fingerprint": null
     },
-    "commit": "0260c8b39c0bb9594afe423b30d8e3536918f24c",
-    "commitDate": "2026-08-17T00:43:59+02:00",
+    "commit": "fff3ee4dcf89341ad004a7c91f1f50eebaccabc0",
+    "commitDate": "2026-08-17T00:46:18Z",
     "workingTreeClean": true
   },
   "runtimeBackend": {
@@ -40,6 +40,21 @@
     "publishedByBuild": false
   },
   "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 124,
+      "sha256": "eff1e7e66b35fa28c6d70240f162e1adedbaae4c3764ba3b5fb58f474e728287"
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 4236,
+      "sha256": "f12f335318169e100b102458dd3fe5c400d732d1d74f7e07305786f10ee48ac2"
+    },
     {
       "path": "__jv_scan__/index.json",
       "bytes": 7256,
@@ -206,34 +221,19 @@
       "sha256": "024905fc0d74db64a4f44b896a4e07eca93c5d0e92f9292de7f30fc239b8a45f"
     },
     {
-      "path": ".gitattributes",
-      "bytes": 124,
-      "sha256": "eff1e7e66b35fa28c6d70240f162e1adedbaae4c3764ba3b5fb58f474e728287"
-    },
-    {
-      "path": ".nojekyll",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "AGENTS.md",
-      "bytes": 2302,
-      "sha256": "8edc916cefc2c1b7e9f6c9fa3bbef3d7592af34c6a87da6a643ff7b8f2bda772"
-    },
-    {
       "path": "assets/__vite-browser-external-BRyEmtFe.js",
       "bytes": 103,
       "sha256": "d7f5932de1313b3114c9bb06a6a5f9ca426be7a2ef25ad94a9ffce806ebdb4be"
     },
     {
-      "path": "assets/index-g-YNmfpp.css",
-      "bytes": 8607,
-      "sha256": "57c13288b442cd38f713cac7bb7f2996614a0213b5319651788b6325173aad55"
+      "path": "assets/index-DirczXwy.js",
+      "bytes": 25154,
+      "sha256": "7b6487a6199fb88ffdf071377b85d09ffd23a10689c859b458873e8f12398486"
     },
     {
-      "path": "assets/index-MTh8QkQZ.js",
-      "bytes": 25154,
-      "sha256": "cddc4bf91de06c8bb2f4c82595971cc90747d88e5b38c1d500d26302570648b9"
+      "path": "assets/index-N3zzWxFK.css",
+      "bytes": 9810,
+      "sha256": "d005603bb759a46b9545f9d9b0ff1b68f1e8957d87acbab0a3a77f5dedd427c9"
     },
     {
       "path": "assets/main-DmjjlkoL.js",
@@ -241,14 +241,14 @@
       "sha256": "a93ec53e381e41be5041608f6f9a1e1d33d0cf6ce693e3625a6abbd1ce303832"
     },
     {
-      "path": "assets/preload-helper-aKpBoyEj.css",
-      "bytes": 11057,
-      "sha256": "bac169a675a96f9e6fc7dc2c03e14447686d73beaacef90749f4daf490a4c305"
-    },
-    {
       "path": "assets/preload-helper-CglLYZWr.js",
       "bytes": 14624,
       "sha256": "2b95e07be03544f8ac68eca86862d474df311212d679f1060e9da3c6a455cc85"
+    },
+    {
+      "path": "assets/preload-helper-aKpBoyEj.css",
+      "bytes": 11057,
+      "sha256": "bac169a675a96f9e6fc7dc2c03e14447686d73beaacef90749f4daf490a4c305"
     },
     {
       "path": "assets/rolldown-runtime-Bh1tDfsg.js",
@@ -256,29 +256,9 @@
       "sha256": "1b13387cb23dc39bf70e31677c21f6db5cad3377b96f286b6ee444496e5bfea7"
     },
     {
-      "path": "HANDOFF.md",
-      "bytes": 1538,
-      "sha256": "d925e5d9ecbc69d00ef3cc62c9d67462c52398471bfe911c32cabd8f64b5eeca"
-    },
-    {
       "path": "index.html",
-      "bytes": 688,
-      "sha256": "4581c226adcd9e3cb9dc9e373a8133e12fbf2dc4c100653735c74c0dde9a7a70"
-    },
-    {
-      "path": "LIVE_BUILD.json",
-      "bytes": 1077,
-      "sha256": "99b4aeaf301f86de44c8397d1ac60e5668304505b31de179d45bac945bc4fd9e"
-    },
-    {
-      "path": "PUBLICATION_CONTRACT.md",
-      "bytes": 3026,
-      "sha256": "b228ca34c398d2349d4883dfd3e1ea3c82e4575fd6d5da39bb811ace67b1a593"
-    },
-    {
-      "path": "README.md",
-      "bytes": 1975,
-      "sha256": "82584729df9791d718f5f6a2b610b2524d2d69c8f2ce8e47bb8dd3b753ba71ca"
+      "bytes": 672,
+      "sha256": "db75e4620448046f47552b0e36bca753ee86a82cff9a7c90b1d893a6ee45d151"
     },
     {
       "path": "receipts/jv_friends_scan_receipt.json",
@@ -292,18 +272,8 @@
     },
     {
       "path": "scenes/synthetic-flat-lab.scene.json",
-      "bytes": 441,
-      "sha256": "a8247fa29d1971e1e3f818e3ffa1fc211c2134db8fd174a29621053cb67f2ffe"
-    },
-    {
-      "path": "SECURITY.md",
-      "bytes": 1243,
-      "sha256": "364a451756a1b18b1c6540a83474e8ce272842adb95e0980ae66f52684415e4d"
-    },
-    {
-      "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 4353,
-      "sha256": "2eeaadc2aaa574d4152ee6a5ab25e2fd55745d6271e19d5175d97d97c548f4fb"
+      "bytes": 418,
+      "sha256": "2c6bbea634b8868e92af3081e7e9a224bfb98de6880e2fa07c244c61dddfd9f4"
     },
     {
       "path": "vehicles/m6-owner-r2/m6-owner-full-rig-r2.report.json",
