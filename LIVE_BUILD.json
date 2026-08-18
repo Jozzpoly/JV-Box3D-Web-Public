@@ -17,6 +17,17 @@
     "PUBLICATION_CONTRACT.md",
     "SECURITY.md"
   ],
-  "ownerValidation": "REQUIRED_EXTERNALLY_AFTER_PAGES_PROMOTION",
+  "ownerValidation": "PASS",
+  "ownerValidationDevice": "Samsung Galaxy A53 / Chrome",
+  "ownerValidationScope": [
+    "world-and-vehicle-boot",
+    "steering",
+    "throttle-and-brake",
+    "utility-drawer-open-close",
+    "steering-plate-default-off-and-on-off-toggle",
+    "landscape-browser-and-fullscreen-no-obvious-regression",
+    "JSPREV2-load"
+  ],
+  "ownerValidationAt": "2026-08-18T22:17:33Z",
   "generatedAt": "2026-08-18T22:10:58Z"
 }
