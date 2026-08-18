@@ -7,7 +7,7 @@ Public, artifact-only deployment repository for JV Web.
 - **Private source authority:** `Jozzpoly/JV-Box3D-Web-experiment`
 - **Public publication authority:** this repository's `main`
 - **GitHub Pages target:** repository root of `main`
-- **Private source used for this artifact:** `0260c8b39c0bb9594afe423b30d8e3536918f24c`
+- **Canonical private executable source for the current promotion:** `cd7f5f89e8cfb872ff6bddc619e3fb78f2124af4`
 
 The public repository is not a development workspace. Product changes belong in the private repository, are built and validated there, and only the reviewed static artifact is promoted here.
 
@@ -34,7 +34,7 @@ SECURITY.md
 .gitattributes
 ```
 
-`build-manifest.json` binds the candidate to the exact private source commit and file bytes. `LIVE_BUILD.json` records the public release-layer provenance, including preservation of the already-approved JSPREV2 scan.
+`build-manifest.json` binds the executable candidate to the exact private source commit and file bytes. `LIVE_BUILD.json` records release-layer provenance, including preservation of the already-approved JSPREV2 scan.
 
 ## Branch policy
 
@@ -44,7 +44,7 @@ Steady state is deliberately simple:
 main
 ```
 
-A second rollback branch may exist **temporarily** while a newly promoted `main` is undergoing Owner/browser/device validation. It is not a second source of truth and should be removed after acceptance. Historical rollback remains available through exact Git commit ancestry.
+A temporary preview/rollback branch may exist while a newly promoted `main` is undergoing Owner/browser/device validation. It is not a second source of truth and should be removed after acceptance. Historical rollback remains available through exact Git commit ancestry.
 
 Do not recreate permanent `release/*` or `checkpoint/*` branch forests.
 
