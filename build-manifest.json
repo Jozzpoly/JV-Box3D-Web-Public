@@ -51,6 +51,11 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "P1_3_1_PREVIEW_OVERLAY.json",
+      "bytes": 781,
+      "sha256": "4a75e95213aaa5fcc0f4210dca2c6badde06d0d67a801dbaf22e4844eb5d5448"
+    },
+    {
       "path": "THIRD_PARTY_NOTICES.md",
       "bytes": 4236,
       "sha256": "f12f335318169e100b102458dd3fe5c400d732d1d74f7e07305786f10ee48ac2"
@@ -241,6 +246,16 @@
       "sha256": "a93ec53e381e41be5041608f6f9a1e1d33d0cf6ce693e3625a6abbd1ce303832"
     },
     {
+      "path": "assets/p13-1-drawer-polish-preview.css",
+      "bytes": 5259,
+      "sha256": "a20aa86f2db313eaa1f388e5c01e71529c78250f10bcfe5947a791481a73a273"
+    },
+    {
+      "path": "assets/p13-1-drawer-polish-preview.js",
+      "bytes": 3083,
+      "sha256": "b4887be5ae6e4c5f790c2d9d75e0ae09d07b2382af41cb961c89a8fe9ab0e989"
+    },
+    {
       "path": "assets/preload-helper-CglLYZWr.js",
       "bytes": 14624,
       "sha256": "2b95e07be03544f8ac68eca86862d474df311212d679f1060e9da3c6a455cc85"
@@ -257,8 +272,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 688,
-      "sha256": "444287a9536b0539230a4c36bc1e722be2266e1269b993934d1a6a4afb1b8beb"
+      "bytes": 831,
+      "sha256": "eea0882757a0183d06843de14dafe1985a0c0960a48845239fd57d7a599a811e"
     },
     {
       "path": "receipts/jv_friends_scan_receipt.json",

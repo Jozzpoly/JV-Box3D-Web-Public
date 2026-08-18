@@ -1,0 +1,228 @@
+/* P1.3 Utility Drawer.
+   P1.2 driving controls are a protected baseline. This stylesheet changes only
+   compact/touch product chrome: the persistent header disappears and the
+   existing world/view toolbar becomes an on-demand overlay. */
+.utility-drawer-toggle {
+  display: none;
+}
+
+.utility-drawer-scroll {
+  display: contents;
+}
+
+@media (hover: none) and (pointer: coarse), (max-width: 620px) {
+  .scene-panel {
+    grid-template-rows: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "readouts world actions"
+      "controls controls controls";
+  }
+
+  .scene-header {
+    display: none;
+  }
+
+  .utility-drawer-toggle {
+    position: absolute;
+    z-index: 24;
+    top: var(--mobile-hud-safe-top);
+    left: 50%;
+    width: 52px;
+    height: 25px;
+    min-height: 25px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(198, 214, 231, .2);
+    border-top: 0;
+    border-radius: 0 0 11px 11px;
+    background: rgba(8, 13, 20, .96);
+    color: rgba(226, 237, 248, .9);
+    transform: translateX(-50%);
+    touch-action: manipulation;
+    box-shadow: 0 7px 18px rgba(0, 0, 0, .18);
+  }
+
+  .utility-drawer-toggle:hover {
+    background: rgba(18, 27, 38, .98);
+  }
+
+  .utility-drawer-toggle:focus-visible {
+    outline: 2px solid rgba(165, 211, 255, .95);
+    outline-offset: 2px;
+  }
+
+  .utility-drawer-chevron {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform: rotate(0deg);
+    transition: transform 130ms ease;
+    pointer-events: none;
+  }
+
+  .scene-panel[data-utility-drawer-open] .utility-drawer-chevron {
+    transform: rotate(180deg);
+  }
+
+  .product-toolbar {
+    grid-area: auto;
+    position: absolute;
+    z-index: 23;
+    top: calc(var(--mobile-hud-safe-top) + 32px);
+    left: var(--mobile-hud-safe-left);
+    right: var(--mobile-hud-safe-right);
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    overflow: hidden;
+    border: 1px solid rgba(198, 214, 231, .16);
+    border-radius: 14px;
+    background: #080d14;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, .3);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-7px) scale(.99);
+    transform-origin: 50% 0;
+    transition:
+      opacity 110ms ease,
+      transform 130ms cubic-bezier(.2, .75, .2, 1),
+      visibility 0s linear 130ms;
+  }
+
+  .product-toolbar::before,
+  .product-toolbar::after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    width: 22px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 90ms ease;
+  }
+
+  .product-toolbar::before {
+    left: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(8, 13, 20, .94),
+      rgba(8, 13, 20, 0)
+    );
+  }
+
+  .product-toolbar::after {
+    right: 0;
+    background: linear-gradient(
+      270deg,
+      rgba(8, 13, 20, .94),
+      rgba(8, 13, 20, 0)
+    );
+  }
+
+  .product-toolbar[data-utility-scroll-left]::before,
+  .product-toolbar[data-utility-scroll-right]::after {
+    opacity: 1;
+  }
+
+  .scene-panel[data-utility-drawer-open] .product-toolbar {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+    transition-delay: 0s;
+  }
+
+  .utility-drawer-scroll {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-padding-inline: 12px;
+    scroll-snap-type: inline proximity;
+    touch-action: pan-x;
+    padding: 7px 8px;
+  }
+
+  .utility-drawer-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product-controls {
+    width: max-content;
+    min-width: max-content;
+    margin-inline: auto;
+    max-width: none;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .product-control-group {
+    align-items: end;
+    scroll-snap-align: start;
+  }
+
+  .product-control-group + .product-control-group {
+    margin-inline-start: 4px;
+    padding-inline-start: 10px;
+    border-inline-start: 1px solid rgba(198, 214, 231, .14);
+  }
+
+  .product-control-label {
+    display: none;
+  }
+
+  .product-choice-row {
+    flex-wrap: nowrap;
+    gap: 6px;
+  }
+
+  .product-choice {
+    min-height: 36px;
+    padding: 8px 11px;
+    border-radius: 9px;
+  }
+
+  .product-controls > .product-choice {
+    margin-inline-start: 4px;
+    scroll-snap-align: end;
+  }
+}
+
+/* P1.2's accepted short-landscape control overlay still owns the numeric
+   .mobile-controls grid area. Zero-height retired chrome rows preserve those
+   exact row lines while giving the world the recovered height. */
+@media (hover: none) and (pointer: coarse) and (orientation: landscape) and (max-height: 520px) and (max-width: 980px) {
+  .scene-panel {
+    grid-template-rows: 0 0 minmax(0, 1fr);
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      "readouts world actions";
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .utility-drawer-chevron,
+  .product-toolbar,
+  .product-toolbar::before,
+  .product-toolbar::after {
+    transition: none;
+  }
+}

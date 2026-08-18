@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "JV_WEB_UI_POLISH_PREVIEW_OVERLAY",
+  "basePublicPreviewCommit": "69bea00e6cad4d306179badddc451f5cd1f15302",
+  "baseCanonicalSourceCommit": "1a17d12797f1cb515a35eae4d7f42681b1c5f010",
+  "overlaySource": {
+    "repository": "Jozzpoly/JV-Box3D-Web-experiment",
+    "branch": "work/p1-3-1-drawer-polish",
+    "commit": "4cda838ea57d2716f3ff86db1c2865cc03ee06d4"
+  },
+  "scope": [
+    "utility drawer shell width",
+    "inner horizontal scroller",
+    "overflow edge affordance",
+    "group rhythm",
+    "SVG chevron"
+  ],
+  "protectedBaseline": [
+    "steering input/presentation",
+    "pedal input/presentation",
+    "D/R input/presentation",
+    "vehicle physics",
+    "public main"
+  ],
+  "canonicalRebuildRequiredBeforeProductAcceptance": true
+}
