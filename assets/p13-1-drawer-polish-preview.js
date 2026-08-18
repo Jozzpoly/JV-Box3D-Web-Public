@@ -1,5 +1,5 @@
 const PREVIEW_OVERLAY_SOURCE =
-  "7b4db0f0afa8e682d57d8a423a01b62283923a82";
+  "691544f97b40e3dfd5aed59903c06517441dfa18";
 const SCROLL_EPSILON_PX = 2;
 
 function setChoiceActive(button, active) {
@@ -15,7 +15,13 @@ function findOrCreateViewGroup(controls) {
       if (!(row instanceof HTMLElement)) {
         row = document.createElement("div");
         row.className = "product-choice-row";
+        const directChoices = Array.from(group.children).filter(
+          (child) => child.classList.contains("product-choice"),
+        );
         group.append(row);
+        for (const choice of directChoices) {
+          row.append(choice);
+        }
       }
       return row;
     }

@@ -6,21 +6,23 @@
   "overlaySource": {
     "repository": "Jozzpoly/JV-Box3D-Web-experiment",
     "branch": "work/p1-3-1-drawer-polish",
-    "commit": "d097de9bc2b28345efdf7c34eb9817c6a664ea7e"
+    "commit": "691544f97b40e3dfd5aed59903c06517441dfa18"
   },
   "scope": [
     "accepted utility drawer polish",
+    "complete compact utility drawer control groups",
     "top-edge compact Camera Reset Debug actions",
     "momentary action sticky-hover correction",
     "action strip hidden while utility drawer owns top surface",
     "steering wheel visual cleanup",
     "responsive steering acquisition enlargement",
+    "landscape steering artwork vertical correction",
     "steering background visibility UX preview"
   ],
   "previewIntegrity": {
     "authority": "PUBLIC_GIT_COMMIT_TREE_AND_THIS_RECEIPT",
-    "cssBlob": "bf3c2bf0dc8d75caffe2b213ec17689eed16ba00",
-    "jsBlob": "077d81931e09d47c68f3a16b07139d67317f75c2",
+    "cssBlob": "ef16bfddb507c367f0470299a598726a50a5c39a",
+    "jsBlob": "cefa846b25df0cd5339a8c659c6ef6485072af8b",
     "canonicalBuildManifestIsPreviewAuthority": false
   },
   "sourceExecutionBoundary": {
@@ -28,7 +30,7 @@
     "steeringAcquisitionCssMirrorsSource": true,
     "steeringPlateUxMirrorsSourceSemantics": true,
     "sourceSettingsStoreExecutedInPreview": false,
-    "note": "Preview JS mirrors the source control label, URL parameter and scene attribute because the base canonical P1.3 bundle predates the new settings-store field. Canonical source wiring requires a normal rebuild before product acceptance."
+    "note": "Preview JS mirrors the source control label, URL parameter and scene attribute because the base canonical P1.3 bundle predates the new settings-store field. It also normalizes the legacy P1.3 Grid control into the current view-row structure. Canonical source wiring requires a normal rebuild before product acceptance."
   },
   "protectedBaseline": [
     "X-only steering POSITION semantics and dead-zone policy",

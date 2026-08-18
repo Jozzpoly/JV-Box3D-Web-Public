@@ -163,6 +163,10 @@
     box-shadow: none;
   }
 
+  .product-toolbar[data-utility-drawer] .product-control-group {
+    display: grid;
+  }
+
   .product-control-group {
     align-items: end;
     scroll-snap-align: start;
@@ -384,7 +388,7 @@
 
 @media (hover: none) and (pointer: coarse) and (orientation: landscape) {
   .mobile-steering-wheel-tilt {
-    top: -102px;
+    top: -90px;
     width: clamp(264px, 33vw, 304px);
     height: clamp(264px, 33vw, 304px);
   }
@@ -402,7 +406,7 @@
   .scene-action::before { width: 16px; height: 16px; }
 
   .mobile-steering-wheel-tilt {
-    top: -104px;
+    top: -92px;
     width: clamp(248px, 31vw, 286px);
     height: clamp(248px, 31vw, 286px);
   }
