@@ -1,7 +1,4 @@
-/* P1.3 Utility Drawer.
-   P1.2 driving controls are a protected baseline. This stylesheet changes only
-   compact/touch product chrome: the persistent header disappears and the
-   existing world/view toolbar becomes an on-demand overlay. */
+/* P1.3 Utility Drawer source preview. */
 .utility-drawer-toggle {
   display: none;
 }
@@ -111,20 +108,12 @@
 
   .product-toolbar::before {
     left: 0;
-    background: linear-gradient(
-      90deg,
-      rgba(8, 13, 20, .94),
-      rgba(8, 13, 20, 0)
-    );
+    background: linear-gradient(90deg, rgba(8, 13, 20, .94), rgba(8, 13, 20, 0));
   }
 
   .product-toolbar::after {
     right: 0;
-    background: linear-gradient(
-      270deg,
-      rgba(8, 13, 20, .94),
-      rgba(8, 13, 20, 0)
-    );
+    background: linear-gradient(270deg, rgba(8, 13, 20, .94), rgba(8, 13, 20, 0));
   }
 
   .product-toolbar[data-utility-scroll-left]::before,
@@ -206,9 +195,6 @@
   }
 }
 
-/* P1.2's accepted short-landscape control overlay still owns the numeric
-   .mobile-controls grid area. Zero-height retired chrome rows preserve those
-   exact row lines while giving the world the recovered height. */
 @media (hover: none) and (pointer: coarse) and (orientation: landscape) and (max-height: 520px) and (max-width: 980px) {
   .scene-panel {
     grid-template-rows: 0 0 minmax(0, 1fr);
@@ -228,44 +214,45 @@
   }
 }
 
-/* Mobile driving surface polish.
-   Presentation-only overrides: input geometry and semantics remain owned by
-   mobile-driving-controls.css and main.ts. */
-
+/* Mobile driving surface polish. */
 @media (hover: none) and (pointer: coarse), (max-width: 620px) {
   .scene-actions {
-    gap: 6px;
+    position: absolute;
+    z-index: 22;
+    top: var(--mobile-hud-safe-top);
+    right: var(--mobile-hud-safe-right);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    pointer-events: auto;
   }
 
   .scene-action {
     --scene-action-icon: none;
     position: relative;
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    min-height: 44px;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
     padding: 0;
     display: grid;
     place-items: center;
     overflow: hidden;
-    border: 1px solid rgba(199, 216, 234, .18);
-    border-radius: 13px;
-    background: rgba(10, 16, 24, .88);
+    border: 1px solid rgba(199, 216, 234, .16);
+    border-radius: 12px;
+    background: rgba(8, 14, 22, .88);
     color: rgba(236, 244, 252, .92);
     font-size: 0;
     line-height: 1;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, .18);
-    transition:
-      transform 90ms ease,
-      background 90ms ease,
-      border-color 90ms ease,
-      opacity 90ms ease;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, .14);
+    transition: transform 80ms ease, background 80ms ease, border-color 80ms ease, opacity 80ms ease;
   }
 
   .scene-action::before {
     content: "";
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
     background: currentColor;
     -webkit-mask: var(--scene-action-icon) center / contain no-repeat;
     mask: var(--scene-action-icon) center / contain no-repeat;
@@ -273,95 +260,147 @@
   }
 
   .scene-action[data-camera-reset] {
-    --scene-action-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 7h3l2-2h6l2 2h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Z'/%3E%3Ccircle cx='12' cy='13' r='3.25'/%3E%3C/svg%3E");
+    --scene-action-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7.1 6.5 8.8 4.8h6.4l1.7 1.7h2.35A2.75 2.75 0 0 1 22 9.25v7A2.75 2.75 0 0 1 19.25 19H4.75A2.75 2.75 0 0 1 2 16.25v-7A2.75 2.75 0 0 1 4.75 6.5H7.1Zm4.9 3A3.75 3.75 0 1 0 12 17a3.75 3.75 0 0 0 0-7.5Zm0 1.8a1.95 1.95 0 1 1 0 3.9 1.95 1.95 0 0 1 0-3.9Z'/%3E%3C/svg%3E");
   }
 
   .scene-action[data-restart] {
-    --scene-action-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6v5h-5'/%3E%3Cpath d='M20 11a8 8 0 1 0-2.34 5.66'/%3E%3C/svg%3E");
+    --scene-action-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3.25a8.75 8.75 0 1 0 8.54 10.66h-2.1A6.75 6.75 0 1 1 16.9 7.2l-2.65 2.65H21V3.1l-2.65 2.65A8.7 8.7 0 0 0 12 3.25Z'/%3E%3C/svg%3E");
   }
 
   .scene-action[data-debug-toggle] {
-    --scene-action-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='7' y='7' width='10' height='10' rx='3'/%3E%3Cpath d='M9 7V5m6 2V5M5 9h2m10 0h2M5 15h2m10 0h2M9 17v2m6-2v2'/%3E%3C/svg%3E");
+    --scene-action-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M10.8 2h2.4l.42 2.05c.62.17 1.2.41 1.73.72l1.76-1.15 1.7 1.7-1.15 1.76c.31.53.55 1.11.72 1.73L20.43 9.2v2.4l-2.05.42a6.7 6.7 0 0 1-.72 1.73l1.15 1.76-1.7 1.7-1.76-1.15a6.7 6.7 0 0 1-1.73.72L13.2 18.83h-2.4l-.42-2.05a6.7 6.7 0 0 1-1.73-.72l-1.76 1.15-1.7-1.7 1.15-1.76a6.7 6.7 0 0 1-.72-1.73L3.57 11.6V9.2l2.05-.39c.17-.62.41-1.2.72-1.73L5.19 5.32l1.7-1.7 1.76 1.15a6.7 6.7 0 0 1 1.73-.72L10.8 2Zm1.2 5.35a3.05 3.05 0 1 0 0 6.1 3.05 3.05 0 0 0 0-6.1Z'/%3E%3C/svg%3E");
   }
 
-  .scene-action[aria-expanded="true"] {
-    border-color: rgba(151, 195, 238, .42);
-    background: rgba(45, 78, 112, .9);
-    color: #f5f9ff;
+  .scene-action:hover {
+    border-color: rgba(199, 216, 234, .16);
+    background: rgba(8, 14, 22, .88);
+    color: rgba(236, 244, 252, .92);
   }
 
   .scene-action:active {
-    transform: scale(.94);
+    transform: scale(.92);
+    border-color: rgba(180, 211, 241, .36);
+    background: rgba(33, 55, 78, .94);
   }
 
-  /* Keep the accepted acquisition rectangle stable while allowing the wheel
-     artwork to breathe beyond it. The plate remains only a quiet contrast cue. */
+  .scene-action[aria-expanded="true"],
+  .scene-action[aria-expanded="true"]:hover {
+    border-color: rgba(151, 195, 238, .46);
+    background: rgba(45, 78, 112, .92);
+    color: #f5f9ff;
+  }
+
+  .scene-action[data-camera-reset]::before { transform: translateY(.35px); }
+  .scene-action[data-restart]::before { transform: translateX(-.35px); }
+  .scene-action[data-debug-toggle]::before { transform: translateY(.2px); }
+
   .mobile-steering-joystick {
+    width: clamp(184px, 50vw, 276px);
+    height: clamp(82px, 21vw, 108px);
     overflow: visible;
     contain: layout;
-    border-color: rgba(160, 199, 237, .28);
-    background:
-      radial-gradient(ellipse at 50% 118%, rgba(67, 118, 173, .16), transparent 60%),
-      linear-gradient(180deg, rgba(31, 49, 70, .72), rgba(13, 23, 35, .8));
+    border-color: rgba(160, 199, 237, .19);
+    background: radial-gradient(ellipse at 50% 122%, rgba(67, 118, 173, .105), transparent 62%), linear-gradient(180deg, rgba(25, 41, 59, .48), rgba(11, 20, 31, .58));
   }
 
-  .mobile-steering-wheel-stage {
-    z-index: 2;
-    transform-origin: 50% 62%;
-  }
+  .mobile-steering-joystick::before { opacity: .42; }
+  .mobile-steering-wheel-stage { z-index: 2; transform-origin: 50% 62%; }
 
   .mobile-steering-wheel-tilt {
-    top: -90px;
-    width: clamp(248px, 56vw, 286px);
-    height: clamp(248px, 56vw, 286px);
-    transform: translateX(-50%) scaleY(.4);
+    top: -96px;
+    width: clamp(260px, 58vw, 300px);
+    height: clamp(260px, 58vw, 300px);
+    transform: translateX(-50%) scaleY(.42);
   }
 
-  .mobile-steering-joystick > small {
-    right: 8px;
-    bottom: 5px;
-    color: rgba(197, 215, 232, .5);
+  .mobile-steering-wheel-rim {
+    z-index: 3;
+    inset: 11px;
+    border-width: 11px;
+    border-color: rgba(73, 102, 132, .98);
+    box-shadow: inset 0 0 0 2px rgba(220, 235, 249, .12), inset 0 0 12px rgba(5, 11, 18, .28), 0 0 0 2px rgba(6, 12, 20, .82);
   }
+
+  .mobile-steering-wheel-rim::before {
+    inset: -11px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    border-top-color: rgba(214, 232, 249, .58);
+    border-bottom-color: rgba(5, 10, 17, .74);
+  }
+
+  .mobile-steering-spoke {
+    z-index: 2;
+    width: 82px;
+    height: 11px;
+    margin-top: -5.5px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, rgba(49, 73, 97, .98), rgba(121, 153, 183, .92) 58%, rgba(178, 201, 222, .78));
+    clip-path: polygon(0 27%, 100% 0, 100% 100%, 0 73%);
+  }
+
+  .mobile-steering-spoke-c { width: 70px; height: 13px; margin-top: -6.5px; }
+
+  .mobile-steering-wheel-hub {
+    z-index: 4;
+    width: 44px;
+    height: 44px;
+    border: 4px solid rgba(145, 179, 210, .42);
+    background: radial-gradient(circle at 50% 38%, rgba(57, 83, 108, .98), rgba(16, 29, 43, .99) 66%);
+    box-shadow: inset 0 1px rgba(230, 240, 249, .16), 0 0 0 2px rgba(6, 13, 21, .36);
+  }
+
+  .mobile-steering-wheel-marker {
+    z-index: 5;
+    top: 8px;
+    width: 7px;
+    height: 22px;
+    background: linear-gradient(180deg, #ffdc6f, #bd8d20);
+  }
+
+  .mobile-steering-center-tick { top: 9px; height: 14px; opacity: .72; }
+  .mobile-steering-joystick > small { display: none; }
 
   .mobile-steering-joystick[data-active] {
-    border-color: rgba(194, 221, 248, .42);
-    background:
-      radial-gradient(ellipse at 50% 118%, rgba(78, 137, 196, .22), transparent 62%),
-      linear-gradient(180deg, rgba(35, 57, 81, .8), rgba(14, 25, 39, .86));
+    border-color: rgba(194, 221, 248, .28);
+    background: radial-gradient(ellipse at 50% 122%, rgba(78, 137, 196, .15), transparent 64%), linear-gradient(180deg, rgba(29, 48, 68, .56), rgba(12, 22, 34, .64));
   }
+
+  .scene-panel[data-steering-plate-hidden] .mobile-steering-joystick,
+  .scene-panel[data-steering-plate-hidden] .mobile-steering-joystick[data-active] {
+    border-color: transparent;
+    background: transparent;
+  }
+
+  .scene-panel[data-steering-plate-hidden] .mobile-steering-joystick::before { opacity: 0; }
 }
 
 @media (hover: none) and (pointer: coarse) and (orientation: landscape) {
   .mobile-steering-wheel-tilt {
-    top: -96px;
-    width: clamp(248px, 32vw, 292px);
-    height: clamp(248px, 32vw, 292px);
+    top: -102px;
+    width: clamp(264px, 33vw, 304px);
+    height: clamp(264px, 33vw, 304px);
   }
 }
 
 @media (hover: none) and (pointer: coarse) and (orientation: landscape) and (max-height: 520px) and (max-width: 980px) {
   .scene-action {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    min-height: 40px;
-    border-radius: 12px;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    border-radius: 11px;
   }
 
-  .scene-action::before {
-    width: 17px;
-    height: 17px;
-  }
+  .scene-action::before { width: 16px; height: 16px; }
 
   .mobile-steering-wheel-tilt {
-    top: -100px;
-    width: clamp(240px, 31vw, 276px);
-    height: clamp(240px, 31vw, 276px);
+    top: -104px;
+    width: clamp(248px, 31vw, 286px);
+    height: clamp(248px, 31vw, 286px);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .scene-action {
-    transition: none;
-  }
+  .scene-action { transition: none; }
 }

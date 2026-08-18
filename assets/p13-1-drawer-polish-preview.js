@@ -1,6 +1,79 @@
 const PREVIEW_OVERLAY_SOURCE =
-  "4cda838ea57d2716f3ff86db1c2865cc03ee06d4";
+  "7b4db0f0afa8e682d57d8a423a01b62283923a82";
 const SCROLL_EPSILON_PX = 2;
+
+function setChoiceActive(button, active) {
+  button.classList.toggle("is-active", active);
+  button.setAttribute("aria-pressed", String(active));
+}
+
+function findOrCreateViewGroup(controls) {
+  for (const group of controls.querySelectorAll(".product-control-group")) {
+    const label = group.querySelector(".product-control-label");
+    if (label?.textContent?.trim() === "Widok") {
+      let row = group.querySelector(".product-choice-row");
+      if (!(row instanceof HTMLElement)) {
+        row = document.createElement("div");
+        row.className = "product-choice-row";
+        group.append(row);
+      }
+      return row;
+    }
+  }
+
+  const group = document.createElement("div");
+  group.className = "product-control-group";
+  const label = document.createElement("span");
+  label.className = "product-control-label";
+  label.textContent = "Widok";
+  const row = document.createElement("div");
+  row.className = "product-choice-row";
+  group.append(label, row);
+  controls.append(group);
+  return row;
+}
+
+function installSteeringPlatePreview(toolbar) {
+  const scenePanel = document.querySelector(".scene-panel");
+  const controls = toolbar.querySelector(".product-controls");
+  if (!(scenePanel instanceof HTMLElement) || !(controls instanceof HTMLElement)) {
+    return false;
+  }
+
+  let button = controls.querySelector("[data-steering-plate-preview]");
+  if (!(button instanceof HTMLButtonElement)) {
+    button = document.createElement("button");
+    button.type = "button";
+    button.className = "product-choice";
+    button.setAttribute("data-steering-plate-preview", "");
+    button.setAttribute("aria-label", "Pokaż lub ukryj tło kierownicy");
+    button.title = "Tło kierownicy";
+    findOrCreateViewGroup(controls).append(button);
+  }
+
+  let visible = new URL(window.location.href).searchParams.get("jvSteeringPlate") !== "0";
+
+  function sync() {
+    scenePanel.toggleAttribute("data-steering-plate-hidden", !visible);
+    button.textContent = visible ? "Tło kier. ON" : "Tło kier. OFF";
+    setChoiceActive(button, visible);
+  }
+
+  button.addEventListener("click", () => {
+    visible = !visible;
+    const url = new URL(window.location.href);
+    if (visible) {
+      url.searchParams.delete("jvSteeringPlate");
+    } else {
+      url.searchParams.set("jvSteeringPlate", "0");
+    }
+    window.history.replaceState(null, "", url.href);
+    sync();
+  });
+
+  sync();
+  return true;
+}
 
 function installDrawerPolishOverlay() {
   const toolbar = document.querySelector("[data-product-controls]");
@@ -39,6 +112,10 @@ function installDrawerPolishOverlay() {
     path.setAttribute("d", "M6.5 9 12 14.5 17.5 9");
     chevron.append(path);
     oldChevron.replaceWith(chevron);
+  }
+
+  if (!installSteeringPlatePreview(toolbar)) {
+    return false;
   }
 
   function syncScrollAffordance() {

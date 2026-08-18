@@ -1,28 +1,41 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "kind": "JV_WEB_UI_POLISH_PREVIEW_OVERLAY",
   "basePublicPreviewCommit": "69bea00e6cad4d306179badddc451f5cd1f15302",
   "baseCanonicalSourceCommit": "1a17d12797f1cb515a35eae4d7f42681b1c5f010",
   "overlaySource": {
     "repository": "Jozzpoly/JV-Box3D-Web-experiment",
     "branch": "work/p1-3-1-drawer-polish",
-    "commit": "bf3dc8ae9ae9c146787a87daf4263e4f248d3f14"
+    "commit": "7b4db0f0afa8e682d57d8a423a01b62283923a82"
   },
   "scope": [
-    "utility drawer shell width",
-    "inner horizontal scroller",
-    "overflow edge affordance",
-    "group rhythm",
-    "compact SVG chevron",
-    "preview-only legacy chevron border reset",
-    "compact persistent action rail",
-    "steering visual unboxing"
+    "accepted utility drawer polish",
+    "top-edge compact Camera Reset Debug actions",
+    "momentary action sticky-hover correction",
+    "steering wheel visual cleanup",
+    "responsive steering acquisition enlargement",
+    "steering background visibility UX preview"
   ],
+  "previewIntegrity": {
+    "authority": "PUBLIC_GIT_COMMIT_TREE_AND_THIS_RECEIPT",
+    "cssBlob": "82941a86e290dbec9dadca2763a3c36f02b20fdd",
+    "jsBlob": "077d81931e09d47c68f3a16b07139d67317f75c2",
+    "canonicalBuildManifestIsPreviewAuthority": false
+  },
+  "sourceExecutionBoundary": {
+    "cssPresentationMirrorsSource": true,
+    "steeringAcquisitionCssMirrorsSource": true,
+    "steeringPlateUxMirrorsSourceSemantics": true,
+    "sourceSettingsStoreExecutedInPreview": false,
+    "note": "Preview JS mirrors the source control label, URL parameter and scene attribute because the base canonical P1.3 bundle predates the new settings-store field. Canonical source wiring requires a normal rebuild before product acceptance."
+  },
   "protectedBaseline": [
-    "steering input semantics/acquisition geometry",
-    "pedal input/presentation",
-    "D/R input/presentation",
-    "vehicle physics",
+    "X-only steering POSITION semantics and dead-zone policy",
+    "pedal input and presentation",
+    "D/R semantics",
+    "multitouch and lifecycle behavior",
+    "vehicle physics and drivetrain",
+    "camera rig semantics",
     "public main"
   ],
   "canonicalRebuildRequiredBeforeProductAcceptance": true
