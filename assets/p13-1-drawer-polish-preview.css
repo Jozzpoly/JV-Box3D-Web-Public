@@ -227,3 +227,141 @@
     transition: none;
   }
 }
+
+/* Mobile driving surface polish.
+   Presentation-only overrides: input geometry and semantics remain owned by
+   mobile-driving-controls.css and main.ts. */
+
+@media (hover: none) and (pointer: coarse), (max-width: 620px) {
+  .scene-actions {
+    gap: 6px;
+  }
+
+  .scene-action {
+    --scene-action-icon: none;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border: 1px solid rgba(199, 216, 234, .18);
+    border-radius: 13px;
+    background: rgba(10, 16, 24, .88);
+    color: rgba(236, 244, 252, .92);
+    font-size: 0;
+    line-height: 1;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .18);
+    transition:
+      transform 90ms ease,
+      background 90ms ease,
+      border-color 90ms ease,
+      opacity 90ms ease;
+  }
+
+  .scene-action::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: currentColor;
+    -webkit-mask: var(--scene-action-icon) center / contain no-repeat;
+    mask: var(--scene-action-icon) center / contain no-repeat;
+    pointer-events: none;
+  }
+
+  .scene-action[data-camera-reset] {
+    --scene-action-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 7h3l2-2h6l2 2h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Z'/%3E%3Ccircle cx='12' cy='13' r='3.25'/%3E%3C/svg%3E");
+  }
+
+  .scene-action[data-restart] {
+    --scene-action-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6v5h-5'/%3E%3Cpath d='M20 11a8 8 0 1 0-2.34 5.66'/%3E%3C/svg%3E");
+  }
+
+  .scene-action[data-debug-toggle] {
+    --scene-action-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='7' y='7' width='10' height='10' rx='3'/%3E%3Cpath d='M9 7V5m6 2V5M5 9h2m10 0h2M5 15h2m10 0h2M9 17v2m6-2v2'/%3E%3C/svg%3E");
+  }
+
+  .scene-action[aria-expanded="true"] {
+    border-color: rgba(151, 195, 238, .42);
+    background: rgba(45, 78, 112, .9);
+    color: #f5f9ff;
+  }
+
+  .scene-action:active {
+    transform: scale(.94);
+  }
+
+  /* Keep the accepted acquisition rectangle stable while allowing the wheel
+     artwork to breathe beyond it. The plate remains only a quiet contrast cue. */
+  .mobile-steering-joystick {
+    overflow: visible;
+    contain: layout;
+    border-color: rgba(160, 199, 237, .28);
+    background:
+      radial-gradient(ellipse at 50% 118%, rgba(67, 118, 173, .16), transparent 60%),
+      linear-gradient(180deg, rgba(31, 49, 70, .72), rgba(13, 23, 35, .8));
+  }
+
+  .mobile-steering-wheel-stage {
+    z-index: 2;
+    transform-origin: 50% 62%;
+  }
+
+  .mobile-steering-wheel-tilt {
+    top: -90px;
+    width: clamp(248px, 56vw, 286px);
+    height: clamp(248px, 56vw, 286px);
+    transform: translateX(-50%) scaleY(.4);
+  }
+
+  .mobile-steering-joystick > small {
+    right: 8px;
+    bottom: 5px;
+    color: rgba(197, 215, 232, .5);
+  }
+
+  .mobile-steering-joystick[data-active] {
+    border-color: rgba(194, 221, 248, .42);
+    background:
+      radial-gradient(ellipse at 50% 118%, rgba(78, 137, 196, .22), transparent 62%),
+      linear-gradient(180deg, rgba(35, 57, 81, .8), rgba(14, 25, 39, .86));
+  }
+}
+
+@media (hover: none) and (pointer: coarse) and (orientation: landscape) {
+  .mobile-steering-wheel-tilt {
+    top: -96px;
+    width: clamp(248px, 32vw, 292px);
+    height: clamp(248px, 32vw, 292px);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) and (orientation: landscape) and (max-height: 520px) and (max-width: 980px) {
+  .scene-action {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 12px;
+  }
+
+  .scene-action::before {
+    width: 17px;
+    height: 17px;
+  }
+
+  .mobile-steering-wheel-tilt {
+    top: -100px;
+    width: clamp(240px, 31vw, 276px);
+    height: clamp(240px, 31vw, 276px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene-action {
+    transition: none;
+  }
+}

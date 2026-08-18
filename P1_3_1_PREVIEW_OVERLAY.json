@@ -6,7 +6,7 @@
   "overlaySource": {
     "repository": "Jozzpoly/JV-Box3D-Web-experiment",
     "branch": "work/p1-3-1-drawer-polish",
-    "commit": "512fd9bbde73c979b8da3b233a830367221429ff"
+    "commit": "bf3dc8ae9ae9c146787a87daf4263e4f248d3f14"
   },
   "scope": [
     "utility drawer shell width",
@@ -14,10 +14,12 @@
     "overflow edge affordance",
     "group rhythm",
     "compact SVG chevron",
-    "preview-only legacy chevron border reset"
+    "preview-only legacy chevron border reset",
+    "compact persistent action rail",
+    "steering visual unboxing"
   ],
   "protectedBaseline": [
-    "steering input/presentation",
+    "steering input semantics/acquisition geometry",
     "pedal input/presentation",
     "D/R input/presentation",
     "vehicle physics",
