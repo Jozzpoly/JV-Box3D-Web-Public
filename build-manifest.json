@@ -52,8 +52,8 @@
     },
     {
       "path": "P1_3_1_PREVIEW_OVERLAY.json",
-      "bytes": 781,
-      "sha256": "4a75e95213aaa5fcc0f4210dca2c6badde06d0d67a801dbaf22e4844eb5d5448"
+      "bytes": 837,
+      "sha256": "6622b9158764a3b965d3d1b0082e7741aee9dd99e759dd0aeb3897333b83166b"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -247,8 +247,8 @@
     },
     {
       "path": "assets/p13-1-drawer-polish-preview.css",
-      "bytes": 5259,
-      "sha256": "a20aa86f2db313eaa1f388e5c01e71529c78250f10bcfe5947a791481a73a273"
+      "bytes": 5274,
+      "sha256": "3e68060b79c86442feec72fc423f6da065127bf28a5a7d5bbc7d6cd31b600ba6"
     },
     {
       "path": "assets/p13-1-drawer-polish-preview.js",
