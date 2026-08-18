@@ -327,22 +327,22 @@
   .mobile-steering-wheel-rim {
     z-index: 3;
     inset: 11px;
-    border-width: 11px;
+    border-width: 17px;
     border-color: rgba(73, 102, 132, .98);
-    box-shadow: inset 0 0 0 2px rgba(220, 235, 249, .12), inset 0 0 12px rgba(5, 11, 18, .28), 0 0 0 2px rgba(6, 12, 20, .82);
+    box-shadow: inset 0 0 0 2px rgba(220, 235, 249, .12), inset 0 0 14px rgba(5, 11, 18, .3), 0 0 0 2px rgba(6, 12, 20, .82);
   }
 
   .mobile-steering-wheel-rim::before {
-    inset: -11px;
-    border-top-width: 3px;
-    border-bottom-width: 3px;
+    inset: -17px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
     border-top-color: rgba(214, 232, 249, .58);
     border-bottom-color: rgba(5, 10, 17, .74);
   }
 
   .mobile-steering-spoke {
     z-index: 2;
-    width: 82px;
+    width: calc(50% - 18px);
     height: 11px;
     margin-top: -5.5px;
     border-radius: 6px;
@@ -350,7 +350,7 @@
     clip-path: polygon(0 27%, 100% 0, 100% 100%, 0 73%);
   }
 
-  .mobile-steering-spoke-c { width: 70px; height: 13px; margin-top: -6.5px; }
+  .mobile-steering-spoke-c { width: calc(50% - 18px); height: 13px; margin-top: -6.5px; }
 
   .mobile-steering-wheel-hub {
     z-index: 4;
@@ -388,9 +388,11 @@
 
 @media (hover: none) and (pointer: coarse) and (orientation: landscape) {
   .mobile-steering-wheel-tilt {
-    top: -90px;
+    top: auto;
+    bottom: 4px;
     width: clamp(264px, 33vw, 304px);
     height: clamp(264px, 33vw, 304px);
+    transform-origin: 50% 100%;
   }
 }
 
@@ -406,9 +408,11 @@
   .scene-action::before { width: 16px; height: 16px; }
 
   .mobile-steering-wheel-tilt {
-    top: -92px;
+    top: auto;
+    bottom: 3px;
     width: clamp(248px, 31vw, 286px);
     height: clamp(248px, 31vw, 286px);
+    transform-origin: 50% 100%;
   }
 }
 

@@ -6,7 +6,7 @@
   "overlaySource": {
     "repository": "Jozzpoly/JV-Box3D-Web-experiment",
     "branch": "work/p1-3-1-drawer-polish",
-    "commit": "691544f97b40e3dfd5aed59903c06517441dfa18"
+    "commit": "23fe49c608da2aaecdf5cf28f3954d55bb364db9"
   },
   "scope": [
     "accepted utility drawer polish",
@@ -16,13 +16,14 @@
     "action strip hidden while utility drawer owns top surface",
     "steering wheel visual cleanup",
     "responsive steering acquisition enlargement",
-    "landscape steering artwork vertical correction",
-    "steering background visibility UX preview"
+    "landscape steering artwork bottom anchoring",
+    "steering wheel rim and spoke construction finish",
+    "steering background default-off UX preview"
   ],
   "previewIntegrity": {
     "authority": "PUBLIC_GIT_COMMIT_TREE_AND_THIS_RECEIPT",
-    "cssBlob": "ef16bfddb507c367f0470299a598726a50a5c39a",
-    "jsBlob": "cefa846b25df0cd5339a8c659c6ef6485072af8b",
+    "cssBlob": "7561d30d9d1732bfd6578746ae60634f522c6db0",
+    "jsBlob": "5d949ba520eb632404b4d267671737a8c5aea5b5",
     "canonicalBuildManifestIsPreviewAuthority": false
   },
   "sourceExecutionBoundary": {
@@ -30,7 +31,7 @@
     "steeringAcquisitionCssMirrorsSource": true,
     "steeringPlateUxMirrorsSourceSemantics": true,
     "sourceSettingsStoreExecutedInPreview": false,
-    "note": "Preview JS mirrors the source control label, URL parameter and scene attribute because the base canonical P1.3 bundle predates the new settings-store field. It also normalizes the legacy P1.3 Grid control into the current view-row structure. Canonical source wiring requires a normal rebuild before product acceptance."
+    "note": "Preview JS mirrors the source steering-background default OFF, explicit jvSteeringPlate=1 opt-in, control label and scene attribute because the base canonical P1.3 bundle predates the source settings-store field. It also normalizes the legacy P1.3 Grid control into the current view-row structure. Canonical source wiring requires a normal rebuild before product acceptance."
   },
   "protectedBaseline": [
     "X-only steering POSITION semantics and dead-zone policy",

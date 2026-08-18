@@ -1,5 +1,5 @@
 const PREVIEW_OVERLAY_SOURCE =
-  "691544f97b40e3dfd5aed59903c06517441dfa18";
+  "23fe49c608da2aaecdf5cf28f3954d55bb364db9";
 const SCROLL_EPSILON_PX = 2;
 
 function setChoiceActive(button, active) {
@@ -57,7 +57,7 @@ function installSteeringPlatePreview(toolbar) {
     findOrCreateViewGroup(controls).append(button);
   }
 
-  let visible = new URL(window.location.href).searchParams.get("jvSteeringPlate") !== "0";
+  let visible = new URL(window.location.href).searchParams.get("jvSteeringPlate") === "1";
 
   function sync() {
     scenePanel.toggleAttribute("data-steering-plate-hidden", !visible);
@@ -69,9 +69,9 @@ function installSteeringPlatePreview(toolbar) {
     visible = !visible;
     const url = new URL(window.location.href);
     if (visible) {
-      url.searchParams.delete("jvSteeringPlate");
+      url.searchParams.set("jvSteeringPlate", "1");
     } else {
-      url.searchParams.set("jvSteeringPlate", "0");
+      url.searchParams.delete("jvSteeringPlate");
     }
     window.history.replaceState(null, "", url.href);
     sync();
