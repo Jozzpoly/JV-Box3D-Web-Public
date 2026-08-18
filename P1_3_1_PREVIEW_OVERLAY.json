@@ -6,19 +6,20 @@
   "overlaySource": {
     "repository": "Jozzpoly/JV-Box3D-Web-experiment",
     "branch": "work/p1-3-1-drawer-polish",
-    "commit": "7b4db0f0afa8e682d57d8a423a01b62283923a82"
+    "commit": "d097de9bc2b28345efdf7c34eb9817c6a664ea7e"
   },
   "scope": [
     "accepted utility drawer polish",
     "top-edge compact Camera Reset Debug actions",
     "momentary action sticky-hover correction",
+    "action strip hidden while utility drawer owns top surface",
     "steering wheel visual cleanup",
     "responsive steering acquisition enlargement",
     "steering background visibility UX preview"
   ],
   "previewIntegrity": {
     "authority": "PUBLIC_GIT_COMMIT_TREE_AND_THIS_RECEIPT",
-    "cssBlob": "82941a86e290dbec9dadca2763a3c36f02b20fdd",
+    "cssBlob": "bf3c2bf0dc8d75caffe2b213ec17689eed16ba00",
     "jsBlob": "077d81931e09d47c68f3a16b07139d67317f75c2",
     "canonicalBuildManifestIsPreviewAuthority": false
   },

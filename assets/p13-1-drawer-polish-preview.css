@@ -226,6 +226,13 @@
     align-items: center;
     gap: 4px;
     pointer-events: auto;
+    transition: opacity 90ms ease, visibility 0s linear 0s;
+  }
+
+  .scene-panel[data-utility-drawer-open] .scene-actions {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   .scene-action {
@@ -402,5 +409,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .scene-actions,
   .scene-action { transition: none; }
 }
