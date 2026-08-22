@@ -4,12 +4,14 @@ Public, artifact-only deployment repository for JV Web.
 
 ## Authority
 
-- **Private source authority:** `Jozzpoly/JV-Box3D-Web-experiment`
-- **Public publication authority:** this repository's `main`
+- **Source authority:** `Jozzpoly/JV-Box3D-Web-experiment/main`
+- **Public artifact/release authority:** this repository's `main`
 - **GitHub Pages target:** repository root of `main`
-- **Canonical private executable source for the accepted artifact:** `cd7f5f89e8cfb872ff6bddc619e3fb78f2124af4`
+- **Canonical executable source for the currently accepted Friends artifact:** `cd7f5f89e8cfb872ff6bddc619e3fb78f2124af4`
 
-The public repository is not a development workspace. Product changes belong in the private repository, are built and validated there, and only reviewed static artifacts are promoted here.
+This repository is not a development workspace. Product changes belong in the source repository, are built and validated there, and only reviewed static artifacts are promoted here.
+
+The accepted source may advance independently of this Friends artifact. A source change — including the later dual-mode steering foundation — is **not** present here until a separate Friends publication is built, promoted and accepted.
 
 ## Current artifact model
 
@@ -34,7 +36,7 @@ SECURITY.md
 .gitattributes
 ```
 
-`build-manifest.json` binds the executable candidate to exact private source/file bytes. `LIVE_BUILD.json` records release-layer provenance and Owner acceptance, including preservation of the approved JSPREV2 scan.
+`build-manifest.json` binds the executable artifact to exact source/file bytes. `LIVE_BUILD.json` records release-layer provenance and Owner acceptance, including preservation of the approved JSPREV2 scan.
 
 ## Branch policy
 
@@ -44,7 +46,7 @@ Steady-state authority is deliberately simple:
 main
 ```
 
-A temporary preview/rollback branch is never a second source of truth. After acceptance it should be retired when normal ref-deletion tooling is available. The currently visible `preview/p1-2-owner` ref is redundant historical navigation only; it remains because the current connector session does not expose branch-ref deletion. Do not build a special Owner-side cleanup helper solely to remove it.
+A temporary preview/rollback branch is never a second source of truth. After acceptance it should be retired when normal ref-deletion tooling is available. The currently visible `preview/p1-2-owner` ref is redundant historical navigation only. Do not build a special Owner-side cleanup helper solely to remove it.
 
 Historical rollback remains available through exact Git commit ancestry. Do not recreate permanent `release/*` or `checkpoint/*` branch forests.
 

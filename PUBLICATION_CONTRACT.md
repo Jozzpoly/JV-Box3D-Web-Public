@@ -12,19 +12,21 @@ Target Pages subpath:
 
 `main` is both the default branch and the steady-state public artifact branch. GitHub Pages should serve `main` from repository root.
 
-The public repository does not rebuild or author JV-Web. Private source authority remains `Jozzpoly/JV-Box3D-Web-experiment`.
+This repository does not rebuild or author JV-Web. Source authority remains `Jozzpoly/JV-Box3D-Web-experiment/main`.
 
 Permanent release/checkpoint branch families are intentionally retired. Rollback authority is an exact known commit SHA in `main` ancestry. A temporary preview/rollback branch is permitted only during an active Owner validation window.
 
 ## Evidence layers
 
-`build-manifest.json` is generated from the clean private candidate and records exact private repository/source/file identity at build time.
+`build-manifest.json` is generated from the clean source candidate and records exact source repository/commit/file identity at build time.
 
-`LIVE_BUILD.json` is release-layer provenance. It records the exact private source used for the executable root and whether already-approved static data was preserved from a prior public artifact.
+`LIVE_BUILD.json` is release-layer provenance. It records the exact source used for the executable root and whether already-approved static data was preserved from a prior public artifact.
 
 Live public Git `main` plus the GitHub Pages configuration establish what is deployed.
 
 Owner/browser/device evidence establishes user-visible acceptance. Never infer Owner acceptance from a branch update alone.
+
+Source acceptance and Friends artifact acceptance are separate. A newer accepted source commit is not part of this artifact until a separate publication is executed and accepted.
 
 ## Allowed payload
 
@@ -36,13 +38,13 @@ The exact `build-manifest.json` file table is authoritative for the executable a
 
 Do not publish:
 
-- private source/history;
+- product source/history as development material;
 - `node_modules`, caches or build workspaces;
 - secrets, credentials, private paths or personal data;
 - arbitrary/unapproved local scan packs;
 - unreviewed source maps;
 - obsolete test/laboratory overlays in the production root;
-- executable JS/CSS carried forward from an older public layer instead of rebuilt private source;
+- executable JS/CSS carried forward from an older public layer instead of rebuilt source;
 - provenance or validation claims that did not occur.
 
 ## Approved scan preservation
@@ -54,7 +56,7 @@ A scan-changing release requires its own pinned source pack and independent vali
 ## Current promotion basis
 
 ```text
-canonical private executable source:
+canonical executable source for current Friends artifact:
   cd7f5f89e8cfb872ff6bddc619e3fb78f2124af4
 
 previous accepted public main:
